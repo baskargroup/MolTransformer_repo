@@ -1,9 +1,10 @@
 from ..model_architecture import *
 from ..utils import init_distributed_mode
 import torch # type: ignore
+import os
 
 class BuildModel():
-    def __init__(self,device,model_mode,gpu_mode = False ,train = False,preload_model = 'SS',pretrain_model_file = ''):
+    def __init__(self,device = torch.device("cpu"),model_mode = 'SS',gpu_mode = False ,train = False,preload_model = 'SS',pretrain_model_file = ''):
         
         self.device = device
         self.model_mode = model_mode
@@ -30,6 +31,9 @@ class BuildModel():
             preload_model = self.model_mode
         else:
             preload_model = preload_model
+        if not pretrain_model_file:
+            if  preload_model == 'SS':   
+                pretrain_model_file = self._get_SS_path()
         self._pre_load_model(preload_model,pretrain_model_file = pretrain_model_file)
         
 
@@ -129,3 +133,15 @@ class BuildModel():
                 self.model.multi_high_fidelity_model.fc2.weight.copy_(self.model.module.high_fidelity_model.fc2.weight)
                 self.model.multi_high_fidelity_model.fc2.bias.copy_(self.model.module.high_fidelity_model.fc2.bias)
 
+    def _get_SS_path(self):
+        # Get the directory of the current script
+        current_dir = os.path.dirname(__file__)
+        # Construct the path relative to the current script
+        # Move up to the package root (MolTransformer), assuming the current script is inside 'model/model_operation'
+        package_root = os.path.abspath(os.path.join(current_dir, '../..'))
+        # Determine the model file based on gpu_mode
+        model_file = 'Best_SS_GPU.pt' if self.gpu_mode else 'Best_SS_CPU.pt'
+        # Append the relative path to the target file
+        model_path = os.path.join(package_root, 'models/best_models/SS_model', model_file)
+        
+        return model_path
