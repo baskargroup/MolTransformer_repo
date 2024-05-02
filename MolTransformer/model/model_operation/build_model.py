@@ -84,7 +84,8 @@ class BuildModel():
                 pretrain_model_file = ''
 
 
-
+        else: #dataset not define
+            pass
 
         if self.model_mode == 'Descriptors':
             model = DescriptorHF()
