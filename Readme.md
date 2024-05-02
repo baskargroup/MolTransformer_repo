@@ -49,20 +49,44 @@ print('---------build model operator-----------')
 #MO.train()
 MO.r_square(num_batch = 100)
 example 2:
-from MolTransformer import *
-build_model_instance = BuildModel(model_mode = 'SS')
+
+
+## BuildModel Configuration
+### Overview
+The BuildModel class simplifies the initialization and configuration of models tailored for different machine learning tasks in the MolTransformer project. It handles device setup, model initialization, and pre-loading of models with detailed customization options.
+
+### Configuration Parameters
+#### Basic Parameters
+- **device**: The computation device (CPU or GPU) used for the model. Default is CPU.
+- **model_mode**: Type of the model ('SS', 'HF', 'multiF_HF', 'SS_HF', 'Descriptors'). Determines the model's architecture and behavior.
+- **gpu_mode**: Enables GPU acceleration if set to True. Improves performance and supports parallel processing.
+
+#### Model Loading
+- **train**: Indicates if the model is in training mode.
+- **preload_model**: Specifies which model to load initially, defaults to the value of `model_mode`.
+- **pretrain_model_file**: Path to a pre-trained model file.
+
+#### Dataset Handling
+- **dataset**: Dataset to use ('qm9' or 'ocelot'). Determines how the model is configured and initialized.
+  - Default behavior: If `dataset` is not 'SS', `model_mode` will automatically adjust to 'multiF_HF'.
+
+### Usage Scenarios
+```python
+# Example 1: Initialize a self-supervised model with default settings
+build_model_instance = BuildModel(model_mode='SS')
 model = build_model_instance.model
-print("loaded SS model")
+print("Loaded SS model")
 
-build_model_instance = BuildModel(dataset = 'ocelot')
+# Example 2: Load a MultiF_HF model for the 'ocelot' dataset with GPU acceleration
+build_model_instance = BuildModel(dataset='ocelot', gpu_mode=True)
 model = build_model_instance.model
-print("loaded multiHF_hf ocelot model")
+print("Loaded MultiF_HF ocelot model")
 
-build_model_instance = BuildModel(dataset = 'qm9')
+# Example 3: Load a MultiF_HF model for the 'qm9' dataset
+build_model_instance = BuildModel(dataset='qm9')
 model = build_model_instance.model
-print("loaded multiHF_hf qm9 model")
-
-
+print("Loaded MultiF_HF qm9 model")
+```
 
 ## DataLoader Configuration
 ### Overview
@@ -82,7 +106,7 @@ Enabling GPU Mode: Set gpu_mode to True to enable processing on a GPU, enhancing
 ### Important Notes
 Ensure both 'train' and 'test' paths are specified when using custom data. Failing to specify both will default the DataLoader to use the preconfigured datasets ('qm9' or 'ocelot').
 Explicitly define both paths to avoid default settings. The system will not infer missing paths.
-## Example Usage of DataLoader
+### Example Usage of DataLoader
 
 
 ```python
