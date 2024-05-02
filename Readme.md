@@ -100,6 +100,8 @@ Explicitly define both paths to avoid default settings. The system will not infe
 
 
 ```python
+from MolTransformer import DataLoader
+
 # Example 1: Using the DataLoader with default settings for the 'qm9' dataset
 data_loader = DataLoader(dataset='qm9')
 
