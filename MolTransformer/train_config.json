@@ -1,0 +1,21 @@
+{
+    "model_mode": "multiF_HF",
+    "pretrain_model_type": "multiF_HF",
+    "user_data":false,
+    "dataset":"ocelot",
+    "high_fidelity": ["aea"],
+    "num_gpu": 4,
+    "gpu_mode": false,
+    "batch_size":64,
+    "report_save_path": "/Users/tcpba/MolTransformer_repo/output/test_package/",
+    "model_save_folder" : "/Users/tcpba/MolTransformer_repo/output/test_package/",
+    "pretrain_model_file": "/Users/tcpba/MolTransformer_repo/MolTransformer/model/models/best_models/MultiF_HF/ocelot_aea/model_noneDDP.pt",
+    "train_only_lock_layer":"Na",
+    "train_only_save_non_ddp_model": false,
+    "train_only_train_epochs": 1000,
+    "data_path": {"train": [["train_data_1.csv", "train_data_2.csv"],["second_trucnk_train_data_1.csv", "second_trucnk_train_data_2.csv"]], "test":  [["test_data_2.csv", "test_data_2.csv"],["test_data_2.csv", "test_data_2.csv"]]}
+    
+}
+
+
+
