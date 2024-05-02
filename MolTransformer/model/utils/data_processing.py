@@ -6,30 +6,20 @@ from .general_utils import plot_histogram
 from rdkit import Chem # type: ignore
 from .descriptors import molecule_descriptors
 import selfies as sf # type: ignore
-from .general_utils import Config, dataset_building, get_index_path
-import os
-import glob
-
-# not hard core things as well need to change!
-
-global_config = Config()
+from .general_utils import dataset_building, get_index_path
 
 class DataProcess(): 
-    def __init__(self,data_set_id = 0,data_name = '',user_data = True,dataset = 'qm9'):
+    """
+    data_path: in a form: {'train':['your csv file 1','your csv file 2'],'test':['your csv file']}
+    high_fidelity_label: str, the label . note a column with the input label name is needed in the csv file
+
+    """
+    def __init__(self,model_mode,data_path,high_fidelity_label,save_path):
+        
         self.index_path = get_index_path()
-        self.dataset_name = data_name
-        if not user_data:
-            base_train_path = os.path.join(os.path.dirname(__file__), '..', 'data',dataset, 'train')
-            base_test_path = os.path.join(os.path.dirname(__file__), '..', 'data', dataset,'test')
-            # List all CSV files in the training and testing directories
-            self.train_path = glob.glob(os.path.join(base_train_path, '*.csv'))
-            self.test_path = glob.glob(os.path.join(base_test_path, '*.csv'))
-            # Print the paths to check them
-            print('Train paths: ', self.train_path)
-            print('Test paths: ', self.test_path)
-        else:
-            self.train_path = global_config['data_path']['train'][data_set_id] 
-            self.test_path = global_config['data_path']['test'][data_set_id] 
+        self.train_path = data_path['train'] 
+        self.test_path = data_path['test'] 
+        self.save_path = save_path
 
         #########
         '''
@@ -46,27 +36,26 @@ class DataProcess():
         print('number of test',len(data_test_sel['SELFIES']))
         
         #2. load HF if needed
-        if global_config['model_mode'] != 'SS':
+        if model_mode != 'SS':
             print('not ss')
-            self.label_list = global_config['high_fidelity'] 
-            fidelity = 'hf'
+            self.label = high_fidelity_label
             data_train_sel = self._load_label_data('train',data_train_sel)
             data_test_sel = self._load_label_data('test',data_test_sel)
-            label = self.label_list[0]
-            plot_histogram(data1 = data_train_sel[label],data2 = data_test_sel[label],path = global_config['report_save_path'] ,name = label + '_original') 
+            plot_histogram(data1 = data_train_sel[self.label],data2 = data_test_sel[self.label],path = save_path ,name = self.label + '_original') 
             self.std_parameter =  defaultdict(lambda: defaultdict(float))
             data_train_sel,data_test_sel = self._std_data(data_train_sel,data_test_sel)
-            if  global_config['model_mode'] in  ['multiF_HF','Descriptors' ]:
+            if  model_mode in  ['multiF_HF','Descriptors' ]:
                 print('start compute descriptors')
                 data_train_sel = self._get_descriptors('train',data_train_sel)
                 data_test_sel = self._get_descriptors('test',data_test_sel)
-
+        else:
+            self.label = ''
         #3. dataset_building
         print('start dataset_building')
         self.char2ind = self._load_char2ind()
         print('end char2ind')
-        self.dataset_train = dataset_building(self.char2ind,data_train_sel)
-        self.dataset_test = dataset_building(self.char2ind,data_test_sel)
+        self.dataset_train = dataset_building(self.char2ind,data_train_sel,label = self.label)
+        self.dataset_test = dataset_building(self.char2ind,data_test_sel,label = self.label)
         print('end dataset_test')
         
     
@@ -90,15 +79,12 @@ class DataProcess():
         paths =self.train_path if file_type == 'train' else self.test_path
         for file in paths:
             df = pd.read_csv(file)
-            for label in self.label_list:
-                saver[label] += np.asanyarray(df[label]).tolist()
-        
+            saver[self.label] += np.asanyarray(df[self.label]).tolist()
         return saver
 
     def _std_data(self,data_train_sel,data_test_sel):
-        for label in global_config['high_fidelity']:
-            data_train_sel[label],data_test_sel[label] = self.standardize_data(data_train_sel[label],data_test_sel[label],label)
-            plot_histogram(data1 = data_train_sel[label],data2 = data_test_sel[label],path = global_config['report_save_path'],name = label)   
+        data_train_sel[self.label],data_test_sel[self.label] = self.standardize_data(data_train_sel[self.label],data_test_sel[self.label],self.label)
+        plot_histogram(data1 = data_train_sel[self.label],data2 = data_test_sel[self.label],path = self.save_path ,name = self.label)   
         return data_train_sel,data_test_sel
 
     
@@ -117,14 +103,14 @@ class DataProcess():
         constant = np.ceil(np.abs(min(min(data1), min(data2))))
         data1 = data1 + constant
         data2 = data2 + constant
-        np.save(global_config['report_save_path'] +self.dataset_name + '_'+ name + '_mean_std.npy', [mean1, std1,constant])
+        np.save(self.save_path + name + '_mean_std.npy', [mean1, std1,constant])
         self.std_parameter[name]['mean'] = mean1
         self.std_parameter[name]['std'] = std1
         self.std_parameter[name]['constant'] = constant
         return data1, data2
 
     def recover_standardized_data(self,data1, data2):
-        mean1, std1, constant = np.load(global_config['report_save_path'] + 'mean_std.npy')
+        mean1, std1, constant = np.load(self.save_path + 'mean_std.npy')
         data1 = data1 - constant
         data2 = data2 - constant
         data1 = data1 * std1 + mean1
@@ -143,3 +129,4 @@ class DataProcess():
                 descriptors = molecule_descriptors(molecule)
                 saver['descriptors'].append(descriptors)
         return saver
+

@@ -1,11 +1,11 @@
 from MolTransformer import *
 
 print('imported')
-#MO = ModelOperator()
-#print('---------build model operator-----------')
-#MO.evaluate_decoder(num_batch = 1)
+MO = ModelOperator()
+print('---------build model operator-----------')
+MO.evaluate_decoder(num_batch = 1)
 #MO.train()
-#MO.r_square(num_batch = 100)
+MO.r_square(num_batch = 100)
 
 build_model_instance = BuildModel(model_mode = 'SS')
 model = build_model_instance.model

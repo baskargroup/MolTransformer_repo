@@ -1,4 +1,5 @@
-from .model import ModelOperator,BuildModel
+from .model import ModelOperator,BuildModel,DataProcess
 
-__all__ = ['ModelOperator','BuildModel']
+__all__ = ['ModelOperator','BuildModel','DataProcess']
 
+#DataProcess for now

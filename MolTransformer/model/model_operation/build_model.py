@@ -44,31 +44,52 @@ class BuildModel():
         if not preload_model:
             preload_model = model_mode
         if dataset:
-            if self.model_mode != 'multiF_HF':
-                message = (
-                    "Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, "
-                    "since 'dataset' is specified, 'model_mode' will be overridden to 'multiF_HF'."
-                )
-                print(message)
-                logging.warning(message)
-            if pretrain_model_file != '':
-                message = (
-                    "Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' "
-                    "is specified and the model configuration will default to 'multiF_HF'."
-                )
-                print(message)
-                logging.warning(message)
-            self.model_mode = 'multiF_HF'
-            preload_model = 'multiF_HF'
-            pretrain_model_file = ''
-            if dataset not in ['qm9', 'ocelot']:
-                raise ValueError("Invalid dataset specified. Please choose either 'qm9' or 'ocelot'.")
+            if dataset != 'SS':
+                if self.model_mode != 'multiF_HF':
+                    message = (
+                        "Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, "
+                        "since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'."
+                    )
+                    print(message)
+                    logging.warning(message)
+                if pretrain_model_file != '':
+                    message = (
+                        "Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' "
+                        "is specified and not 'SS', the model configuration will load default 'multiF_HF' model."
+                    )
+                    print(message)
+                    logging.warning(message)
+                self.model_mode = 'multiF_HF'
+                preload_model = 'multiF_HF'
+                pretrain_model_file = ''
+                if dataset not in ['qm9', 'ocelot']:
+                    raise ValueError("Invalid dataset specified. Please choose either 'qm9' or 'ocelot'.")
+            else:
+                if self.model_mode != 'SS':
+                    message = (
+                        "Warning: The 'model_mode' is set to a value other than 'SS'. However, "
+                        "since 'dataset' is specified to 'SS' , 'model_mode' will be overridden to 'SS'."
+                    )
+                    print(message)
+                    logging.warning(message)
+                if pretrain_model_file != '':
+                    message = (
+                        "Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' "
+                        "is specified to 'SS', the model will load default pretrain 'SS' model."
+                    )
+                    print(message)
+                    logging.warning(message)
+                self.model_mode = 'SS'
+                preload_model = 'SS'
+                pretrain_model_file = ''
 
 
-        if model_mode == 'Descriptors':
+
+
+        if self.model_mode == 'Descriptors':
             model = DescriptorHF()
         else:
-            model = ChemTransformer(device,model_mode, train = True,gpu = gpu_mode)
+            model = ChemTransformer(device,self.model_mode, train = True,gpu = gpu_mode)
         print('done intialized')
 
         #set DDP

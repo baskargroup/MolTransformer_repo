@@ -20,7 +20,7 @@ from torch.distributed import barrier # type: ignore
 import selfies as sf # type: ignore
 from rdkit import Chem # type: ignore
 from . import settings 
-
+import glob
 # add mutiF for HF: to compare with Chad's group paper and QM9
 # add lfHF for HF: for compare and prove the low f is well embeeding in the model
 # for rl: train decoder only: 128 -> memory -> embedding
@@ -132,12 +132,34 @@ class ModelOperator():
             raise ValueError('please choose a valid model_mode for training')
         
            
-    def generate_data(self,data_set_id = 0,user_data = False,dataset = 'qm9'):
-        if global_config['model_mode'] == 'SS':
-            current_dataset = 'SS'
+    def generate_data(self,data_set_id = 0,user_data = False,dataset = ''):
+
+        #model_mode,data_path,high_fidelity_label,save_path  
+        if not user_data:
+            if global_config['model_mode'] != 'SS' and not dataset:
+                dataset = 'qm9'
+            elif global_config['model_mode'] == 'SS':
+                dataset = 'SS'
+            if dataset not in ['qm9', 'ocelot','SS']:
+                raise ValueError("Invalid dataset specified. Please choose either 'qm9' , 'ocelot' or 'SS'.")
+            label = 'lumo' if dataset == 'qm9' else 'aea'
+            # Path to the 'data' directory relative to the current script
+            base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            base_train_path = os.path.join(base_dir, 'model','data', dataset, 'train')
+            base_test_path = os.path.join(base_dir,  'model','data', dataset, 'test')
+
+            # List all CSV files in the training and testing directories
+            train_path = glob.glob(os.path.join(base_train_path, '*.csv'))
+            test_path = glob.glob(os.path.join(base_test_path, '*.csv'))
+
         else:
-            current_dataset = dataset
-        Data = DataProcess(data_set_id = data_set_id,user_data = user_data,dataset = dataset)
+            train_path = global_config['data_path']['train'][data_set_id] 
+            test_path = global_config['data_path']['test'][data_set_id] 
+            label = global_config['high_fidelity']
+        
+        data_path = {'train':train_path,'test':test_path}
+
+        Data = DataProcess(model_mode = global_config['model_mode'] ,data_path = data_path,high_fidelity_label =label ,save_path = global_config['report_save_path'])
         logging.info("********train size :  " + str(len(Data.dataset_train)) + " ***************")
         logging.info("********test size :  " + str(len(Data.dataset_test)) + " ***************")
         if global_config["gpu_mode"]:
@@ -675,7 +697,7 @@ class ModelOperator():
             predict = predicted
 
 
-        list_name = global_config['high_fidelity']
+        label = global_config['high_fidelity']
         
         r_total = 0 
         r_list = []
@@ -685,8 +707,8 @@ class ModelOperator():
         if intrain:
             return r2
         else:
-            target_recover = self.recover_standardized_data(target_, list_name[0])
-            predict_recover = self.recover_standardized_data(predict_, list_name[0])
+            target_recover = self.recover_standardized_data(target_, label)
+            predict_recover = self.recover_standardized_data(predict_, label)
             # Calculate min/mean/max
             min_target = target_recover.min().item()
             mean_target = target_recover.mean().item()
@@ -695,11 +717,11 @@ class ModelOperator():
             logging.info(f'After recovery - Target: Min = {min_target}, Mean = {mean_target}, Max = {max_target}')
             #logging.info(f'After recovery - Predict: Min = {min_predict}, Mean = {mean_predict}, Max = {max_predict}')
             r2_recover  = r2_score(target_recover, predict_recover)
-            self.plot_r2(target_recover, predict_recover,r2_recover,property_name = 'recover_'+list_name[0] + '_' + data_set)   
-            self.plot_r2(target_, predict_,r2,property_name =  list_name[0] + '_' + data_set)
-            self.plot_error_histogram(target_recover, predict_recover, 'recover_'+ list_name[0] + '_' + data_set)
-            self.plot_value_histogram(target_recover, predict_recover,'recover_'+ list_name[0] + '_' + data_set)
-            logging.info('For ' + list_name[0]+ ' , R2 = ' + str(r2))
+            self.plot_r2(target_recover, predict_recover,r2_recover,property_name = 'recover_'+label + '_' + data_set)   
+            self.plot_r2(target_, predict_,r2,property_name =  label + '_' + data_set)
+            self.plot_error_histogram(target_recover, predict_recover, 'recover_'+ label + '_' + data_set)
+            self.plot_value_histogram(target_recover, predict_recover,'recover_'+ label + '_' + data_set)
+            logging.info('For ' + label+ ' , R2 = ' + str(r2))
             mae = mean_absolute_error(target_recover, predict_recover)
             return r2_recover,mae
             

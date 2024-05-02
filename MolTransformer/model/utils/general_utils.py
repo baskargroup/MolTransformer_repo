@@ -157,12 +157,13 @@ def plot_histogram(data1, data2, path = '',name = ''):
         plt.savefig(path + name+  '_histogram.png')
         plt.close()
 
+
 class dataset_building(Dataset): 
     '''
     main purpose:
     make data['input'], data['target'] or [ data['properties'] or data['high_f']  ] if needed
     '''
-    def __init__(self,char2ind,data):
+    def __init__(self,char2ind,data,label = ''):
         self.count_over_400 = 0
         self.count = 0
         self.largest = 0
@@ -174,13 +175,10 @@ class dataset_building(Dataset):
         self.seq_len = self.get_len()   # add index G to the begining
         # for reading labels to the data
         if global_config['model_mode'] != 'SS':
-            if 'LF' in global_config['model_mode']:
-                self.label_list = low_fidelity_label_list
-            else:
-                self.label_list = global_config['high_fidelity']
-                if global_config['model_mode'] in  ['multiF_HF','Ensemble_multiF','Descriptors']:
-                    self.descriptors = self.data['descriptors']
-            self.num = len(self.label_list)
+            self.label = label
+            if global_config['model_mode'] in  ['multiF_HF','Descriptors']:
+                self.descriptors = self.data['descriptors']
+            self.num = 1
         
     def __getitem__(self,index):
         seq_len = self.seq_len[index]
@@ -245,8 +243,8 @@ class dataset_building(Dataset):
 
     def _get_labels(self,index):
         properties = Variable(torch.zeros((self.num)))
-        for i in range(self.num):
-            properties[i] = torch.tensor(self.data[self.label_list[i]][index])
+        properties[0] = torch.tensor(self.data[self.label][index])
+        print('length of ')
         return properties
 
 
