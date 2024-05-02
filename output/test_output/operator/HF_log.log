@@ -1,0 +1,8 @@
+2024-04-30 00:03:07,402 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-04-30 00:03:07,823 - INFO - HF
+2024-04-30 00:03:09,069 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-04-30 00:03:09,170 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-04-30 00:03:13,055 - INFO - ********train size :  126976 ***************
+2024-04-30 00:03:13,055 - INFO - ********test size :  31738 ***************
+2024-04-30 00:03:13,056 - INFO - ********train_low_f, with lr =  0.0001 , epochs = 2
+2024-04-30 00:03:13,652 - INFO - #####################epoch: 0

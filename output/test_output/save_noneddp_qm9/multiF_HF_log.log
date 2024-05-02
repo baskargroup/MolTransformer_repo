@@ -1,0 +1,48 @@
+2024-05-01 16:36:03,629 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-01 16:36:03,629 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-01 16:36:03,629 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-01 16:36:03,629 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-01 16:36:04,830 - INFO - multiF_HF
+2024-05-01 16:36:04,847 - INFO - multiF_HF
+2024-05-01 16:36:04,857 - INFO - multiF_HF
+2024-05-01 16:36:04,858 - INFO - Added key: store_based_barrier_key:1 to store for rank: 2
+2024-05-01 16:36:04,863 - INFO - multiF_HF
+2024-05-01 16:36:04,870 - INFO - Added key: store_based_barrier_key:1 to store for rank: 1
+2024-05-01 16:36:04,875 - INFO - Added key: store_based_barrier_key:1 to store for rank: 0
+2024-05-01 16:36:04,878 - INFO - Added key: store_based_barrier_key:1 to store for rank: 3
+2024-05-01 16:36:04,878 - INFO - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2024-05-01 16:36:04,878 - INFO - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2024-05-01 16:36:04,880 - INFO - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2024-05-01 16:36:04,885 - INFO - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2024-05-01 16:36:10,289 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:10,452 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:13,114 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:13,242 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:13,325 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:13,462 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:13,875 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:36:14,005 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 16:38:50,645 - INFO - ********train size :  107106 ***************
+2024-05-01 16:38:50,646 - INFO - ********test size :  26776 ***************
+2024-05-01 16:38:54,571 - INFO - ********train size :  107106 ***************
+2024-05-01 16:38:54,571 - INFO - ********test size :  26776 ***************
+2024-05-01 16:38:56,057 - INFO - ********train size :  107106 ***************
+2024-05-01 16:38:56,057 - INFO - ********test size :  26776 ***************
+2024-05-01 16:38:56,763 - INFO - ********train size :  107106 ***************
+2024-05-01 16:38:56,763 - INFO - ********test size :  26776 ***************
+2024-05-01 16:38:57,209 - INFO - After recovery - Target: Min = -4.802419185638428, Mean = 0.2853999137878418, Max = 2.753793716430664
+2024-05-01 16:38:57,209 - INFO - After recovery - Target: Min = -4.802419185638428, Mean = 0.2853999137878418, Max = 2.753793716430664
+2024-05-01 16:38:57,209 - INFO - After recovery - Target: Min = -4.802419185638428, Mean = 0.2853999137878418, Max = 2.753793716430664
+2024-05-01 16:38:57,209 - INFO - After recovery - Target: Min = -4.802419185638428, Mean = 0.2853999137878418, Max = 2.753793716430664
+2024-05-01 16:38:58,052 - INFO - For lumo , R2 = 0.9766950461185645
+2024-05-01 16:38:58,070 - INFO - For lumo , R2 = 0.9766950461185645
+2024-05-01 16:38:58,070 - INFO - For lumo , R2 = 0.9766950461185645
+2024-05-01 16:38:58,086 - INFO - For lumo , R2 = 0.9766950461185645
+2024-05-01 17:19:07,756 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-01 17:19:08,210 - INFO - multiF_HF
+2024-05-01 17:19:09,662 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 17:19:09,883 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-01 17:22:43,749 - INFO - ********train size :  107106 ***************
+2024-05-01 17:22:43,749 - INFO - ********test size :  26776 ***************
+2024-05-01 17:22:44,662 - INFO - After recovery - Target: Min = -3.395982503890991, Mean = 0.20412802696228027, Max = 2.606851816177368
+2024-05-01 17:22:45,262 - INFO - For lumo , R2 = 0.9787422419458706
