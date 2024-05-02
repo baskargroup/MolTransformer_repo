@@ -19,7 +19,7 @@ from .model_architecture import (
     MultiFidelity,
     PositionalEncoding
 )
-from .model_operation import ModelOperator,BuildModel
+from .model_operation import ModelOperator,BuildModel,DataLoader
 
 __all__ = [
     'DataProcess',
@@ -40,7 +40,8 @@ __all__ = [
     'LowFidelity',
     'MultiFidelity',
     'PositionalEncoding',
-    'BuildModel'
+    'BuildModel',
+    'DataLoader'
 ]
 
 

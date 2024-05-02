@@ -1,5 +1,6 @@
 
 max_sequence_length = 400
+data_loader_batch_size = 64
 # --- training only ----- :
 loop_number_in_one_epoch = 2
 test_training_num_iteration = 1000

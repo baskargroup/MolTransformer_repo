@@ -10,17 +10,18 @@ class DataLoader:
     Initializes a DataLoader to manage dataset loading and processing.
 
     Parameters:
-        model_mode (str): Specifies the model mode, default is 'SS'. Valid options are 'SS', 'HF', 'multiF_HF', 'SS_HF', or 'Descriptors'.
-        gpu_mode (bool): Enables GPU mode if True.
-        dataset (str): Specifies the predefined dataset to use. Options are 'qm9' or 'ocelot'.
-        data_path (dict): Specifies paths for training and testing data.
-        label (str): Column name for the label, dependent on dataset and model_mode.
+        model_mode (str): Model mode, default 'SS'. Options: 'SS', 'HF', 'multiF_HF', 'SS_HF', 'Descriptors'.
+        gpu_mode (bool): If True, enables GPU mode.
+        dataset (str): Predefined dataset to use ('qm9' or 'ocelot').
+        data_path (dict): Paths for training and testing data.
+        label (str): Label column name, depends on dataset and model_mode.
+        report_save_path (str): Path to save reports.
 
     Attributes:
-        user_data (bool): Indicates whether user-provided data is being used.
+        user_data (bool): True if using user-provided data.
 
     Raises:
-        ValueError: If only one of train or test data paths is specified.
+        ValueError: If both or one of the train/test paths are not specified when using custom data.
     """
     def __init__(self, model_mode='', gpu_mode=False, dataset='SS', data_path={'train': [''], 'test': ['']}, label='',report_save_path = ''):
         self.model_mode = model_mode
@@ -48,25 +49,21 @@ class DataLoader:
             # print and log warinig
             #please refine my messages 
             message = (
-                        "please sepcify your  model_mode form 'SS', 'HF', 'multiF_HF', 'SS_HF', or 'Descriptors'.  and if the model_mode is not 'SS' make sure you have set label and the csv files you provided have corresponding column "
+                        "Please specify your model_mode from 'SS', 'HF', 'multiF_HF', 'SS_HF', or 'Descriptors'. If the model_mode is not 'SS', ensure the label is defined and the label column exists in your CSV files."
                     )
             print(message)
             logging.warning(message)
         else:  # no user_data
             if self.dataset == 'SS':
-                message = (
-                        "The 'model_mode' is set default 'SS'. Since the dataset is 'SS') "
-                    )
+                message = "The 'model_mode' is set to default 'SS'."
                 print(message)
                 logging.info(message)
                 self.model_mode = 'SS'
             else:
                 if dataset not in ['qm9', 'ocelot']:
                     raise ValueError("Invalid dataset specified. Please choose either 'qm9' or 'ocelot'.")
-                message = (
-                        "The 'model_mode' is set to 'multiF_HF'. Since the dataset is 'qm9' or 'ocelot'. if you want to set model_mode to 'SS', 'HF', 'multiF_HF', 'SS_HF', or 'Descriptors', please do define model_load.ex data = DataLoader(dataset = 'ocelot',model_load = 'HF') ,please make sure you also define properly the label",
-                        "the label setting will be overwrite to default label if no model_mode is define"
-                    )
+                message = "The 'model_mode' will default to 'multiF_HF'. To customize, specify model_mode explicitly, e.g., DataLoader(dataset='ocelot', model_mode='HF'). Ensure 'label' is set appropriately."
+
                 print(message)
                 logging.info(message)
                 if not self.model_mode:
@@ -94,13 +91,13 @@ class DataLoader:
         logging.info("********test size :  " + str(len(Data.dataset_test)) + " ***************")
         if self.gpu_mode:
             self.train_sampler = torch.utils.data.distributed.DistributedSampler(Data.dataset_train)
-            self.dataloader_train =  torch.utils.data.DataLoader(Data.dataset_train,batch_size=settings.batch_size,sampler=self.train_sampler ,num_workers=self.gpu_world_size,pin_memory=True)        
+            self.train =  torch.utils.data.DataLoader(Data.dataset_train,batch_size=settings.data_loader_batch_size,sampler=self.train_sampler ,num_workers=self.gpu_world_size,pin_memory=True)        
             self.test_sampler = torch.utils.data.distributed.DistributedSampler(Data.dataset_test, shuffle=False)
-            self.dataloader_test = torch.utils.data.DataLoader(Data.dataset_test, batch_size=settings.batch_size, sampler=self.test_sampler, num_workers=self.gpu_world_size, pin_memory=True)
+            self.test = torch.utils.data.DataLoader(Data.dataset_test, batch_size=settings.data_loader_batch_size, sampler=self.test_sampler, num_workers=self.gpu_world_size, pin_memory=True)
             
         else:
-            self.dataloader_train =  torch.utils.data.DataLoader(Data.dataset_train,batch_size=settings.batch_size,pin_memory=True) 
-            self.dataloader_test = torch.utils.data.DataLoader(Data.dataset_test, batch_size=settings.batch_size,  pin_memory=True)
+            self.train =  torch.utils.data.DataLoader(Data.dataset_train,batch_size=settings.data_loader_batch_size,pin_memory=True) 
+            self.test = torch.utils.data.DataLoader(Data.dataset_test, batch_size=settings.data_loader_batch_size,  pin_memory=True)
                           
         if self.model_mode != 'SS':
             self.std_parameter = Data.std_parameter   
