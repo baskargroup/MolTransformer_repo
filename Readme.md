@@ -24,8 +24,8 @@ For cpu: python test_main.py
 For gpu multi node: CUDA_VISIBLE_DEVICES=0,1,2,3 python3 -m torch.distributed.run --nproc_per_node=4 test_main.py
 
 
-# config.jason setting
-
+# train_config.jason setting
+you only need to edit train_config.jason if you want to train your own model.
 model_mode chosse from: ['SS', 'HF','multiF_HF','SS_HF','Descriptors'] 
 
 If model_mode = multiF_HF and pretrain_model_type = HF, please remember to edit a pretrain HF_path to pretrain_model_file for the multiF_HF to transfer learning from there.
@@ -36,4 +36,4 @@ train_only_lock_layer choose from : ['Na', 'SS','fc1fc2',"SS_fc1fc2"]
 
 Now, the package offer the following model to ty and keep trying if you wish, please set user_data = false, and choose from the following comibination: [ "dataset" = 'qm9', "high_fidelity" = ['lumo'] ; "dataset" = 'ocelot', "high_fidelity" = ['aea']]
 
-If you are using Generative method, please change Generative_configuration.jason
+If you are using Generative method, please change config.jason

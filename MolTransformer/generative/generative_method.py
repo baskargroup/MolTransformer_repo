@@ -1,10 +1,11 @@
 from ..model import BuildModel
 from .generative_utils import *
+from . import settings 
 import torch  # type: ignore
 import logging 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-config = Config('config')
+config = Config('config.json')
 
 class GenerateMolecules():
     def __init__(self):
@@ -48,7 +49,6 @@ class GenerateMolecules():
         print('mean_matrix shape: ',mean_matrix.shape)
         print('std_dev_matrix shape: ',std_dev_matrix.shape)
 
-
         sampled_vectors = np.zeros((n_samples, n_components))
 
         for i in range(n_components):
@@ -67,18 +67,17 @@ class GenerateMolecules():
 
         smiles_list = []
         selfies_list = []
-        n_batch = (n_samples // self.Args.batch_size) + (1 if n_samples % self.Args.batch_size != 0 else 0)
+        n_batch = (n_samples // settings.batch_size) + (1 if n_samples % settings.batch_size != 0 else 0)
 
         for i in range(n_batch):
             print('in batch: ',i)
-            start_idx = i * self.Args.batch_size
-            end_idx = min((i + 1) * self.Args.batch_size, n_samples)
+            start_idx = i * settings.batch_size
+            end_idx = min((i + 1) * settings.batch_size, n_samples)
             # No need to subtract 1 from end_idx due to Python's exclusive range in slicing
             vector = sampled_vectors[start_idx:end_idx].reshape((-1, sampled_vectors.shape[1])).astype(np.float64)
             # The reshape now uses -1 for the first dimension to automatically adjust to the correct batch size
 
             smiles_list_, selfies_list_ = self._adjusted_ls_2_smiles(vector)
-
 
             smiles_list += smiles_list_
             selfies_list += selfies_list_
@@ -105,7 +104,6 @@ class GenerateMolecules():
         #df = validate_smiles_in_pubchem(df)  # Ensure this function is defined
         df_Analysis.to_csv(csv_file_path, index=False)
 
-
         #plotting
         # test
         df['rdk_mol'] = unique_rdk_mol_list
@@ -113,7 +111,6 @@ class GenerateMolecules():
 
 
 
-    
     
 
         

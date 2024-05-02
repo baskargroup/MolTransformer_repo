@@ -2,13 +2,68 @@ from ..model_architecture import *
 from ..utils import init_distributed_mode
 import torch # type: ignore
 import os
+import logging
+
+# Set up logging configuration
+logging.basicConfig(level=logging.WARNING, format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 class BuildModel():
-    def __init__(self,device = torch.device("cpu"),model_mode = 'SS',gpu_mode = False ,train = False,preload_model = 'SS',pretrain_model_file = ''):
+    """
+    Initializes and configures a model based on the specified parameters, handling both training and pre-loaded scenarios.
+
+    Parameters:
+        device (torch.device): The device to use for the model, defaults to CPU.
+        model_mode (str): The mode of the model, which can be 'SS', 'HF', 'multiF_HF', 'SS_HF', or 'Descriptors'.
+        gpu_mode (bool): Flag indicating whether to use GPU for model operations, defaults to False.
+        train (bool): Flag indicating whether the model is being initialized for training, defaults to False.
+        preload_model (str): The model to preload, defaults to the value of model_mode.
+        pretrain_model_file (str): Path to a pre-trained model file to load, defaults to empty.
+        dataset (str): Specifies the dataset to use, defaults to 'qm9'. Valid options are 'qm9' and 'ocelot'.
+
+    If a dataset is specified and model_mode is not 'multiF_HF', model_mode will be overridden to 'multiF_HF'.
+    If a pretrain_model_file is provided but a dataset is also specified, the file will be ignored and the model
+    will default to 'multiF_HF' settings.
+
+    Raises:
+        ValueError: If the specified dataset is not valid.
+
+    This class supports initializing a model directly with specified configurations. It handles device placement,
+    distributed training setup, and loading pre-trained models based on the configuration.
+
+    Examples of usage:
+        - For a simple Self-Supervised model: BuildModel(model_mode='SS')
+        - For loading a specific pre-trained High Fidelity model: BuildModel(preload_model='HF', pretrain_model_file='path/to/model')
+
+    """
+    def __init__(self,device = torch.device("cpu"),model_mode = 'SS',gpu_mode = False ,train = False,preload_model = '',pretrain_model_file = '',dataset = 'qm9'):
         
         self.device = device
         self.model_mode = model_mode
         self.gpu_mode = gpu_mode
+        if not preload_model:
+            preload_model = model_mode
+        if dataset:
+            if self.model_mode != 'multiF_HF':
+                message = (
+                    "Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, "
+                    "since 'dataset' is specified, 'model_mode' will be overridden to 'multiF_HF'."
+                )
+                print(message)
+                logging.warning(message)
+            if pretrain_model_file != '':
+                message = (
+                    "Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' "
+                    "is specified and the model configuration will default to 'multiF_HF'."
+                )
+                print(message)
+                logging.warning(message)
+            self.model_mode = 'multiF_HF'
+            preload_model = 'multiF_HF'
+            pretrain_model_file = ''
+            if dataset not in ['qm9', 'ocelot']:
+                raise ValueError("Invalid dataset specified. Please choose either 'qm9' or 'ocelot'.")
+
 
         if model_mode == 'Descriptors':
             model = DescriptorHF()
@@ -34,6 +89,21 @@ class BuildModel():
         if not pretrain_model_file:
             if  preload_model == 'SS':   
                 pretrain_model_file = self._get_SS_path()
+            else:
+                # Log the message as a warning
+                message = (
+                    "Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. "
+                    "To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` "
+                    "when initializing your model. If you wish to load the model in SS mode without specifying a dataset, "
+                    "please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, "
+                    "you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`."
+                )
+
+                # Print and log the same message
+                print(message)
+                logging.warning(message)
+                pretrain_model_file = self._get_multiF_HF_path(dataset)
+
         self._pre_load_model(preload_model,pretrain_model_file = pretrain_model_file)
         
 
@@ -134,14 +204,22 @@ class BuildModel():
                 self.model.multi_high_fidelity_model.fc2.bias.copy_(self.model.module.high_fidelity_model.fc2.bias)
 
     def _get_SS_path(self):
-        # Get the directory of the current script
+        """
+        Constructs the full path to the best Self-Supervised (SS) model file based on the GPU mode.
+        """
         current_dir = os.path.dirname(__file__)
-        # Construct the path relative to the current script
-        # Move up to the package root (MolTransformer), assuming the current script is inside 'model/model_operation'
         package_root = os.path.abspath(os.path.join(current_dir, '../..'))
-        # Determine the model file based on gpu_mode
         model_file = 'Best_SS_GPU.pt' if self.gpu_mode else 'Best_SS_CPU.pt'
-        # Append the relative path to the target file
-        model_path = os.path.join(package_root, 'models/best_models/SS_model', model_file)
-        
+        model_path = os.path.join(package_root, 'model', 'models', 'best_models', 'SS_model', model_file)
+        return model_path
+
+    def _get_multiF_HF_path(self, dataset):
+        """
+        Constructs the full path to the best multi-fidelity HF model file based on the GPU mode and dataset.
+        """
+        current_dir = os.path.dirname(__file__)
+        package_root = os.path.abspath(os.path.join(current_dir, '../..'))
+        model_file = 'R2_HF_best.pt' if self.gpu_mode else 'model_noneDDP.pt'
+        model_folder = 'ocelot_aea' if dataset == 'ocelot' else 'qm9_lumo'
+        model_path = os.path.join(package_root, 'model', 'models', 'best_models', 'MultiF_HF', model_folder, model_file)
         return model_path

@@ -22,11 +22,12 @@ class Config:
     """
     def __init__(self,config_name = ''):
         if not config_name:
-            config_name = 'train_config'
+            config_name = 'train_config.json'
         try:
             # Calculate the path to the configuration file
             base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-            config_path = os.path.join(base_dir, config_name,'.json')
+            config_path = os.path.join(base_dir, config_name)
+            print('expect a configuration file at :', config_path)
 
             # Open and load the configuration file
             with open(config_path, 'r') as config_file:

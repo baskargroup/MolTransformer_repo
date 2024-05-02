@@ -1,5 +1,6 @@
 {
-    "gpu_mode": false
+    "gpu_mode": false,
+    "output_folder_name": "test_gm"
 
 
 
