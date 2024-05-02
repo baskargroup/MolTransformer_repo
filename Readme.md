@@ -82,16 +82,22 @@ Enabling GPU Mode: Set gpu_mode to True to enable processing on a GPU, enhancing
 ### Important Notes
 Ensure both 'train' and 'test' paths are specified when using custom data. Failing to specify both will default the DataLoader to use the preconfigured datasets ('qm9' or 'ocelot').
 Explicitly define both paths to avoid default settings. The system will not infer missing paths.
-### Example Usage
-Example 1: Using the DataLoader with default settings for the 'qm9' dataset
+## Example Usage of DataLoader
+
+
+```python
+# Example 1: Using the DataLoader with default settings for the 'qm9' dataset
 data_loader = DataLoader(dataset='qm9')
 
-Example 2: Using custom data with specified paths
+# Example 2: Using custom data with specified paths
 custom_data_path = {
     'train': ['/path/to/your/train_data.csv'],
     'test': ['/path/to/your/test_data.csv']
 }
 data_loader = DataLoader(data_path=custom_data_path, label='your_label_here', gpu_mode=True)
 
-Example 3: Handling 'ocelot' dataset with GPU acceleration
+#Example 3: Handling 'ocelot' dataset with GPU acceleration
 data_loader = DataLoader(dataset='ocelot', gpu_mode=True)
+
+```
+
