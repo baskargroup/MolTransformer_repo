@@ -244,7 +244,6 @@ class dataset_building(Dataset):
     def _get_labels(self,index):
         properties = Variable(torch.zeros((self.num)))
         properties[0] = torch.tensor(self.data[self.label][index])
-        print('length of ')
         return properties
 
 

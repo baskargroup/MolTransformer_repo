@@ -94,21 +94,6 @@ class ModelOperator():
         else:
             self.lock_FirstTop = False
 
-    
-    def load_pretrain_SS_model(self):
-        # Relative path from the current file to the best_models directory
-        base_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'best_models', 'SS_model')
-        if not global_config['pretrain_model_file']:
-            model_filename = 'Best_SS_GPU.pt' if global_config["gpu_mode"] else 'Best_SS_CPU.pt'
-            model_path = os.path.join(base_path, model_filename)
-        else:
-            model_path = global_config['pretrain_model_file']
-        if global_config["gpu_mode"]:
-            self.model.load_state_dict(torch.load(model_path))
-            print('load the gpu model!! ')
-        else:
-            self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
-            print('load the cpu model!! ')
 
     def train(self,epochs = None,lr = 0.0001):
         print('start training')

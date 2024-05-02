@@ -141,7 +141,7 @@ class BuildModel():
             else:
                 pass
         elif preload_model == 'SS':
-            self.load_pretrain_SS_model()  # change to: load pretrain ss model
+            self.load_pretrain_SS_model(pretrain_model_file = pretrain_model_file)  # change to: load pretrain ss model
             self.model.eval()
             if self.model_mode != 'SS':
                 if self.model_mode in ['SS_HF','HF']:
@@ -244,3 +244,18 @@ class BuildModel():
         model_folder = 'ocelot_aea' if dataset == 'ocelot' else 'qm9_lumo'
         model_path = os.path.join(package_root, 'model', 'models', 'best_models', 'MultiF_HF', model_folder, model_file)
         return model_path
+    
+    def load_pretrain_SS_model(self,pretrain_model_file):
+        # Relative path from the current file to the best_models directory
+        base_path = os.path.join(os.path.dirname(__file__), '..', 'models', 'best_models', 'SS_model')
+        if not pretrain_model_file:
+            model_filename = 'Best_SS_GPU.pt' if self.gpu_mode else 'Best_SS_CPU.pt'
+            model_path = os.path.join(base_path, model_filename)
+        else:
+            model_path = pretrain_model_file
+        if self.gpu_mode:
+            self.model.load_state_dict(torch.load(model_path))
+            print('load the gpu model!! ')
+        else:
+            self.model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+            print('load the cpu model!! ')

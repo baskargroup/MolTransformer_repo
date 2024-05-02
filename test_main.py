@@ -11,6 +11,10 @@ build_model_instance = BuildModel(model_mode = 'SS')
 model = build_model_instance.model
 print("loaded SS model")
 
+build_model_instance = BuildModel(dataset = 'SS')
+model = build_model_instance.model
+print("loaded SS model")
+
 build_model_instance = BuildModel(dataset = 'ocelot')
 model = build_model_instance.model
 print("loaded multiHF_hf ocelot model")

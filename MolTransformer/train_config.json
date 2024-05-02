@@ -1,9 +1,9 @@
 {
-    "model_mode": "SS",
-    "pretrain_model_type": "SS",
+    "model_mode": "multiF_HF",
+    "pretrain_model_type": "multiF_HF",
     "user_data":false,
-    "dataset":"qm9",
-    "high_fidelity": "aea",
+    "dataset":"ocelot",
+    "high_fidelity": "lumo",
     "num_gpu": 4,
     "gpu_mode": false,
     "batch_size":64,
