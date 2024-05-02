@@ -12,7 +12,7 @@ class GenerateMolecules():
             gpu_mode = config["gpu_mode"] ,train = True, 
             preload_model=global_config['pretrain_model_type'], pretrain_model_file=global_config['pretrain_model_file'])
         self.model = build_model_instance.model
-        #change
+        #change test 
      
           
           
