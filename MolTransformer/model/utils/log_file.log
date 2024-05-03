@@ -231,3 +231,115 @@
 2024-05-02 16:47:27,898 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
 2024-05-02 16:49:40,642 - INFO - ********train size :  107106 ***************
 2024-05-02 16:49:40,643 - INFO - ********test size :  26776 ***************
+2024-05-02 21:01:22,249 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:01:24,127 - INFO - multiF_HF
+2024-05-02 21:01:24,127 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified and not 'SS', the model configuration will load default 'multiF_HF' model.
+2024-05-02 21:01:24,157 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:01:24,743 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:01:24,831 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:01:52,614 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:01:53,039 - INFO - multiF_HF
+2024-05-02 21:01:53,039 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified and not 'SS', the model configuration will load default 'multiF_HF' model.
+2024-05-02 21:01:53,068 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:01:53,522 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:01:53,608 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:02:44,125 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:02:44,566 - INFO - SS
+2024-05-02 21:02:44,567 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:02:44,567 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified and not 'SS', the model configuration will load default 'multiF_HF' model.
+2024-05-02 21:02:44,571 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:02:48,901 - INFO - ********train size :  126976 ***************
+2024-05-02 21:02:48,901 - INFO - ********test size :  31738 ***************
+2024-05-02 21:02:48,902 - INFO - evaluate decoder, num_batch: 1
+2024-05-02 21:03:23,059 - INFO - number of inference: 64
+2024-05-02 21:03:23,060 - INFO - validation ratio:    1.0
+2024-05-02 21:03:23,061 - INFO - molecular acuracy:   0.0
+2024-05-02 21:03:23,061 - INFO - symbol accuracy:     0.1304163126593033
+2024-05-02 21:03:23,062 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:03:23,070 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:03:23,171 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:03:23,175 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:03:23,269 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:03:23,273 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:03:23,382 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:03:23,385 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:03:23,480 - INFO - The 'model_mode' is set to default 'SS'.
+2024-05-02 21:03:27,838 - INFO - ********train size :  126976 ***************
+2024-05-02 21:03:27,838 - INFO - ********test size :  31738 ***************
+2024-05-02 21:03:27,838 - INFO - The 'model_mode' is set to default 'SS'.
+2024-05-02 21:03:32,320 - INFO - ********train size :  126976 ***************
+2024-05-02 21:03:32,320 - INFO - ********test size :  31738 ***************
+2024-05-02 21:03:32,341 - INFO - The 'model_mode' will default to 'multiF_HF'. To customize, specify model_mode explicitly, e.g., DataLoader(dataset='ocelot', model_mode='HF'). Ensure 'label' is set appropriately.
+2024-05-02 21:03:32,767 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:03:32,863 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:04:20,719 - INFO - ********train size :  19870 ***************
+2024-05-02 21:04:20,721 - INFO - ********test size :  4962 ***************
+2024-05-02 21:04:20,761 - INFO - The 'model_mode' will default to 'multiF_HF'. To customize, specify model_mode explicitly, e.g., DataLoader(dataset='ocelot', model_mode='HF'). Ensure 'label' is set appropriately.
+2024-05-02 21:04:21,594 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:04:21,680 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2024-05-02 21:05:22,597 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:05:23,042 - INFO - SS
+2024-05-02 21:05:23,042 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:05:23,042 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified and not 'SS', the model configuration will load default 'multiF_HF' model.
+2024-05-02 21:05:23,067 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:05:27,751 - INFO - ********train size :  126976 ***************
+2024-05-02 21:05:27,751 - INFO - ********test size :  31738 ***************
+2024-05-02 21:05:27,756 - INFO - evaluate decoder, num_batch: 10
+2024-05-02 21:08:53,248 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:08:53,627 - INFO - SS
+2024-05-02 21:08:53,627 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-05-02 21:08:58,050 - INFO - ********train size :  126976 ***************
+2024-05-02 21:08:58,050 - INFO - ********test size :  31738 ***************
+2024-05-02 21:08:58,051 - INFO - evaluate decoder, num_batch: 10
+2024-05-02 21:09:19,461 - INFO - number of inference: 640
+2024-05-02 21:09:19,463 - INFO - validation ratio:    1.0
+2024-05-02 21:09:19,463 - INFO - molecular acuracy:   1.0
+2024-05-02 21:09:19,463 - INFO - symbol accuracy:     1.0
+2024-05-02 21:09:19,464 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:09:19,468 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:09:19,572 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:09:19,575 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:09:19,676 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:09:19,680 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:09:19,788 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:09:19,791 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:11:09,943 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:11:10,400 - INFO - SS
+2024-05-02 21:11:10,400 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-05-02 21:11:14,684 - INFO - ********train size :  126976 ***************
+2024-05-02 21:11:14,685 - INFO - ********test size :  31738 ***************
+2024-05-02 21:11:14,686 - INFO - evaluate decoder, num_batch: 10
+2024-05-02 21:11:36,111 - INFO - number of inference: 640
+2024-05-02 21:11:36,112 - INFO - validation ratio:    1.0
+2024-05-02 21:11:36,112 - INFO - molecular acuracy:   1.0
+2024-05-02 21:11:36,112 - INFO - symbol accuracy:     1.0
+2024-05-02 21:11:36,130 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:11:36,134 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:11:36,272 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-02 21:11:36,275 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-02 21:13:36,187 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:13:36,634 - INFO - SS
+2024-05-02 21:13:36,635 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-05-02 21:13:40,914 - INFO - ********train size :  126976 ***************
+2024-05-02 21:13:40,914 - INFO - ********test size :  31738 ***************
+2024-05-02 21:13:40,915 - INFO - evaluate decoder, num_batch: 10
+2024-05-02 21:14:01,590 - INFO - number of inference: 640
+2024-05-02 21:14:01,590 - INFO - validation ratio:    1.0
+2024-05-02 21:14:01,590 - INFO - molecular acuracy:   1.0
+2024-05-02 21:14:01,590 - INFO - symbol accuracy:     1.0
+2024-05-02 21:23:55,687 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:24:26,045 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:27:59,957 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:28:27,086 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:30:26,997 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:30:28,982 - INFO - iteration_num: 0
+2024-05-02 21:30:28,982 - INFO - uniqueness_ratio: 1.0
+2024-05-02 21:32:21,050 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:32:30,888 - INFO - iteration_num: 0
+2024-05-02 21:32:30,889 - INFO - uniqueness_ratio: 0.92
+2024-05-02 21:36:05,934 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:36:15,411 - INFO - iteration_num: 0
+2024-05-02 21:36:15,411 - INFO - uniqueness_ratio: 0.92
+2024-05-02 21:37:08,593 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 21:37:17,930 - INFO - iteration_num: 0
+2024-05-02 21:37:17,931 - INFO - uniqueness_ratio: 0.92

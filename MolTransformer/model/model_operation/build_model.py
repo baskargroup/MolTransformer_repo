@@ -36,7 +36,7 @@ class BuildModel():
         - For loading a specific pre-trained High Fidelity model: BuildModel(preload_model='HF', pretrain_model_file='path/to/model')
 
     """
-    def __init__(self,device = torch.device("cpu"),model_mode = 'SS',gpu_mode = False ,train = False,preload_model = '',pretrain_model_file = '',dataset = 'qm9'):
+    def __init__(self,device = torch.device("cpu"),model_mode = 'SS',gpu_mode = False ,train = False,preload_model = '',pretrain_model_file = '',dataset = ''):
         
         self.device = device
         self.model_mode = model_mode
@@ -111,6 +111,7 @@ class BuildModel():
         if not pretrain_model_file:
             if  preload_model == 'SS':   
                 pretrain_model_file = self._get_SS_path()
+                print('loading SS model')
             else:
                 # Log the message as a warning
                 message = (

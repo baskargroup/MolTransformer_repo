@@ -101,7 +101,7 @@ Index = LoadIndex()
 class IndexConvert:
     def __init__(self):
         # Assuming Index is an object with attributes like sos_indx, eos_indx, pad_indx, etc.
-        self.Index = Index
+        self.Index = LoadIndex()
 
     def compare_2_idxs(self, target_idx, reconstruction_output_idx):
         ignore_list = [self.Index.sos_indx, self.Index.eos_indx, self.Index.pad_indx]
@@ -120,12 +120,7 @@ class IndexConvert:
         return molecular_correct, symbol, symbol_correct, test_size
 
     def index_2_selfies(self, list_of_index_list):
-        selfies_list = []
-        for index_list in list_of_index_list:
-            selfies = ''.join(self.Index.ind2char[idx] for idx in index_list
-                              if idx not in [self.Index.sos_indx, self.Index.eos_indx, self.Index.pad_indx])
-            selfies_list.append(selfies)
-        return selfies_list
+        return [''.join(self.Index.ind2char[v] for v in sublist if v not in {self.Index.sos_indx, self.Index.eos_indx, self.Index.pad_indx , self.Index.char2ind['[nop]']}) for sublist in list_of_index_list]
 
     def selfies_2_smile(self, selfies_list):
         smiles = [sf.decoder(selfies) for selfies in selfies_list]

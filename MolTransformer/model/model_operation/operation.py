@@ -48,7 +48,7 @@ class ModelOperator():
 
         build_model_instance = BuildModel(device=device,model_mode=global_config['model_mode'],
             gpu_mode = global_config["gpu_mode"] ,train = True, 
-            preload_model=global_config['pretrain_model_type'], pretrain_model_file=global_config['pretrain_model_file'])
+            preload_model=global_config['pretrain_model_type'], pretrain_model_file=global_config['pretrain_model_file'],dataset = global_config['dataset'])
         self.model = build_model_instance.model
         
         ########### define data loader stuff 

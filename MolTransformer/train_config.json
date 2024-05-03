@@ -1,8 +1,8 @@
 {
-    "model_mode": "multiF_HF",
-    "pretrain_model_type": "multiF_HF",
+    "model_mode": "SS",
+    "pretrain_model_type": "SS",
     "user_data":false,
-    "dataset":"ocelot",
+    "dataset":"SS",
     "high_fidelity": "lumo",
     "num_gpu": 4,
     "gpu_mode": false,

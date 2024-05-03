@@ -3,10 +3,13 @@ from MolTransformer import *
 '''print('imported')
 MO = ModelOperator()
 print('---------build model operator-----------')
-MO.evaluate_decoder(num_batch = 1)
+MO.evaluate_decoder(num_batch = 10)
 #MO.train()
-MO.r_square(num_batch = 100)'''
-
+MO.r_square(num_batch = 100)
+'''
+GM = GenerateMethods()
+GM.global_molecular_generation(n_samples = 100 )
+''''
 build_model_instance = BuildModel(model_mode = 'SS')
 model = build_model_instance.model
 print("loaded SS model")
@@ -34,4 +37,4 @@ test_data = data.test
 print("loaded DataLoader ocelot ")
 data = DataLoader(dataset = 'qm9')
 test_data = data.test
-print("loaded DataLoader qm9 ")
+print("loaded DataLoader qm9 ")'''
