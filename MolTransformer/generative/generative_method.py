@@ -30,7 +30,7 @@ class GenerateMethods(IndexConvert):
         Take LS of the moleular pair: ( start , end ), compute the vector of the LS and then take k points on the vector.
         Decode the k points, record them if they are unique molecules. 
         Plot and solve all the generative molecules. 
-    5. smiles_2_latent_space
+    5. smile_2_latent_space
     6. latent_space_2_smiles
     7. latent_space_2_properties:
         to use the function, make sure you call .set_property_model(dataset = 'qm9') or 'ocelot'
@@ -48,7 +48,7 @@ class GenerateMethods(IndexConvert):
             report_save_path = os.path.join(self.base_dir, 'output','GenerateMethods/')
         self.report_save_path = report_save_path
         check_path(self.report_save_path)
-        
+
         logging.basicConfig(filename=self.report_save_path +'log.txt', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode)
@@ -154,17 +154,19 @@ class GenerateMethods(IndexConvert):
         plot_generative_molecules_analysis(df,save_file = global_molecular_generation_save_path )
         return unique_smiles_list,unique_selfies_list
     
-    def latent_space_2_smiles(self,latent_space):
-        # Check if the numpy array has the correct number of elements
-        # expect shape: (num,401,30)
-        if int(latent_space.size % 12030) != 0 :
-            raise ValueError(f"Expected numpy array of size 12030, got {latent_space.size}")
+    def latent_space_2_smiles(self, latent_space):
+        # Reshape the numpy array
+        ls = latent_space.reshape(-1, 401, 30)
         
-        # Reshape the numpy array and convert it to a torch tensor
-        torch_tensor = torch.from_numpy(latent_space.reshape(-1, 401, 30)).to(self.device)
+        # Convert numpy array to a torch tensor and move it to the device
+        if isinstance(ls, np.ndarray):
+            torch_tensor = torch.from_numpy(ls).to(self.device)
+        else:
+            torch_tensor = ls.to(self.device)
         
-        smiles,selfies = self._memory_2_smiles(torch_tensor)
-        return smiles,selfies
+        # Assuming _memory_2_smiles is a method that takes a torch tensor and returns smiles and selfies
+        smiles, selfies = self._memory_2_smiles(torch_tensor)
+        return smiles, selfies
     
     def _memory_2_smiles(self,memory_torch):
 

@@ -652,3 +652,8 @@
 2024-05-02 22:50:25,416 - INFO - Mean of r: 16.919509887695312
 2024-05-02 22:50:25,416 - INFO - Standard Deviation of r: 3.5288354083979994
 2024-05-02 22:50:25,416 - INFO - Ratio of fail: 0.0
+2024-05-02 23:00:24,234 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 23:03:27,704 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 23:06:17,438 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 23:07:09,237 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 23:07:35,912 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
