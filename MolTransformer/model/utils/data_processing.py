@@ -6,7 +6,9 @@ from .general_utils import plot_histogram
 from rdkit import Chem # type: ignore
 from .descriptors import molecule_descriptors
 import selfies as sf # type: ignore
+import os
 from .general_utils import dataset_building, get_index_path
+from ..utils import check_path
 
 class DataProcess(): 
     """
@@ -14,12 +16,22 @@ class DataProcess():
     high_fidelity_label: str, the label . note a column with the input label name is needed in the csv file
 
     """
-    def __init__(self,model_mode,data_path,high_fidelity_label,save_path):
+    def __init__(self,model_mode,data_path,high_fidelity_label,report_save_path, save = False):
+        self.save = save or bool(report_save_path)
+        if  self.save  and not report_save_path:
+            report_base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            report_save_path = os.path.join(report_base_dir, 'output','user_output')
+            print('Resault will be save to the following path: ', report_save_path)
+            
+        
+        if self.save:
+            self.report_save_path = report_save_path
+            check_path(self.report_save_path)
+
         
         self.index_path = get_index_path()
         self.train_path = data_path['train'] 
         self.test_path = data_path['test'] 
-        self.save_path = save_path
 
         #########
         '''
@@ -84,7 +96,8 @@ class DataProcess():
 
     def _std_data(self,data_train_sel,data_test_sel):
         data_train_sel[self.label],data_test_sel[self.label] = self.standardize_data(data_train_sel[self.label],data_test_sel[self.label],self.label)
-        plot_histogram(data1 = data_train_sel[self.label],data2 = data_test_sel[self.label],path = self.save_path ,name = self.label)   
+        if self.save:
+            plot_histogram(data1 = data_train_sel[self.label],data2 = data_test_sel[self.label],path = self.report_save_path ,name = self.label)   
         return data_train_sel,data_test_sel
 
     
@@ -103,14 +116,16 @@ class DataProcess():
         constant = np.ceil(np.abs(min(min(data1), min(data2))))
         data1 = data1 + constant
         data2 = data2 + constant
-        np.save(self.save_path + name + '_mean_std.npy', [mean1, std1,constant])
+        if self.save:
+            np.save(self.report_save_path + name + '_mean_std.npy', [mean1, std1,constant])
         self.std_parameter[name]['mean'] = mean1
         self.std_parameter[name]['std'] = std1
         self.std_parameter[name]['constant'] = constant
         return data1, data2
 
     def recover_standardized_data(self,data1, data2):
-        mean1, std1, constant = np.load(self.save_path + 'mean_std.npy')
+        if self.save:
+            mean1, std1, constant = np.load(self.report_save_path + 'mean_std.npy')
         data1 = data1 - constant
         data2 = data2 - constant
         data1 = data1 * std1 + mean1

@@ -23,7 +23,7 @@ class DataLoader:
     Raises:
         ValueError: If both or one of the train/test paths are not specified when using custom data.
     """
-    def __init__(self, model_mode='', gpu_mode=False, dataset='SS', data_path={'train': [''], 'test': ['']}, label='',report_save_path = ''):
+    def __init__(self, model_mode='', gpu_mode=False, dataset='SS', data_path={'train': [''], 'test': ['']}, label='',report_save_path = '', save = False):
         self.model_mode = model_mode
         self.gpu_mode = gpu_mode
         self.dataset = dataset
@@ -81,10 +81,14 @@ class DataLoader:
             test_path = glob.glob(os.path.join(base_test_path, '*.csv'))
 
             data_path = {'train':train_path,'test':test_path}
-        if not report_save_path:
-            report_save_path = os.path.join(base_dir, 'output','user_output')
+        self.save = save or bool(report_save_path)
+        if  self.save  and not report_save_path:
+            report_base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            report_save_path = os.path.join(report_base_dir, 'output','user_output')
+            print('Resault will be save to the following path: ', report_save_path)
         
-        check_path(report_save_path)
+        if self.save:
+            check_path(report_save_path)
 
         Data = DataProcess(model_mode = self.model_mode ,data_path = data_path,high_fidelity_label =label ,save_path = report_save_path)
         logging.info("********train size :  " + str(len(Data.dataset_train)) + " ***************")

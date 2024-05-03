@@ -49,9 +49,9 @@ class GenerateMethods(IndexConvert):
             self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
             report_save_path = os.path.join(self.base_dir, 'output','GenerateMethods/')
             print('Resault will be save to the following path: ', report_save_path)
+        if self.save:
             self.report_save_path = report_save_path
             check_path(self.report_save_path)
-            logging.basicConfig(filename=self.report_save_path +'log.txt', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode)
         self.model = build_model_instance.model
