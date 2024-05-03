@@ -343,3 +343,312 @@
 2024-05-02 21:37:08,593 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
 2024-05-02 21:37:17,930 - INFO - iteration_num: 0
 2024-05-02 21:37:17,931 - INFO - uniqueness_ratio: 0.92
+2024-05-02 22:19:17,711 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:19:27,149 - INFO - iteration_num: 0
+2024-05-02 22:19:27,149 - INFO - uniqueness_ratio: 0.92
+2024-05-02 22:23:04,401 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:23:14,341 - INFO - iteration_num: 0
+2024-05-02 22:23:14,342 - INFO - uniqueness_ratio: 0.92
+2024-05-02 22:23:50,846 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:24:00,439 - INFO - iteration_num: 0
+2024-05-02 22:24:00,440 - INFO - uniqueness_ratio: 0.92
+2024-05-02 22:25:35,675 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:25:45,432 - INFO - iteration_num: 0
+2024-05-02 22:25:45,432 - INFO - uniqueness_ratio: 0.92
+2024-05-02 22:25:46,465 - INFO - For vector 0 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:47,053 - INFO - For vector 0 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:47,663 - INFO - For vector 1 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:48,587 - INFO - For vector 1 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:50,524 - INFO - For vector 3 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:51,114 - INFO - For vector 3 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:51,704 - INFO - For vector 4 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:52,298 - INFO - For vector 4 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:52,893 - INFO - For vector 5 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:53,517 - INFO - For vector 5 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:54,140 - INFO - For vector 6 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:54,747 - INFO - For vector 6 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:55,350 - INFO - For vector 7 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:55,938 - INFO - For vector 7 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:56,524 - INFO - For vector 8 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:57,111 - INFO - For vector 8 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:57,699 - INFO - For vector 9 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:58,296 - INFO - For vector 9 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:58,908 - INFO - For vector 10 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:25:59,504 - INFO - For vector 10 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:00,107 - INFO - For vector 11 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:00,709 - INFO - For vector 11 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:01,303 - INFO - For vector 12 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:01,909 - INFO - For vector 12 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:02,508 - INFO - For vector 13 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:03,106 - INFO - For vector 13 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:03,730 - INFO - For vector 14 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:04,346 - INFO - For vector 14 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:05,486 - INFO - For vector 15 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:07,926 - INFO - For vector 17 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:08,526 - INFO - For vector 18 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:09,124 - INFO - For vector 18 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:10,025 - INFO - For vector 19 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:10,844 - INFO - For vector 19 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:11,457 - INFO - For vector 20 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:12,112 - INFO - For vector 20 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:14,636 - INFO - For vector 22 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:15,263 - INFO - For vector 23 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:15,854 - INFO - For vector 23 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:16,481 - INFO - For vector 24 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:17,089 - INFO - For vector 24 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:17,693 - INFO - For vector 25 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:18,341 - INFO - For vector 25 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:18,990 - INFO - For vector 26 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:19,642 - INFO - For vector 26 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:20,286 - INFO - For vector 27 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:20,882 - INFO - For vector 27 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:22,191 - INFO - For vector 28 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:22,859 - INFO - For vector 29 , the direction:-1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:23,501 - INFO - For vector 29 , the direction:1  failed to find new molecule    ,count: 14
+2024-05-02 22:26:23,502 - INFO - Min of r: 11.10992431640625
+2024-05-02 22:26:23,502 - INFO - Max of r: 15.0
+2024-05-02 22:26:23,502 - INFO - Mean of r: 14.715087890625
+2024-05-02 22:26:23,502 - INFO - Standard Deviation of r: 0.7938388633452235
+2024-05-02 22:26:23,502 - INFO - Ratio of fail: 0.8333333333333334
+2024-05-02 22:26:23,513 - INFO - iteration_num :0
+2024-05-02 22:26:23,513 - INFO - uniqueness_ratio :0.18032786885245902
+2024-05-02 22:39:40,322 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:39:41,684 - INFO - For vector 0 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:42,260 - INFO - For vector 0 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:42,973 - INFO - For vector 1 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:44,201 - INFO - For vector 1 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:44,841 - INFO - For vector 2 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:45,494 - INFO - For vector 2 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:46,132 - INFO - For vector 3 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:46,735 - INFO - For vector 3 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:47,336 - INFO - For vector 4 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:47,943 - INFO - For vector 4 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:48,555 - INFO - For vector 5 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:49,148 - INFO - For vector 5 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:49,720 - INFO - For vector 6 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:50,289 - INFO - For vector 6 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:50,858 - INFO - For vector 7 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:51,428 - INFO - For vector 7 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:51,999 - INFO - For vector 8 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:52,569 - INFO - For vector 8 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:53,139 - INFO - For vector 9 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:53,738 - INFO - For vector 9 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:54,318 - INFO - For vector 10 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:54,896 - INFO - For vector 10 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:55,482 - INFO - For vector 11 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:56,073 - INFO - For vector 11 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:56,664 - INFO - For vector 12 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:57,244 - INFO - For vector 12 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:57,812 - INFO - For vector 13 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:58,376 - INFO - For vector 13 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:58,945 - INFO - For vector 14 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:39:59,512 - INFO - For vector 14 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:00,152 - INFO - For vector 15 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:00,923 - INFO - For vector 15 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:01,511 - INFO - For vector 16 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:02,187 - INFO - For vector 16 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:02,787 - INFO - For vector 17 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:03,361 - INFO - For vector 17 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:03,946 - INFO - For vector 18 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:04,527 - INFO - For vector 18 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:05,117 - INFO - For vector 19 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:05,689 - INFO - For vector 19 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:06,253 - INFO - For vector 20 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:06,817 - INFO - For vector 20 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:07,382 - INFO - For vector 21 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:07,986 - INFO - For vector 21 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:08,563 - INFO - For vector 22 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:09,135 - INFO - For vector 22 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:09,713 - INFO - For vector 23 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:10,294 - INFO - For vector 23 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:10,871 - INFO - For vector 24 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:11,437 - INFO - For vector 24 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:12,022 - INFO - For vector 25 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:12,603 - INFO - For vector 25 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:13,170 - INFO - For vector 26 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:13,756 - INFO - For vector 26 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:14,321 - INFO - For vector 27 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:14,887 - INFO - For vector 27 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:15,453 - INFO - For vector 28 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:16,019 - INFO - For vector 28 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:16,610 - INFO - For vector 29 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:17,182 - INFO - For vector 29 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:17,760 - INFO - For vector 30 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:18,336 - INFO - For vector 30 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:18,954 - INFO - For vector 31 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:19,529 - INFO - For vector 31 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:20,098 - INFO - For vector 32 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:20,669 - INFO - For vector 32 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:21,251 - INFO - For vector 33 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:21,822 - INFO - For vector 33 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:22,413 - INFO - For vector 34 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:23,026 - INFO - For vector 34 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:23,688 - INFO - For vector 35 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:24,287 - INFO - For vector 35 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:25,338 - INFO - For vector 36 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:25,930 - INFO - For vector 36 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:26,510 - INFO - For vector 37 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:27,132 - INFO - For vector 37 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:27,758 - INFO - For vector 38 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:28,360 - INFO - For vector 38 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:28,938 - INFO - For vector 39 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:29,517 - INFO - For vector 39 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:30,128 - INFO - For vector 40 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:30,721 - INFO - For vector 40 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:31,295 - INFO - For vector 41 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:31,888 - INFO - For vector 41 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:32,486 - INFO - For vector 42 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:33,066 - INFO - For vector 42 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:33,639 - INFO - For vector 43 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:34,205 - INFO - For vector 43 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:34,772 - INFO - For vector 44 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:35,346 - INFO - For vector 44 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:35,948 - INFO - For vector 45 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:36,541 - INFO - For vector 45 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:37,113 - INFO - For vector 46 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:37,686 - INFO - For vector 46 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:38,257 - INFO - For vector 47 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:38,830 - INFO - For vector 47 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:39,397 - INFO - For vector 48 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:39,964 - INFO - For vector 48 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:40,532 - INFO - For vector 49 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:41,098 - INFO - For vector 49 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:41,667 - INFO - For vector 50 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:42,233 - INFO - For vector 50 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:42,802 - INFO - For vector 51 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:43,370 - INFO - For vector 51 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:43,969 - INFO - For vector 52 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:44,546 - INFO - For vector 52 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:45,139 - INFO - For vector 53 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:45,740 - INFO - For vector 53 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:46,312 - INFO - For vector 54 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:46,895 - INFO - For vector 54 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:47,485 - INFO - For vector 55 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:48,069 - INFO - For vector 55 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:48,648 - INFO - For vector 56 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:49,244 - INFO - For vector 56 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:49,820 - INFO - For vector 57 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:50,411 - INFO - For vector 57 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:50,989 - INFO - For vector 58 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:51,563 - INFO - For vector 58 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:52,498 - INFO - For vector 59 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:53,089 - INFO - For vector 59 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:53,687 - INFO - For vector 60 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:54,256 - INFO - For vector 60 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:54,825 - INFO - For vector 61 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:55,393 - INFO - For vector 61 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:55,963 - INFO - For vector 62 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:56,529 - INFO - For vector 62 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:57,096 - INFO - For vector 63 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:57,666 - INFO - For vector 63 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:58,405 - INFO - For vector 64 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:58,984 - INFO - For vector 64 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:40:59,623 - INFO - For vector 65 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:00,208 - INFO - For vector 65 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:00,786 - INFO - For vector 66 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:01,374 - INFO - For vector 66 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:01,950 - INFO - For vector 67 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:02,521 - INFO - For vector 67 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:03,102 - INFO - For vector 68 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:03,687 - INFO - For vector 68 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:04,288 - INFO - For vector 69 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:04,874 - INFO - For vector 69 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:05,522 - INFO - For vector 70 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:06,120 - INFO - For vector 70 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:06,704 - INFO - For vector 71 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:07,299 - INFO - For vector 71 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:07,889 - INFO - For vector 72 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:08,463 - INFO - For vector 72 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:09,034 - INFO - For vector 73 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:09,618 - INFO - For vector 73 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:10,188 - INFO - For vector 74 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:10,757 - INFO - For vector 74 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:11,326 - INFO - For vector 75 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:11,909 - INFO - For vector 75 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:12,476 - INFO - For vector 76 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:13,070 - INFO - For vector 76 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:13,645 - INFO - For vector 77 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:14,253 - INFO - For vector 77 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:14,945 - INFO - For vector 78 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:15,685 - INFO - For vector 78 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:16,395 - INFO - For vector 79 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:16,969 - INFO - For vector 79 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:18,133 - INFO - For vector 80 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:19,137 - INFO - For vector 80 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:20,157 - INFO - For vector 81 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:20,778 - INFO - For vector 81 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:21,396 - INFO - For vector 82 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:22,031 - INFO - For vector 82 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:22,685 - INFO - For vector 83 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:23,267 - INFO - For vector 83 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:24,002 - INFO - For vector 84 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:24,644 - INFO - For vector 84 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:25,234 - INFO - For vector 85 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:25,856 - INFO - For vector 85 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:26,512 - INFO - For vector 86 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:27,157 - INFO - For vector 86 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:28,156 - INFO - For vector 87 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:28,766 - INFO - For vector 87 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:29,341 - INFO - For vector 88 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:29,965 - INFO - For vector 88 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:30,547 - INFO - For vector 89 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:31,113 - INFO - For vector 89 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:31,718 - INFO - For vector 90 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:32,286 - INFO - For vector 90 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:32,853 - INFO - For vector 91 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:33,432 - INFO - For vector 91 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:34,013 - INFO - For vector 92 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:34,579 - INFO - For vector 92 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:35,146 - INFO - For vector 93 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:35,721 - INFO - For vector 93 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:36,303 - INFO - For vector 94 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:36,877 - INFO - For vector 94 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:37,452 - INFO - For vector 95 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:38,120 - INFO - For vector 95 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:38,730 - INFO - For vector 96 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:39,316 - INFO - For vector 96 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:39,907 - INFO - For vector 97 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:40,485 - INFO - For vector 97 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:41,118 - INFO - For vector 98 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:41,720 - INFO - For vector 98 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:42,305 - INFO - For vector 99 , the direction:-1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:42,885 - INFO - For vector 99 , the direction:1  failed to find new molecule    ,count: 13
+2024-05-02 22:41:42,890 - INFO - Min of r: 5.0
+2024-05-02 22:41:42,890 - INFO - Max of r: 5.0
+2024-05-02 22:41:42,890 - INFO - Mean of r: 5.0
+2024-05-02 22:41:42,891 - INFO - Standard Deviation of r: 0.0
+2024-05-02 22:41:42,891 - INFO - Ratio of fail: 1.0
+2024-05-02 22:43:25,822 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:43:26,855 - INFO - For vector 0 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:28,111 - INFO - For vector 1 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:29,767 - INFO - For vector 3 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:31,829 - INFO - For vector 6 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:33,476 - INFO - For vector 8 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:35,109 - INFO - For vector 10 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:36,337 - INFO - For vector 11 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:38,827 - INFO - For vector 14 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:39,241 - INFO - For vector 15 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:39,657 - INFO - For vector 15 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:40,073 - INFO - For vector 16 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:40,485 - INFO - For vector 16 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:40,897 - INFO - For vector 17 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:41,694 - INFO - For vector 17 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:42,110 - INFO - For vector 18 , the direction:-1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:42,523 - INFO - For vector 18 , the direction:1  failed to find new molecule    ,count: 15
+2024-05-02 22:43:43,353 - INFO - Min of r: 13.192138671875
+2024-05-02 22:43:43,353 - INFO - Max of r: 20.0
+2024-05-02 22:43:43,353 - INFO - Mean of r: 18.363601684570312
+2024-05-02 22:43:43,353 - INFO - Standard Deviation of r: 1.9655219200165772
+2024-05-02 22:43:43,353 - INFO - Ratio of fail: 0.4
+2024-05-02 22:47:40,181 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:48:23,045 - INFO - Min of r: 7.4310302734375
+2024-05-02 22:48:23,046 - INFO - Max of r: 22.4609375
+2024-05-02 22:48:23,046 - INFO - Mean of r: 15.9837646484375
+2024-05-02 22:48:23,046 - INFO - Standard Deviation of r: 3.769684504817926
+2024-05-02 22:48:23,046 - INFO - Ratio of fail: 0.0
+2024-05-02 22:49:51,862 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-02 22:50:25,415 - INFO - Min of r: 6.8896484375
+2024-05-02 22:50:25,416 - INFO - Max of r: 22.6348876953125
+2024-05-02 22:50:25,416 - INFO - Mean of r: 16.919509887695312
+2024-05-02 22:50:25,416 - INFO - Standard Deviation of r: 3.5288354083979994
+2024-05-02 22:50:25,416 - INFO - Ratio of fail: 0.0

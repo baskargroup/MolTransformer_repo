@@ -1,40 +1,22 @@
 from MolTransformer import *
 
-'''print('imported')
-MO = ModelOperator()
-print('---------build model operator-----------')
-MO.evaluate_decoder(num_batch = 10)
-#MO.train()
-MO.r_square(num_batch = 100)
-'''
+#ex1 
 GM = GenerateMethods()
-GM.global_molecular_generation(n_samples = 100 )
-''''
-build_model_instance = BuildModel(model_mode = 'SS')
-model = build_model_instance.model
-print("loaded SS model")
+#smiles_list,selfies_list = GM.global_molecular_generation(n_samples = 100 ) # generate random n_sample of smiles and selfies within the range on latent space, note that the length of unique_smiles_list,unique_selfies_list might not equal to n_samples, since there might be duplicate  generatived molecules, only unique molecules are returned. 
 
-build_model_instance = BuildModel(dataset = 'SS')
-model = build_model_instance.model
-print("loaded SS model")
+# ex2
+# GM = GenerateMethods()
+# generated_results,_ = GM.local_molecular_generation(dataset = 'qm9',num_vector = 30)  # generate random num_vector of smiles and selfies from a random selfies in the dataset
+# generated_results['SMILES']
+# generated_results['SELFIES']
+## generated_results sorted by pareto_frontie have saved to report_save_path/local_molecular_generation, default report_save_path is the package location/output/output/GenerateMethods/
 
-build_model_instance = BuildModel(dataset = 'ocelot')
-model = build_model_instance.model
-print("loaded multiHF_hf ocelot model")
+#ex3
+# GM = GenerateMethods(report_save_path = to your own path)
+initial_smile = GM.random_smile(dataset = 'qm9') # dataset can be your own csv file, make sure the files contains 'SELFIES'
+print('initial_smile: ', initial_smile)
+generated_results,_ = GM.neighboring_search(initial_smile = initial_smile,num_vector= 20)
+print('SMILES: ',generated_results['SMILES'])
+print('SELFIES: ',generated_results['SELFIES'])
 
-build_model_instance = BuildModel(dataset = 'qm9')
-model = build_model_instance.model
-print("loaded multiHF_hf qm9 model")
-
-data = DataLoader()
-test_data = data.test
-
-data = DataLoader(dataset = 'SS')
-test_data = data.test
-print("loaded DataLoader SS ")
-data = DataLoader(dataset = 'ocelot')
-test_data = data.test
-print("loaded DataLoader ocelot ")
-data = DataLoader(dataset = 'qm9')
-test_data = data.test
-print("loaded DataLoader qm9 ")'''
+#ex
