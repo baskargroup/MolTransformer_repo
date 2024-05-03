@@ -49,7 +49,7 @@ global_config = Config()
     
 def log_file():
     # Get the directory of the current script
-    package_directory = os.path.dirname(__file__)
+    package_directory =  os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     # Define the path to the log file within the package directory
     log_path = os.path.join(package_directory, "log_file.log")
     # Ensure the directory exists

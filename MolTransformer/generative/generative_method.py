@@ -38,18 +38,20 @@ class GenerateMethods(IndexConvert):
     9. random_smiles(dataset = 'ocelot') or 'qm9' or a path
     10. neighboring_search(smile)
         """
-    def __init__(self,gpu_mode = False,report_save_path = ''):
+    def __init__(self,gpu_mode = False,report_save_path = '',save = False):
         super().__init__()  # Initialize the base IndexConvert class
         self.device = device
 
         self.gpu_mode = gpu_mode
-        self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        if not report_save_path:
+        self.save = save or bool(report_save_path)
+        
+        if self.save  and not report_save_path:
+            self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
             report_save_path = os.path.join(self.base_dir, 'output','GenerateMethods/')
-        self.report_save_path = report_save_path
-        check_path(self.report_save_path)
-
-        logging.basicConfig(filename=self.report_save_path +'log.txt', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+            print('Resault will be save to the following path: ', report_save_path)
+            self.report_save_path = report_save_path
+            check_path(self.report_save_path)
+            logging.basicConfig(filename=self.report_save_path +'log.txt', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
 
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode)
         self.model = build_model_instance.model
@@ -70,8 +72,9 @@ class GenerateMethods(IndexConvert):
         then converts the samples to SMILES and SELFIES. The results are saved, and the uniqueness of
         the generated molecules is evaluated.
         """
-        global_molecular_generation_save_path = self.report_save_path + 'global_molecular_generation/'
-        check_path(global_molecular_generation_save_path)
+        if self.save:
+            global_molecular_generation_save_path = self.report_save_path + 'global_molecular_generation/'
+            check_path(global_molecular_generation_save_path)
 
         # bounding_box 
         current_dir = os.path.dirname(__file__)
@@ -136,22 +139,23 @@ class GenerateMethods(IndexConvert):
         unique_selfies_list = [selfies_list[i] for i in unique_index]
         unique_rdk_mol_list = [rdk_mol[i] for i in unique_index]
 
-        # Saving to a CSV file
-        csv_file_path = global_molecular_generation_save_path + 'GlobalGeneratedMolecules.csv'
-        df = pd.DataFrame({'SMILES': unique_smiles_list, 'SELFIES': unique_selfies_list})
-        #df = validate_smiles_in_pubchem(df)  # Ensure this function is defined
-        df.to_csv(csv_file_path, index=False)
+        if self.save:
+            # Saving to a CSV file
+            csv_file_path = global_molecular_generation_save_path + 'GlobalGeneratedMolecules.csv'
+            df = pd.DataFrame({'SMILES': unique_smiles_list, 'SELFIES': unique_selfies_list})
+            #df = validate_smiles_in_pubchem(df)  # Ensure this function is defined
+            df.to_csv(csv_file_path, index=False)
 
-        diversity_score = Tanimoto_diversity(unique_smiles_list)
-        csv_file_path = global_molecular_generation_save_path + 'Analysis.csv'
-        df_Analysis = pd.DataFrame({'uniqueness_ratio': [uniqueness_ratio], 'Tanimoto_diversity': [diversity_score]})
-        #df = validate_smiles_in_pubchem(df)  # Ensure this function is defined
-        df_Analysis.to_csv(csv_file_path, index=False)
+            diversity_score = Tanimoto_diversity(unique_smiles_list)
+            csv_file_path = global_molecular_generation_save_path + 'Analysis.csv'
+            df_Analysis = pd.DataFrame({'uniqueness_ratio': [uniqueness_ratio], 'Tanimoto_diversity': [diversity_score]})
+            #df = validate_smiles_in_pubchem(df)  # Ensure this function is defined
+            df_Analysis.to_csv(csv_file_path, index=False)
 
-        #plotting
-        # test
-        df['rdk_mol'] = unique_rdk_mol_list
-        plot_generative_molecules_analysis(df,save_file = global_molecular_generation_save_path )
+            #plotting
+            # test
+            df['rdk_mol'] = unique_rdk_mol_list
+            plot_generative_molecules_analysis(df,save_file = global_molecular_generation_save_path )
         return unique_smiles_list,unique_selfies_list
     
     def latent_space_2_smiles(self, latent_space):
@@ -225,8 +229,9 @@ class GenerateMethods(IndexConvert):
             return uniqueness_ratio
     
     def local_molecular_generation(self,top_k_closest = True, k = 30,alpha_list = [0,0.5,1], random_initial_smile = True,initial_smile = '',dataset = 'ocelot',search_range = 40, resolution = 0.001,num_vector = 150,sa_threshold=6):
-        local_molecular_generation_report_save_path = self.report_save_path + 'local_molecular_generation/'
-        check_path(local_molecular_generation_report_save_path)
+        if self.save:
+            local_molecular_generation_report_save_path = self.report_save_path + 'local_molecular_generation/'
+            check_path(local_molecular_generation_report_save_path)
         # Check if top_k_closest is True and alpha_list is empty
         if top_k_closest and not alpha_list:
             raise ValueError("Alpha list cannot be empty when top_k_closest is True")
@@ -249,17 +254,18 @@ class GenerateMethods(IndexConvert):
         print(f"iteration_num :" + str(self.iteration_num))
         print(f"uniqueness_ratio:" + str(uniqueness_ratio))
 
-        csv_file_path = local_molecular_generation_report_save_path + 'GenerateClosetMolecules' + '.csv'
-        df = pd.DataFrame(generated_results)
-        df.to_csv(csv_file_path, index=True)
-        
-        if top_k_closest:
-            for alpha in alpha_list: 
-                self._sort_pareto_frontier(generated_results = df,alpha = alpha, k = k, save = True, prefix = '',folder_path = local_molecular_generation_report_save_path,sa_threshold=sa_threshold)
-        
-        csv_file_path = local_molecular_generation_report_save_path + 'fail_case_check' + '.csv'
-        df = pd.DataFrame(fail_case_check)
-        df.to_csv(csv_file_path, index=True)
+        if self.save:
+            csv_file_path = local_molecular_generation_report_save_path + 'GenerateClosetMolecules' + '.csv'
+            df = pd.DataFrame(generated_results)
+            df.to_csv(csv_file_path, index=True)
+            
+            if top_k_closest:
+                for alpha in alpha_list: 
+                    self._sort_pareto_frontier(generated_results = df,alpha = alpha, k = k, save = True, prefix = '',folder_path = local_molecular_generation_report_save_path,sa_threshold=sa_threshold)
+            
+            csv_file_path = local_molecular_generation_report_save_path + 'fail_case_check' + '.csv'
+            df = pd.DataFrame(fail_case_check)
+            df.to_csv(csv_file_path, index=True)
         return generated_results
     
     def neighboring_search(self, initial_smile, search_range=40, resolution=0.001, num_vector=100):
@@ -279,8 +285,9 @@ class GenerateMethods(IndexConvert):
         - generated_results (dict): Contains the dimensions, directions, radii, SMILES, and SELFIES of the generated molecules.
         - fail_case_check (dict): Tracks the SMILES and SELFIES that failed to generate valid molecules.
         """
-        neighboring_search_report_save_path = self.report_save_path + 'neighboring_search/'
-        check_path(neighboring_search_report_save_path)
+        if self.save:
+            neighboring_search_report_save_path = self.report_save_path + 'neighboring_search/'
+            check_path(neighboring_search_report_save_path)
         # Validate resolution is strictly positive
         if resolution <= 0:
             raise ValueError("Resolution must be strictly positive to avoid potential division by zero.")
@@ -385,7 +392,8 @@ class GenerateMethods(IndexConvert):
         print(f"Number of failures: {fail_count}")
         print(f"Ratio of fail: {fail_count / (num_vector * 2 )}")
         r_list = np.array(generated_results['radius'][1:], dtype=float)  # Exclude the initial '0' radius
-        np.save(neighboring_search_report_save_path + 'radius_values.npy', r_list)
+        if self.save:
+            np.save(neighboring_search_report_save_path + 'radius_values.npy', r_list)
         logging.info(f"Min of r: {np.min(r_list)}")
         logging.info(f"Max of r: {np.max(r_list)}")
         logging.info(f"Mean of r: {np.mean(r_list)}")
@@ -430,8 +438,6 @@ class GenerateMethods(IndexConvert):
             hmol = Chem.AddHs(mol)
             k_smile = Chem.MolToSmiles(hmol, kekuleSmiles=True)
             k_selfies = sf.encoder(k_smile)
-            print('k_selfies ',k_selfies)
-            
             return [k_selfies]
         except Exception:
             print('error in translate for: ', smile)

@@ -1,0 +1,18 @@
+2024-05-03 19:03:18,267 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-03 19:04:10,653 - INFO - Min of r: 12.0367431640625
+2024-05-03 19:04:10,653 - INFO - Max of r: 25.9991455078125
+2024-05-03 19:04:10,653 - INFO - Mean of r: 18.343292236328125
+2024-05-03 19:04:10,653 - INFO - Standard Deviation of r: 3.208622709138885
+2024-05-03 19:04:10,653 - INFO - Ratio of fail: 0.0
+2024-05-03 19:04:10,669 - INFO - iteration_num :0
+2024-05-03 19:04:10,669 - INFO - uniqueness_ratio :0.5737704918032787
+2024-05-03 19:06:52,582 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-03 19:07:31,281 - INFO - Min of r: 13.7811279296875
+2024-05-03 19:07:31,281 - INFO - Max of r: 28.5662841796875
+2024-05-03 19:07:31,281 - INFO - Mean of r: 19.726033528645832
+2024-05-03 19:07:31,281 - INFO - Standard Deviation of r: 2.907040606114056
+2024-05-03 19:07:31,281 - INFO - Ratio of fail: 0.0
+2024-05-03 19:07:31,296 - INFO - iteration_num :0
+2024-05-03 19:07:31,296 - INFO - uniqueness_ratio :0.6557377049180327
+2024-05-03 19:07:46,903 - INFO - iteration_num: 0
+2024-05-03 19:07:46,903 - INFO - uniqueness_ratio: 0.92

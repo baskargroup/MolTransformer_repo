@@ -22,19 +22,19 @@ The `GenerateMethods` class in the MolTransformer project facilitates the genera
 ```python
 from MolTransformer import *
 # Example 1: Global Molecular Generation
-GM = GenerateMethods()
+GM = GenerateMethods(save = True) # set  save = True will save the results and lots
 smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
 # Note: The lengths of unique_smiles_list and unique_selfies_list may not equal n_samples due to possible duplicates.
 
 # Example 2: Local Molecular Generation
 GM = GenerateMethods()
-generated_results, _ = GM.local_molecular_generation(dataset='qm9', num_vector=30)
+generated_results = GM.local_molecular_generation(dataset='qm9', num_vector=30)
 print(generated_results['SMILES'])
 print(generated_results['SELFIES'])
 # Results are saved to report_save_path/local_molecular_generation by default.
 
 # Example 3: Neighboring Search
-GM = GenerateMethods(report_save_path='your_custom_path')
+GM = GenerateMethods(report_save_path='your_custom_path') # define a  report_save_path will save the results and plot as well 
 initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
 generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
