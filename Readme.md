@@ -127,7 +127,7 @@ Explicitly define both paths to avoid default settings. The system will not infe
 from MolTransformer import DataLoader
 
 # Example 1: Using the DataLoader with default settings for the 'qm9' dataset
-data_loader = DataLoader(dataset='qm9')
+data_loader = DataLoader(dataset='qm9',save = True) # save = True will auto save the histogram to printed path, or you can set report_save_path = 'your_path'
 
 # Example 2: Using custom data with specified paths
 custom_data_path = {
