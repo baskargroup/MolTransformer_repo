@@ -1,14 +1,14 @@
 
 This following section of README file will guide users through the process of setting up a Conda environment named "Env_MolTransformer" specific to your library's requirements.
-# Setting Up Env_MolTransformer
+## Setting Up Env_MolTransformer
 
-## Step 1: Install Conda
+### Step 1: Install Conda
 If you haven't already installed Conda, download and install it from the [official Conda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/).
 
-## Step 2: Download Environment File
+### Step 2: Download Environment File
 Ensure you have the `environment.yml` file from the MolTransformer library.
 
-## Step 3: Create the Conda Environment
+### Step 3: Create the Conda Environment
 Open your terminal or command prompt and navigate to the directory containing the `environment.yml` file. Run the following command:
 
 '''bash
@@ -18,15 +18,55 @@ conda activate Env_MolTransformer
 conda list
 '''
 # Quick Start of Running the code.
-## Step 1: edit config.jason especially to path and model_mode
-## Step 2: run the code
-For cpu: python test_main.py
-For gpu multi node: CUDA_VISIBLE_DEVICES=0,1,2,3 python3 -m torch.distributed.run --nproc_per_node=4 test_main.py
+## GenerateMethods Usage Guide
 
+### Overview
+The `GenerateMethods` class in the MolTransformer project facilitates the generation and analysis of molecular structures from latent space representations. This guide details how to utilize the class for various molecular generation tasks.
 
-If you are using Generative method, please change config.jason
+### Features
+- **Local Molecular Generation**: Generates new molecular structures by manipulating latent space vectors locally.
+- **Global Molecular Generation**: Samples a number of latent space vectors randomly to generate molecular structures globally.
+- **Neighboring Search**: Iteratively searches neighboring molecules to optimize a given property using a multi-fidelity model.
+- **Molecular Evolution**: Evolves molecules along a path in latent space from a start to an end molecule.
+- **Smiles and Selfies Conversion**: Converts SMILES to latent space representations and vice versa.
 
+### Configuration Details
+- **GPU Mode**: Enables computations on a GPU to speed up processing.
+- **Report Save Path**: Specifies the directory for saving outputs and logs.
 
+### Usage Examples
+```python
+from MolTransformer import *
+# Example 1: Global Molecular Generation
+GM = GenerateMethods()
+smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
+# Note: The lengths of unique_smiles_list and unique_selfies_list may not equal n_samples due to possible duplicates.
+
+# Example 2: Local Molecular Generation
+GM = GenerateMethods()
+generated_results, _ = GM.local_molecular_generation(dataset='qm9', num_vector=30)
+print(generated_results['SMILES'])
+print(generated_results['SELFIES'])
+# Results are saved to report_save_path/local_molecular_generation by default.
+
+# Example 3: Neighboring Search
+GM = GenerateMethods(report_save_path='your_custom_path')
+initial_smile = GM.random_smile(dataset='qm9')
+print('Initial SMILE:', initial_smile)
+generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
+print('Generated SMILES:', generated_results['SMILES'])
+print('Generated SELFIES:', generated_results['SELFIES'])
+
+# Example 4: Custom Latent Space Manipulation
+GM = GenerateMethods()
+initial_smile = GM.random_smile(dataset='qm9')
+print('Initial SMILE:', initial_smile)
+ls = GM.smile_2_latent_space(initial_smile)
+print('Latent Space Shape:', ls.shape)
+# Perform custom modifications to ls as needed
+edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
+print('Edited SMILE:', edit_smiles[0])
+```
 
 
 
