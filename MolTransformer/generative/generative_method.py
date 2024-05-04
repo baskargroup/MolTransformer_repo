@@ -37,6 +37,7 @@ class GenerateMethods(IndexConvert):
     8. compute_uniqueness_by_inchi
     9. random_smiles(dataset = 'ocelot') or 'qm9' or a path
     10. neighboring_search(smile)
+    11. set_property_model
         """
     def __init__(self,gpu_mode = False,report_save_path = ''):
         super().__init__()  # Initialize the base IndexConvert class
