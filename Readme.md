@@ -27,7 +27,7 @@ smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
 # Note: The lengths of unique_smiles_list and unique_selfies_list may not equal n_samples due to possible duplicates.
 
 # Example 2: Local Molecular Generation
-GM = GenerateMethods()
+GM = GenerateMethods(save = True)
 generated_results = GM.local_molecular_generation(dataset='qm9', num_vector=30)
 print(generated_results['SMILES'])
 print(generated_results['SELFIES'])
@@ -36,10 +36,14 @@ print(generated_results['SELFIES'])
 # Example 3: Neighboring Search
 GM = GenerateMethods(report_save_path='your_custom_path') # define a  report_save_path will save the results and plot as well 
 initial_smile = GM.random_smile(dataset='qm9')
+initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
 generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
 print('Generated SMILES:', generated_results['SMILES'])
 print('Generated SELFIES:', generated_results['SELFIES'])
+sorted_generated_results = GM.sort_pareto_frontier(generated_results) # you can further sort and pick the top k highest pareto_frontier computed by weight alpha (default k = 30, alpha = 0.5)
+print('Generated SMILES:', sorted_generated_results['SMILES'])
+print('Generated SELFIES:', sorted_generated_results['SELFIES'])
 
 # Example 4: Custom Latent Space Manipulation
 GM = GenerateMethods()

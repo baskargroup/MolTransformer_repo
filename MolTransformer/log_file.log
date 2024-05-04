@@ -16,3 +16,34 @@
 2024-05-03 19:07:31,296 - INFO - uniqueness_ratio :0.6557377049180327
 2024-05-03 19:07:46,903 - INFO - iteration_num: 0
 2024-05-03 19:07:46,903 - INFO - uniqueness_ratio: 0.92
+2024-05-04 17:55:35,040 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-04 17:56:56,462 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-04 17:57:30,202 - INFO - Min of r: 11.55029296875
+2024-05-04 17:57:30,202 - INFO - Max of r: 24.6630859375
+2024-05-04 17:57:30,202 - INFO - Mean of r: 18.474629720052082
+2024-05-04 17:57:30,203 - INFO - Standard Deviation of r: 2.8349310666438354
+2024-05-04 17:57:30,203 - INFO - Ratio of fail: 0.0
+2024-05-04 17:57:30,210 - INFO - iteration_num :0
+2024-05-04 17:57:30,210 - INFO - uniqueness_ratio :0.6229508196721312
+2024-05-04 17:57:38,911 - INFO - iteration_num: 0
+2024-05-04 17:57:38,911 - INFO - uniqueness_ratio: 0.92
+2024-05-04 17:58:05,382 - INFO - Min of r: 11.42578125
+2024-05-04 17:58:05,382 - INFO - Max of r: 28.011474609375
+2024-05-04 17:58:05,382 - INFO - Mean of r: 18.40509033203125
+2024-05-04 17:58:05,383 - INFO - Standard Deviation of r: 3.6204444525342403
+2024-05-04 17:58:05,383 - INFO - Ratio of fail: 0.0
+2024-05-04 18:06:26,762 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-04 18:07:08,349 - INFO - Min of r: 10.4107666015625
+2024-05-04 18:07:08,349 - INFO - Max of r: 25.39306640625
+2024-05-04 18:07:08,349 - INFO - Mean of r: 18.102711995442707
+2024-05-04 18:07:08,349 - INFO - Standard Deviation of r: 2.9532528322540026
+2024-05-04 18:07:08,349 - INFO - Ratio of fail: 0.0
+2024-05-04 18:07:08,357 - INFO - iteration_num :0
+2024-05-04 18:07:08,357 - INFO - uniqueness_ratio :0.6557377049180327
+2024-05-04 18:07:17,569 - INFO - iteration_num: 0
+2024-05-04 18:07:17,570 - INFO - uniqueness_ratio: 0.92
+2024-05-04 18:07:44,567 - INFO - Min of r: 11.42578125
+2024-05-04 18:07:44,567 - INFO - Max of r: 28.011474609375
+2024-05-04 18:07:44,568 - INFO - Mean of r: 18.40509033203125
+2024-05-04 18:07:44,568 - INFO - Standard Deviation of r: 3.6204444525342403
+2024-05-04 18:07:44,568 - INFO - Ratio of fail: 0.0

@@ -35,3 +35,13 @@ print(generated_results['SMILES'])
 print(generated_results['SELFIES'])
 
 smiles_list,selfies_list = GM.global_molecular_generation(n_samples = 100 )
+
+GM = GenerateMethods() # define a  report_save_path will save the results and plot as well 
+initial_smile = GM.random_smile(dataset='qm9')
+print('Initial SMILE:', initial_smile)
+generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
+print('Generated SMILES:', generated_results['SMILES'])
+print('Generated SELFIES:', generated_results['SELFIES'])
+sorted_generated_results = GM.sort_pareto_frontier(generated_results)
+print('Generated SMILES:', sorted_generated_results['SMILES'])
+print('Generated SELFIES:', sorted_generated_results['SELFIES'])

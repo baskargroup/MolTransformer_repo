@@ -8,7 +8,7 @@ from .descriptors import molecule_descriptors
 import selfies as sf # type: ignore
 import os
 from .general_utils import dataset_building, get_index_path
-from ..utils import check_path
+from .general_utils import check_path
 
 class DataProcess(): 
     """

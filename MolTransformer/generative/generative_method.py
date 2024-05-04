@@ -15,39 +15,40 @@ config = Config('config.json')
 
 class GenerateMethods(IndexConvert):
     """
-    1. local_molecular_generation: 
+    1. local_molecular_generation: v
         It generate closet new valid molecules from normalize random ls vectors both positive and negtive directions.
-    2. global_molecular_generation:
+    2. global_molecular_generation: v
         Randomly sample n number of  LS vectors; a random samples each dimension vector. 
         ! Analysis around ls space needed.  
-    3. OptimisticMoleculesRevolution:
+    3. !  OptimisticMoleculesRevolution:
         ! adjust the needed for definition changed of NeighboringSearch
         Iteratively use LocalMolecularGeneration, then use Multi-Fedility model to predict the High-Fidelity lables.
         Then, chose the neighbor molecule with the highest predicted lable to be the new itial molecule for next iteration.
         If predicted HF label of  new initail molecule is not larger than epislon + predicted HF label of  old initail molecule, break the loop.
         # to run the method, we need to load multi-fidelity model...and compute the low-fidelity label
-    4. MolecularEvolution:
+    4. !  MolecularEvolution:
         Take LS of the moleular pair: ( start , end ), compute the vector of the LS and then take k points on the vector.
         Decode the k points, record them if they are unique molecules. 
         Plot and solve all the generative molecules. 
-    5. smile_2_latent_space
-    6. latent_space_2_smiles
-    7. latent_space_2_properties:
+    5. smile_2_latent_space v
+    6. latent_space_2_smiles v
+    7. !  latent_space_2_properties:
         to use the function, make sure you call .set_property_model(dataset = 'qm9') or 'ocelot'
-    8. compute_uniqueness_by_inchi
-    9. random_smiles(dataset = 'ocelot') or 'qm9' or a path
-    10. neighboring_search(smile)
-    11. set_property_model
-        """
+    8. compute_uniqueness_by_inchi v
+    9. random_smiles(dataset = 'ocelot') or 'qm9' or a path v
+    10. neighboring_search(smile) v
+    11. ! set_property_model
+    12. sort_pareto_frontier  v
+                    """
     def __init__(self,gpu_mode = False,report_save_path = '',save = False):
         super().__init__()  # Initialize the base IndexConvert class
         self.device = device
 
         self.gpu_mode = gpu_mode
         self.save = save or bool(report_save_path)
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         
         if self.save  and not report_save_path:
-            self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
             report_save_path = os.path.join(self.base_dir, 'output','GenerateMethods/')
             print('Resault will be save to the following path: ', report_save_path)
         if self.save:
@@ -262,7 +263,7 @@ class GenerateMethods(IndexConvert):
             
             if top_k_closest:
                 for alpha in alpha_list: 
-                    self._sort_pareto_frontier(generated_results = df,alpha = alpha, k = k, save = True, prefix = '',folder_path = local_molecular_generation_report_save_path,sa_threshold=sa_threshold)
+                    self.sort_pareto_frontier(generated_results = df,alpha = alpha, k = k, save = True, prefix = '',folder_path = local_molecular_generation_report_save_path,sa_threshold=sa_threshold)
             
             csv_file_path = local_molecular_generation_report_save_path + 'fail_case_check' + '.csv'
             df = pd.DataFrame(fail_case_check)
@@ -486,7 +487,7 @@ class GenerateMethods(IndexConvert):
         
         return normalized_vectors
     
-    def _sort_pareto_frontier(self, generated_results,alpha, k, mols_per_image = 30 , molsPerRow = 5 , save=False, prefix='', folder_path='',plot = True,sa_threshold=''):
+    def sort_pareto_frontier(self, generated_results,alpha = 0.5, k = 30, mols_per_image = 30 , molsPerRow = 5 , save=False,  folder_path='',sa_threshold=''):
         if isinstance(generated_results, dict):
             df = pd.DataFrame.from_dict(generated_results)
         elif not isinstance(generated_results, pd.DataFrame):
@@ -571,8 +572,6 @@ class GenerateMethods(IndexConvert):
         if save:
             file_name = f"{alpha}_pareto_frontier_top_{k}.csv"
             top_k_1.to_csv(os.path.join(folder_path, file_name), index=False, columns=[col for col in columns_to_save if col in top_k_1.columns])
-        
-        if plot:
             if 'SMILES' in top_k_1.columns:
                 smiles_list = top_k_1['SMILES'].tolist()
                 draw_all_structures(smiles_list, out_dir = folder_path, mols_per_image = mols_per_image, molsPerRow = molsPerRow, name_tag = '', file_prefix=str(alpha) + '_Pareto_Frontier_')
