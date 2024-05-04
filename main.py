@@ -1,4 +1,4 @@
-from model import *
+from MolTransformer import *
 
 
 print('imported')

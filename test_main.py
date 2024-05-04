@@ -28,3 +28,10 @@ print('ls shape', ls.shape)
 ## you may do some small change to the ls by pertumate or so
 edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
 print('edit_smile: ',edit_smiles[0])
+
+
+generated_results = GM.local_molecular_generation(dataset = 'qm9',num_vector = 30)  # generate random num_vector of smiles and selfies from a random selfies in the dataset
+print(generated_results['SMILES'])
+print(generated_results['SELFIES'])
+
+smiles_list,selfies_list = GM.global_molecular_generation(n_samples = 100 )
