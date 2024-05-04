@@ -28,20 +28,6 @@ print('ls shape', ls.shape)
 ## you may do some small change to the ls by pertumate or so
 edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
 print('edit_smile: ',edit_smiles[0])
+GM.set_property_model(dataset = 'qm9')
 
 
-generated_results = GM.local_molecular_generation(dataset = 'qm9',num_vector = 30)  # generate random num_vector of smiles and selfies from a random selfies in the dataset
-print(generated_results['SMILES'])
-print(generated_results['SELFIES'])
-
-smiles_list,selfies_list = GM.global_molecular_generation(n_samples = 100 )
-
-GM = GenerateMethods() # define a  report_save_path will save the results and plot as well 
-initial_smile = GM.random_smile(dataset='qm9')
-print('Initial SMILE:', initial_smile)
-generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
-print('Generated SMILES:', generated_results['SMILES'])
-print('Generated SELFIES:', generated_results['SELFIES'])
-sorted_generated_results = GM.sort_pareto_frontier(generated_results)
-print('Generated SMILES:', sorted_generated_results['SMILES'])
-print('Generated SELFIES:', sorted_generated_results['SELFIES'])

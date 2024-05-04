@@ -1,5 +1,4 @@
 
-This following section of README file will guide users through the process of setting up a Conda environment named "Env_MolTransformer" specific to your library's requirements.
 
 # Quick Start of Running the code.
 ## GenerateMethods Usage Guide
@@ -229,6 +228,7 @@ This guide provides detailed instructions on how to configure the `train_config.
 ```
 
 ## Setting Up Env_MolTransformer
+This following section of README file will guide users through the process of setting up a Conda environment named "Env_MolTransformer" specific to your library's requirements.
 
 ### Step 1: Install Conda
 If you haven't already installed Conda, download and install it from the [official Conda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/).

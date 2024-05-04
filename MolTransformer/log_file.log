@@ -47,3 +47,6 @@
 2024-05-04 18:07:44,568 - INFO - Mean of r: 18.40509033203125
 2024-05-04 18:07:44,568 - INFO - Standard Deviation of r: 3.6204444525342403
 2024-05-04 18:07:44,568 - INFO - Ratio of fail: 0.0
+2024-05-04 18:20:38,066 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-04 18:20:38,772 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-04 18:20:38,775 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.

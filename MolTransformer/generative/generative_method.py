@@ -20,7 +20,7 @@ class GenerateMethods(IndexConvert):
     2. global_molecular_generation: v
         Randomly sample n number of  LS vectors; a random samples each dimension vector. 
         ! Analysis around ls space needed.  
-    3. !  OptimisticMoleculesRevolution:
+    3. !  optimistic_property_driven_molecules_generation:
         ! adjust the needed for definition changed of NeighboringSearch
         Iteratively use LocalMolecularGeneration, then use Multi-Fedility model to predict the High-Fidelity lables.
         Then, chose the neighbor molecule with the highest predicted lable to be the new itial molecule for next iteration.
@@ -270,6 +270,79 @@ class GenerateMethods(IndexConvert):
             df.to_csv(csv_file_path, index=True)
         return generated_results
     
+    def set_property_model(self,dataset):
+        build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode,dataset = dataset)
+        self.property_model = build_model_instance.model
+
+
+    def optimistic_property_driven_molecules_generation(self, k = 5,random = True,initial_smile = '',dataset = 'ocelot',accuracy_rate = 0.001,max_step = 5,sorting_method = 'radius'):
+
+        if not self.property_model:
+            self.set_property_model(dataset = dataset)
+
+        if random:
+            if not initial_smile:
+                initial_smile = self._random_pick_initail_smiles(dataset)
+            else:
+                raise ValueError("please not define initial_smile or set random to False")
+        else:
+            if not initial_smile:
+                raise ValueError("please define initial_smile or set random to True")
+        print('model_path: ',model_path)
+        self._load_multiF_model(model_path,std_path)
+        if sorting_method == 'memory':
+            revolution_record = { 'SMILES':[initial_smile],'radius':[0], 'dimension':['0'],'direction':['initial'],'Property':[],'MemoryDistance':[0]}
+        elif sorting_method == 'radius':
+            revolution_record = { 'SMILES':[initial_smile],'radius':[0], 'dimension':['0'],'direction':['initial'],'Property':[]}
+        else: 
+            raise ValueError("please define valid sorting_method")
+        improvement = True
+        step = 0
+        while improvement and step < max_step:
+            print('step: ', str(step))
+            generated_results,_ = self.NeighboringSearch( initial_smile, accuracy_rate = accuracy_rate)
+            generated_results = pd.DataFrame(generated_results)
+            if sorting_method == 'radius':
+                generated_results = sort_k_radius(generated_results, k)
+            else:
+                generated_results = self.sort_memory_norm2(generated_results, k)
+        
+            model_input = self._smile_2_property_model_input(generated_results['SMILES'])
+            predicted_property = self.property_model(model_input['input'],model_input['descriptors'])  # need convert to numpy array
+           
+
+            predicted_property_np_ = predicted_property.detach().numpy()
+            predicted_property_np = self.recover_standardized_data(predicted_property_np_)
+
+            if step == 0:
+                revolution_record['Property'].append(predicted_property_np[0][0])
+                plot_molecules(generated_results['SMILES'][0],path = self.Args.report_save_path + 'initial')
+            
+            print('shpe of predicted_property_np: ', predicted_property_np.shape)
+            print('generative max Property: ', str(np.max(predicted_property_np[1:])))
+            print('initial Property: ', str(predicted_property_np[0][0]))
+            if np.max(predicted_property_np[1:]) > predicted_property_np[0][0]: # if improve
+                initial_smile = generated_results['SMILES'][np.argmax(predicted_property_np[1:])+1]
+                revolution_record['SMILES'].append(initial_smile)
+                revolution_record['radius'].append(generated_results['radius'][np.argmax(predicted_property_np[1:])+1])
+                revolution_record['dimension'].append(generated_results['dimension'][np.argmax(predicted_property_np[1:])+1])
+                revolution_record['direction'].append(generated_results['direction'][np.argmax(predicted_property_np[1:])+1])
+                revolution_record['Property'].append(np.max(predicted_property_np[1:]))
+                if sorting_method == 'memory':
+                    revolution_record['MemoryDistance'].append(generated_results['MemoryDistance'][np.argmax(predicted_property_np[1:])+1])
+                plot_molecules(generated_results['SMILES'][np.argmax(predicted_property_np[1:])+1],path = self.Args.report_save_path + 'step_'+ str(step+1))
+            else:
+                improvement = False
+
+            step += 1
+
+        #save revolution_record to csv file 
+        csv_file_path = self.Args.report_save_path + 'OptimisticMoleculesEvolution' + '.csv'
+        df = pd.DataFrame(revolution_record)
+        # check pubchem_api
+        df = validate_smiles_in_pubchem(df) 
+        df.to_csv(csv_file_path, index=True)
+
     def neighboring_search(self, initial_smile, search_range=40, resolution=0.001, num_vector=100):
         """
         Performs a neighboring search around an initial molecule represented by its SMILES string.
