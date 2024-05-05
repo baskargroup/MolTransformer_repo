@@ -1,5 +1,5 @@
 from MolTransformer import *
-
+import numpy as np
 #ex1 
 #GM = GenerateMethods()
 #smiles_list,selfies_list = GM.global_molecular_generation(n_samples = 100 ) # generate random n_sample of smiles and selfies within the range on latent space, note that the length of unique_smiles_list,unique_selfies_list might not equal to n_samples, since there might be duplicate  generatived molecules, only unique molecules are returned. 
@@ -29,5 +29,12 @@ print('ls shape', ls.shape)
 edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
 print('edit_smile: ',edit_smiles[0])
 GM.set_property_model(dataset = 'qm9')
+
+
+path = '/Users/tcpba/MolTransformer_repo/MolTransformer/model/models/best_models/MultiF_HF/qm9_lumo/'
+data_loader = DataLoader(dataset='qm9',save = True,report_save_path = path)
+print('new_compute std ', data_loader.std_parameter)
+
+
 
 

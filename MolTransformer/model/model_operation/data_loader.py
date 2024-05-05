@@ -90,7 +90,7 @@ class DataLoader:
         if self.save:
             check_path(report_save_path)
 
-        Data = DataProcess(model_mode = self.model_mode ,data_path = data_path,high_fidelity_label =label ,save_path = report_save_path)
+        Data = DataProcess(model_mode = self.model_mode ,data_path = data_path,high_fidelity_label =label ,report_save_path = report_save_path)
         logging.info("********train size :  " + str(len(Data.dataset_train)) + " ***************")
         logging.info("********test size :  " + str(len(Data.dataset_test)) + " ***************")
         if self.gpu_mode:
@@ -104,7 +104,7 @@ class DataLoader:
             self.test = torch.utils.data.DataLoader(Data.dataset_test, batch_size=settings.data_loader_batch_size,  pin_memory=True)
                           
         if self.model_mode != 'SS':
-            self.std_parameter = Data.std_parameter   
+            self.std_parameter = Data.std_parameter 
         del Data
 
                 

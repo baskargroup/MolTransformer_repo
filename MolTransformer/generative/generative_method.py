@@ -9,6 +9,7 @@ import selfies as sf # type: ignore
 from rdkit import Chem # type: ignore
 from rdkit.Chem import inchi # type: ignore
 from numpy.random import choice
+from collections import defaultdict
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 config = Config('config.json')
@@ -34,10 +35,11 @@ class GenerateMethods(IndexConvert):
     6. latent_space_2_smiles v
     7. !  latent_space_2_properties:
         to use the function, make sure you call .set_property_model(dataset = 'qm9') or 'ocelot'
+    smiles_2_properties
     8. compute_uniqueness_by_inchi v
     9. random_smiles(dataset = 'ocelot') or 'qm9' or a path v
     10. neighboring_search(smile) v
-    11. ! set_property_model
+    11. set_property_model v
     12. sort_pareto_frontier  v
                     """
     def __init__(self,gpu_mode = False,report_save_path = '',save = False):
@@ -271,10 +273,56 @@ class GenerateMethods(IndexConvert):
         return generated_results
     
     def set_property_model(self,dataset):
+        if dataset not in ['ocelot','qm9_lumo']:
+            error_message = "Invalid dataset selection. Please choose from 'ocelot' or 'qm9_lumo'."
+            print(error_message)
+            raise ValueError(error_message)
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode,dataset = dataset)
         self.property_model = build_model_instance.model
+        self.std_parameter =  defaultdict(float)
+        model_folder = 'ocelot_aea' if dataset == 'ocelot' else 'qm9_lumo'
+        model_path = os.path.join(self.base_dir,'MolTransformer','model','models','best_models','MultiF_HF',model_folder)
+        mean1, std1, constant = np.load(model_path + 'std.npy')
+        self.std_parameter.update({'mean': mean1, 'std': std1, 'constant': constant})
 
+    def smiles_2_properties(self,SMILES):
+        if not hasattr(self, 'property_model'):
+            error_message = ("Property model not set. Please call set_property_model(dataset) to initialize "
+                            "the property model before using latent_space_2_properties.")
+            print(error_message)
+            raise AttributeError(error_message)
+        #smiles to ls
+        #_smile_2_property_model_input
+        # call property model
+        # property to numpy array
 
+        # recover the std  data
+
+        pass
+    def latent_spaces_2_properties(self, latent_space):
+        # Ensure the property model is loaded before using this function
+        if not hasattr(self, 'property_model'):
+            error_message = ("Property model not set. Please call set_property_model(dataset) to initialize "
+                            "the property model before using latent_space_2_properties.")
+            print(error_message)
+            raise AttributeError(error_message)
+        #ls to smiles
+        #_smile_2_property_model_input
+        # call property model
+        # property to numpy array
+
+        # recover the std  data
+        
+        pass
+
+    def _recover_standardized_data(self, data):
+        mean1 = self.std_parameter['mean'] 
+        std1 = self.std_parameter['std'] 
+        constant = self.std_parameter['constant'] 
+        data = data - constant
+        data = data * std1 + mean1
+        return data
+    
     def optimistic_property_driven_molecules_generation(self, k = 5,random = True,initial_smile = '',dataset = 'ocelot',accuracy_rate = 0.001,max_step = 5,sorting_method = 'radius'):
 
         if not self.property_model:

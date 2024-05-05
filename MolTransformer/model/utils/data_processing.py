@@ -53,7 +53,7 @@ class DataProcess():
             self.label = high_fidelity_label
             data_train_sel = self._load_label_data('train',data_train_sel)
             data_test_sel = self._load_label_data('test',data_test_sel)
-            plot_histogram(data1 = data_train_sel[self.label],data2 = data_test_sel[self.label],path = save_path ,name = self.label + '_original') 
+            plot_histogram(data1 = data_train_sel[self.label],data2 = data_test_sel[self.label],path = report_save_path ,name = self.label + '_original') 
             self.std_parameter =  defaultdict(lambda: defaultdict(float))
             data_train_sel,data_test_sel = self._std_data(data_train_sel,data_test_sel)
             if  model_mode in  ['multiF_HF','Descriptors' ]:
