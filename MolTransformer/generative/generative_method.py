@@ -31,7 +31,7 @@ class GenerateMethods(IndexConvert):
         Take LS of the moleular pair: ( start , end ), compute the vector of the LS and then take k points on the vector.
         Decode the k points, record them if they are unique molecules. 
         Plot and solve all the generative molecules. 
-    5. smile_2_latent_space v
+    5. smiles_2_latent_space v
     6. latent_space_2_smiles v
     7. !  latent_space_2_properties:
         to use the function, make sure you call .set_property_model(dataset = 'qm9') or 'ocelot'
@@ -273,8 +273,8 @@ class GenerateMethods(IndexConvert):
         return generated_results
     
     def set_property_model(self,dataset):
-        if dataset not in ['ocelot','qm9_lumo']:
-            error_message = "Invalid dataset selection. Please choose from 'ocelot' or 'qm9_lumo'."
+        if dataset not in ['ocelot','qm9']:
+            error_message = "Invalid dataset selection. Please choose from 'ocelot' or 'qm9'."
             print(error_message)
             raise ValueError(error_message)
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode,dataset = dataset)
@@ -282,7 +282,7 @@ class GenerateMethods(IndexConvert):
         self.std_parameter =  defaultdict(float)
         model_folder = 'ocelot_aea' if dataset == 'ocelot' else 'qm9_lumo'
         model_path = os.path.join(self.base_dir,'MolTransformer','model','models','best_models','MultiF_HF',model_folder)
-        mean1, std1, constant = np.load(model_path + 'std.npy')
+        mean1, std1, constant = np.load(model_path + '/std.npy')
         self.std_parameter.update({'mean': mean1, 'std': std1, 'constant': constant})
 
     def smiles_2_properties(self,SMILES):
@@ -433,7 +433,7 @@ class GenerateMethods(IndexConvert):
         fail_case_check = {'SMILES': [], 'SELFIES': []}
 
         # Mode-specific initializations
-        representation = self.smile_2_latent_space(initial_smile)  # Use latent space representation for 'ls'
+        representation = self.smiles_2_latent_space([initial_smile])  # Use latent space representation for 'ls'
         representation = representation.view(-1).numpy()  # Convert to 1D numpy array
         representation = representation.reshape((1,-1))
         print("--------- in ls, representation shape", representation.shape)
@@ -548,55 +548,66 @@ class GenerateMethods(IndexConvert):
         SELFIES_list = np.asanyarray(df.SELFIES).tolist()
         return SELFIES_list
     
-    def smile_2_selfies(self, smile: str) -> List[str]:
+    def smile_2_selfies(self, smiles):
+        if isinstance(smiles, str):
+            # Single SMILES string
+            return self._process_smile(smiles)
+        elif isinstance(smiles, list):
+            # List of SMILES strings
+            return [self._process_smile(smile) for smile in smiles if smile]
+        else:
+            raise ValueError("Input must be a SMILES string or a list of SMILES strings.")
+
+    def _process_smile(self, smile):
         try:
             mol = Chem.MolFromSmiles(smile)
             if mol is None:
-                print('error in translate for: ', smile)
-                return []
-        except Exception:
-            print('error in translate for: ', smile)
-            return []
-        try:
+                print('Error in translation for:', smile)
+                return ''
             hmol = Chem.AddHs(mol)
             k_smile = Chem.MolToSmiles(hmol, kekuleSmiles=True)
-            k_selfies = sf.encoder(k_smile)
-            return [k_selfies]
-        except Exception:
-            print('error in translate for: ', smile)
-            return []
+            return sf.encoder(k_smile)
+        except Exception as e:
+            print('Error processing', smile, ":", str(e))
+            return ''
     
-    def smile_2_latent_space(self, smile: str):
-        selfies = self.smile_2_selfies(smile)
-        latent_space = self.selfies_2_latent_space(selfies)
-        return latent_space
+    def smiles_2_latent_space(self, smiles):
+        # Check if the input is a string, and if so, convert it to a list
+        if isinstance(smiles, str):
+            smiles = [smiles]
+        
+        # Generate SELFIES from each SMILES string
+        selfies_list = [self.smile_2_selfies(smile) for smile in smiles]
+
+        # Convert SELFIES to latent space
+        latent_spaces = self.selfies_2_latent_space(selfies_list)
+        return latent_spaces
     
-    def selfies_2_latent_space(self, selfies: List[str]):
-        inputs = [[self.Index.char2ind.get(char, self.Index.char2ind['[nop]']) for char in list(sf.split_selfies(sel))] for sel in selfies][0]
-        seq_len = [len(list(sf.split_selfies(sel))) for  sel in selfies][0]
-        if seq_len >= settings.max_sequence_length : # self.max_seq_len - 1 = Args.max_len
-            seq_len = settings.max_sequence_length 
-        #should still have end
-        G_index = self.Index.char2ind['G']
+    def selfies_2_latent_space(self, selfies):
+        # If the input is a single SELFIES string, convert it to a list
+        if isinstance(selfies, str):
+            selfies = [selfies]
 
-        # lookup index for selfies from the dictionary
-        inputs_padd = Variable(torch.zeros((1, settings.max_sequence_length + 1 ))).long()
-        inputs_padd[0,0] = Variable(torch.tensor(G_index)).long()
-        inputs_padd[0,1:seq_len + 1] = torch.LongTensor(inputs)
+        latent_spaces = []
+        for selfies_str in selfies:
+            inputs = [self.Index.char2ind.get(char, self.Index.char2ind['[nop]']) for char in sf.split_selfies(selfies_str)]
+            seq_len = min(len(inputs), settings.max_sequence_length)
+            inputs_padd = torch.zeros((1, settings.max_sequence_length + 1), dtype=torch.long)
+            inputs_padd[0, 0] = self.Index.char2ind['G']
+            inputs_padd[0, 1:seq_len + 1] = torch.LongTensor(inputs[:seq_len])
 
-        memory_list = []
-        with torch.no_grad():
-            
-            input_idx = inputs_padd.to(self.device)
-            ######     Forward pass  ######
-            if self.gpu_mode:
-                memory = self.model.module.encoder(input_idx).to(self.device)
-            else:
-                memory = self.model.encoder(input_idx).to(self.device)
-            memory_ = memory.permute(1, 0, 2).cpu()
-            memory_list.append(memory_)
+            with torch.no_grad():
+                input_idx = inputs_padd.to(self.device)
+                if self.gpu_mode:
+                    memory = self.model.module.encoder(input_idx)
+                else:
+                    memory = self.model.encoder(input_idx)
+                memory_ = memory.permute(1, 0, 2).cpu()
+                latent_spaces.append(memory_.numpy())
 
-        return torch.cat(memory_list, dim=0).cpu()
+        # Concatenate all the latent space representations into a single numpy array
+        return np.concatenate(latent_spaces, axis=0)
+
     
     def _generate_normalized_vectors(self,dimensions, num_vectors):
         # Generate random vectors with values in the range [-1, 1]

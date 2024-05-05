@@ -48,7 +48,7 @@ print('Generated SELFIES:', sorted_generated_results['SELFIES'])
 GM = GenerateMethods()
 initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
-ls = GM.smile_2_latent_space(initial_smile)
+ls = GM.smile_2_latent_space([initial_smile])
 print('Latent Space Shape:', ls.shape)
 # Perform custom modifications to ls as needed
 edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)

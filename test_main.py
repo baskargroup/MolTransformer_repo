@@ -23,17 +23,16 @@ import numpy as np
 GM = GenerateMethods()
 initial_smile = GM.random_smile(dataset = 'qm9') # dataset can be your own csv file, make sure the files contains 'SELFIES' 
 print('initial_smile', initial_smile)
-ls = GM.smile_2_latent_space(initial_smile)
+ls = GM.smiles_2_latent_space([initial_smile])
 print('ls shape', ls.shape)
 ## you may do some small change to the ls by pertumate or so
 edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
+selfies = GM.smile_2_selfies(initial_smile)
+ls_selfies = GM.selfies_2_latent_space([selfies])
+edit_smiles_selfies, edit_selfies_selfies = GM.latent_space_2_smiles(ls_selfies)
 print('edit_smile: ',edit_smiles[0])
+print('edit_smiles_selfies: ',edit_smiles_selfies[0])
 GM.set_property_model(dataset = 'qm9')
-
-
-path = '/Users/tcpba/MolTransformer_repo/MolTransformer/model/models/best_models/MultiF_HF/qm9_lumo/'
-data_loader = DataLoader(dataset='qm9',save = True,report_save_path = path)
-print('new_compute std ', data_loader.std_parameter)
 
 
 
