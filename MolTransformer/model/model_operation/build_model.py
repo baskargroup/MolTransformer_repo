@@ -90,7 +90,7 @@ class BuildModel():
         if self.model_mode == 'Descriptors':
             model = DescriptorHF()
         else:
-            model = ChemTransformer(device,self.model_mode, train = True,gpu = gpu_mode)
+            model = ChemTransformer(device,self.model_mode, train = train,gpu = gpu_mode)
         print('done intialized')
 
         #set DDP

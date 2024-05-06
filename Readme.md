@@ -17,44 +17,44 @@ The `GenerateMethods` class in the MolTransformer project facilitates the genera
 - **GPU Mode**: Enables computations on a GPU to speed up processing.
 - **Report Save Path**: Specifies the directory for saving outputs and logs.
 
-### Usage Examples
-```python
-from MolTransformer import *
-# Example 1: Global Molecular Generation
-GM = GenerateMethods(save = True) # set  save = True will save the results and lots
-smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
-# Note: The lengths of unique_smiles_list and unique_selfies_list may not equal n_samples due to possible duplicates.
 
-# Example 2: Local Molecular Generation
-GM = GenerateMethods(save = True)
+#### Example 1: Global Molecular Generation
+This example demonstrates how to generate a set number of molecular structures randomly across the latent space. Note that the number of unique molecules may be less than requested due to potential duplicates.
+```python
+GM = GenerateMethods(save=True)  # Set `save=True` to save results and logs
+smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
+```
+####  Example 2: Local Molecular Generation
+Generate molecular structures locally around a randomly selected molecule from a specified dataset. Results are automatically saved to the specified path.
+```python
+GM = GenerateMethods(save=True)
 generated_results = GM.local_molecular_generation(dataset='qm9', num_vector=30)
 print(generated_results['SMILES'])
 print(generated_results['SELFIES'])
-# Results are saved to report_save_path/local_molecular_generation by default.
-
-# Example 3: Neighboring Search
-GM = GenerateMethods(report_save_path='your_custom_path') # define a  report_save_path will save the results and plot as well 
-initial_smile = GM.random_smile(dataset='qm9')
+```
+#### Example 3: Neighboring Search
+This example starts with a random SMILE from a dataset and explores its molecular neighborhood. It's particularly useful for iterative exploration and optimization of molecular structures.
+```python
+GM = GenerateMethods(report_save_path='your_custom_path')
 initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
 generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
 print('Generated SMILES:', generated_results['SMILES'])
 print('Generated SELFIES:', generated_results['SELFIES'])
-sorted_generated_results = GM.sort_pareto_frontier(generated_results) # you can further sort and pick the top k highest pareto_frontier computed by weight alpha (default k = 30, alpha = 0.5)
-print('Generated SMILES:', sorted_generated_results['SMILES'])
-print('Generated SELFIES:', sorted_generated_results['SELFIES'])
-
-# Example 4: Custom Latent Space Manipulation
+```
+#### Example 4: Custom Latent Space Manipulation
+After generating a latent space from a SMILE, you can manually perturb it to explore slight variations and their properties.
+```python
 GM = GenerateMethods()
 initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
-ls = GM.smile_2_latent_space([initial_smile])
+ls = GM.smiles_2_latent_space([initial_smile])
 print('Latent Space Shape:', ls.shape)
 # Perform custom modifications to ls as needed
-edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
-print('Edited SMILE:', edit_smiles[0])
+edit_results = GM.latent_space_2_strings(ls)
+print('Edited SMILE:', edit_results['SMILES'][0])
+print('Edited SELFIES:', edit_results['SELFIES'][0])
 ```
-
 
 
 ## BuildModel Configuration

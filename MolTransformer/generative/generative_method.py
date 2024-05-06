@@ -32,7 +32,7 @@ class GenerateMethods(IndexConvert):
         Decode the k points, record them if they are unique molecules. 
         Plot and solve all the generative molecules. 
     5. smiles_2_latent_space v
-    6. latent_space_2_smiles v
+    6. latent_space_2_string v
     7. !  latent_space_2_properties:
         to use the function, make sure you call .set_property_model(dataset = 'qm9') or 'ocelot'
     smiles_2_properties
@@ -128,10 +128,10 @@ class GenerateMethods(IndexConvert):
             vector = sampled_vectors[start_idx:end_idx].reshape((-1, sampled_vectors.shape[1])).astype(np.float64)
             # The reshape now uses -1 for the first dimension to automatically adjust to the correct batch size
 
-            smiles_list_, selfies_list_ = self.latent_space_2_smiles(latent_space = vector)
+            strings = self.latent_space_2_strings(latent_space = vector)
 
-            smiles_list += smiles_list_
-            selfies_list += selfies_list_
+            smiles_list += strings['SMILES']
+            selfies_list += strings['SELFIES']
 
         uniqueness_ratio, unique_index , rdk_mol = self.compute_uniqueness_by_inchi(smiles_list,return_index = True)  # Ensure this function is defined
         logging.info(f"iteration_num: " + str(self.iteration_num))
@@ -162,7 +162,7 @@ class GenerateMethods(IndexConvert):
             plot_generative_molecules_analysis(df,save_file = global_molecular_generation_save_path )
         return unique_smiles_list,unique_selfies_list
     
-    def latent_space_2_smiles(self, latent_space):
+    def latent_space_2_strings(self, latent_space):
         # Reshape the numpy array
         ls = latent_space.reshape(-1, 401, 30)
         
@@ -172,11 +172,11 @@ class GenerateMethods(IndexConvert):
         else:
             torch_tensor = ls.to(self.device)
         
-        # Assuming _memory_2_smiles is a method that takes a torch tensor and returns smiles and selfies
-        smiles, selfies = self._memory_2_smiles(torch_tensor)
-        return smiles, selfies
+        # Assuming _memory_2_representation is a method that takes a torch tensor and returns smiles and selfies
+        representation = self._memory_2_representation(torch_tensor)
+        return representation
     
-    def _memory_2_smiles(self,memory_torch):
+    def _memory_2_representation(self,memory_torch):
 
         # if the shape of memory_torch is (1, 401, 30) 
         # need to check whether pca version still work
@@ -190,12 +190,13 @@ class GenerateMethods(IndexConvert):
             molecule = self.model.decoder(memory)
 
         smiles,selfies = self._idx_2_smiles(molecules_idx = molecule)
-        return smiles,selfies
+        return {'SMILES': smiles, 'SELFIES': selfies}
     
     def _idx_2_smiles(self,molecules_idx):
         selfies_list = self.index_2_selfies(molecules_idx)
         smiles_list = self.selfies_2_smile(selfies_list)
         return smiles_list,selfies_list
+    
     def compute_uniqueness_by_inchi(self, smiles_list, return_index=False):
         # Initialize a dictionary to store InChI identifiers and their indices
         inchi_indices = {}
@@ -285,20 +286,26 @@ class GenerateMethods(IndexConvert):
         mean1, std1, constant = np.load(model_path + '/std.npy')
         self.std_parameter.update({'mean': mean1, 'std': std1, 'constant': constant})
 
-    def smiles_2_properties(self,SMILES):
+    def smiles_2_properties(self, smiles):
+        # Check if the property model has been initialized
         if not hasattr(self, 'property_model'):
             error_message = ("Property model not set. Please call set_property_model(dataset) to initialize "
                             "the property model before using latent_space_2_properties.")
             print(error_message)
             raise AttributeError(error_message)
-        #smiles to ls
-        #_smile_2_property_model_input
-        # call property model
-        # property to numpy array
-
-        # recover the std  data
-
-        pass
+        
+        # Prepare model input from smiles
+        model_input = self._smile_2_property_model_input(smiles)
+        
+        # Predict properties using the initialized model
+        
+        predicted_property= self.property_model(model_input['input'],model_input['descriptors'])  # need convert to numpy array
+        # Detach and convert tensor to numpy for further processing
+        predicted_property_np = predicted_property.detach().numpy()
+        # Convert standardized prediction outputs to actual property values
+        properties = self._recover_standardized_data(predicted_property_np)
+        return properties
+    
     def latent_spaces_2_properties(self, latent_space):
         # Ensure the property model is loaded before using this function
         if not hasattr(self, 'property_model'):
@@ -306,14 +313,10 @@ class GenerateMethods(IndexConvert):
                             "the property model before using latent_space_2_properties.")
             print(error_message)
             raise AttributeError(error_message)
-        #ls to smiles
-        #_smile_2_property_model_input
-        # call property model
-        # property to numpy array
-
-        # recover the std  data
-        
-        pass
+        strings = self.latent_space_2_strings(latent_space)
+        print('------- smiles: ',strings['SMILES'])
+        properties = self.smiles_2_properties(strings['SMILES'])    
+        return properties
 
     def _recover_standardized_data(self, data):
         mean1 = self.std_parameter['mean'] 
@@ -356,8 +359,9 @@ class GenerateMethods(IndexConvert):
                 generated_results = self.sort_memory_norm2(generated_results, k)
         
             model_input = self._smile_2_property_model_input(generated_results['SMILES'])
-            predicted_property = self.property_model(model_input['input'],model_input['descriptors'])  # need convert to numpy array
-           
+            predicted_property,a = self.property_model(model_input['input'],model_input['descriptors'])  # need convert to numpy array
+            print('----- predicted_property ', predicted_property)
+            print('a ',a)
 
             predicted_property_np_ = predicted_property.detach().numpy()
             predicted_property_np = self.recover_standardized_data(predicted_property_np_)
@@ -481,7 +485,8 @@ class GenerateMethods(IndexConvert):
                 
                 final_smiles, final_selfies = None, None
                 try:
-                    final_smiles, final_selfies = self.latent_space_2_smiles(adjusted_representation)
+                    strings = self.latent_space_2_strings(adjusted_representation)
+                    final_smiles, final_selfies  = strings['SMILES'],strings['SELFIES']
                 except Exception as e:
                     logging.info(f"Final conversion error for adjusted representation at radius {min_success_r}")
                     final_smiles, final_selfies = initial_smile, ori_selfies[0]
@@ -715,6 +720,50 @@ class GenerateMethods(IndexConvert):
         first_memory = df.iloc[0]['Memory']
         df['MemoryDistance'] = df['Memory'].apply(lambda mem: torch.norm(first_memory - mem).item())
         return df
+    
+    def _smile_2_property_model_input(self, smile_list):
+        # Ensure the input is in list format
+        if isinstance(smile_list, str):
+            smile_list = [smile_list]
+
+        # Initialize the container for the input indices
+        inputs_idx = []
+        # Compute descriptors for the smile list
+        model_input = {'descriptors': self._compute_descriptor(smile_list)}
+
+        # Convert each smile in the list to its corresponding input tensor
+        for smile in smile_list:
+            selfies = self.smile_2_selfies(smile)
+            if not selfies:  # Handle possible empty returns from smile_2_selfies
+                continue
+            # Vectorize the SELFIES and handle sequence length limits
+            vectorized_seqs = self._vectorize_sequence(selfies)
+            seq_len = min(len(vectorized_seqs), settings.max_sequence_length)
+            
+            # Prepare padded input tensor
+            inputs_padd = torch.zeros((1, settings.max_sequence_length + 1), dtype=torch.long)
+            inputs_padd[0, 0] = self.Index.char2ind['G']  # Start token
+            inputs_padd[0, 1:seq_len + 1] = torch.LongTensor(vectorized_seqs[:seq_len])
+
+            inputs_idx.append(inputs_padd[0])
+        
+        # Stack all input tensors and add to model_input dictionary
+        if inputs_idx:  # Ensure there is at least one input to stack
+            model_input['input'] = torch.stack(inputs_idx, dim=0)
+        return model_input
+
+    def _vectorize_sequence(self, selfies):
+        # Convert a selfies string to a sequence of indices, handling unknown characters
+        return [self.Index.char2ind.get(char, self.Index.char2ind['[nop]']) for char in sf.split_selfies(selfies)]
+
+    def _compute_descriptor(self,smile_list):
+        descriptors_list = []
+        for smi in smile_list:
+            molecule = Chem.MolFromSmiles(smi)
+            descriptors = torch.tensor(molecule_descriptors(molecule))   
+            descriptors_list.append(descriptors)
+        descriptors_tensor = torch.stack(descriptors_list, dim=0)
+        return descriptors_tensor
     
     
         

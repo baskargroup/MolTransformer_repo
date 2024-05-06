@@ -19,20 +19,30 @@ import numpy as np
 #print('SMILES: ',generated_results['SMILES'])
 #print('SELFIES: ',generated_results['SELFIES'])
 
-#ex4: your own exploration method to edit ls
+# use the code to form a proper example with good command to be a example at readme.
 GM = GenerateMethods()
 initial_smile = GM.random_smile(dataset = 'qm9') # dataset can be your own csv file, make sure the files contains 'SELFIES' 
 print('initial_smile', initial_smile)
 ls = GM.smiles_2_latent_space([initial_smile])
 print('ls shape', ls.shape)
 ## you may do some small change to the ls by pertumate or so
-edit_smiles, edit_selfies = GM.latent_space_2_smiles(ls)
+edit_strings = GM.latent_space_2_strings(ls)
 selfies = GM.smile_2_selfies(initial_smile)
 ls_selfies = GM.selfies_2_latent_space([selfies])
-edit_smiles_selfies, edit_selfies_selfies = GM.latent_space_2_smiles(ls_selfies)
-print('edit_smile: ',edit_smiles[0])
-print('edit_smiles_selfies: ',edit_smiles_selfies[0])
+edit_strings_from_selfies = GM.latent_space_2_strings(ls_selfies)
+#you can also do some pertubute on the ls and see whether the new ls give you a better property value by the following function 
 GM.set_property_model(dataset = 'qm9')
+properties_1 = GM.latent_spaces_2_properties(ls)
+print('properties_1: ', properties_1)
+#also we offer this function
+properties_2 = GM.smiles_2_properties(edit_strings_from_selfies['SMILES'])
+print('properties_2: ', properties_2)
+
+#we can compare the selfies we get to see whether they are same
+print('edit_smile: ',edit_strings['SMILES'][0])
+print('edit_smiles_selfies: ',edit_strings_from_selfies['SMILES'][0])
+
+
 
 
 
