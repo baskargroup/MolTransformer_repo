@@ -27,7 +27,7 @@ class GenerateMethods(IndexConvert):
         Then, chose the neighbor molecule with the highest predicted lable to be the new itial molecule for next iteration.
         If predicted HF label of  new initail molecule is not larger than epislon + predicted HF label of  old initail molecule, break the loop.
         # to run the method, we need to load multi-fidelity model...and compute the low-fidelity label
-    4. !  MolecularEvolution:
+    4. !  molecular_evolution:
         Take LS of the moleular pair: ( start , end ), compute the vector of the LS and then take k points on the vector.
         Decode the k points, record them if they are unique molecules. 
         Plot and solve all the generative molecules. 
@@ -61,6 +61,93 @@ class GenerateMethods(IndexConvert):
         self.model = build_model_instance.model
 
         self.iteration_num = 0
+
+    def molecular_evolution(self, start_molecule, end_molecule, number):
+        """
+        Generates a linear interpolation in the latent space between two given molecules and analyzes the 
+        evolutionary path. This method aims to explore the transformation from the start molecule to the end 
+        molecule by generating intermediate molecular representations, assessing their novelty and validity, and 
+        visualizing the transition.
+
+        Parameters:
+        - start_molecule (str): SMILES string representing the starting molecule.
+        - end_molecule (str): SMILES string representing the target end molecule.
+        - number (int): Number of intermediate molecules to generate along the path from start to end.
+
+        Steps:
+        1. Computes latent space representations (memory vectors) for both start and end molecules.
+        2. Interpolates between these vectors to create intermediate representations and calculates their 
+           distances and relative distances from the start.
+        3. Converts each interpolated representation back to a SMILES string.
+        4. Constructs a DataFrame with SMILES strings and their respective distances and ratios.
+        5. Applies a filtering process to remove duplicates and validate molecules against PubChem.
+        6. Visualizes all unique and valid molecules along the evolutionary path.
+        7. Plots the distance ratios of the molecules to visualize the linear progression in the latent space.
+        8. Saves the detailed information of the molecular evolution path to a CSV file.
+
+        Returns:
+        - A DataFrame containing the filtered and validated list of molecules along with their distances and 
+          distance ratios from the start molecule.
+        """
+
+        # Step 1: Compute memory vectors for start and end molecules
+        start_memory = self.smiles_2_latent_space(start_molecule)  # Ensure this returns a numpy
+        end_memory = self.smiles_2_latent_space(end_molecule)      # Ensure this returns a numpy
+
+        # Step 2: Interpolate vectors and compute distances and ratios using numpy
+        interpolated_memories = [start_memory + (i / number) * (end_memory - start_memory) for i in range(number)]
+        distances = [np.linalg.norm(mem - start_memory) for mem in interpolated_memories]
+        max_distance = np.linalg.norm(end_memory - start_memory)  # Distance to the end molecule
+        distance_ratios = [dist / max_distance for dist in distances]
+        interpolated_memories_array = np.stack(interpolated_memories)
+        print('shape of interpolated_memories_array: ', interpolated_memories_array.shape)
+
+        # Step 3: Convert each interpolated memory back to SMILES
+        # Adjusting for numpy arrays
+        strings_list = self.latent_space_2_strings(interpolated_memories_array)
+
+        # Step 4: Construct DataFrame with additional columns
+        df = pd.DataFrame({
+            'SMILES': [smiles for smiles in strings_list['SMILES']],
+            'distance': distances,
+            'distance_ratio': distance_ratios,
+            'similarity_start':np.nan,
+            'similarity_end':np.nan
+
+        })
+
+        # Step 5: Apply filter before returning
+        filtered_df = filter_duplicates(df)  # Assuming filter_duplicates is defined within the class
+        # check pubchem_api
+        filtered_df = validate_smiles_in_pubchem(filtered_df) 
+        filtered_df['similarity_start'] = calculate_tanimoto_similarity_from_target(filtered_df,start_molecule)
+        filtered_df['similarity_end'] = calculate_tanimoto_similarity_from_target(filtered_df,end_molecule)
+
+        if self.save:
+            molecular_evolution_report_save_path = self.report_save_path + 'molecular_evolution/'
+            check_path(molecular_evolution_report_save_path)
+            
+            # edit plot_tanimoto
+            plot_tanimoto_histogram(filtered_df,out_dir = molecular_evolution_report_save_path)
+            plot_tanimoto(filtered_df,out_dir = molecular_evolution_report_save_path)
+
+            # step6: Plot all the molecules:
+            for i, smiles in enumerate(filtered_df['SMILES']):
+                if i == 0:
+                    path = os.path.join(molecular_evolution_report_save_path + 'start_molecule')
+                elif i == len(filtered_df)-1:
+                    path = os.path.join(molecular_evolution_report_save_path + 'end_molecule')
+                else:
+                    path = os.path.join(molecular_evolution_report_save_path, f'molecule_{i}.png')
+                plot_molecules(smiles, path)
+            # step7: plot the linear line 
+            plot_1d_distance_ratio_line(filtered_df,molecular_evolution_report_save_path,marker_size=10)
+            # step 8: save dataframe to csv
+            filtered_df.to_csv(os.path.join(molecular_evolution_report_save_path, 'MolecularLinearEvolution.csv'), index=False)
+
+            smiles_list = filtered_df['SMILES']
+            draw_all_structures(smiles_list, out_dir = molecular_evolution_report_save_path, mols_per_image = 15, molsPerRow = 5, name_tag = '', file_prefix= 'MolecularLinearEvolution',pop_first = False,molecule_prefix = 'step :  ')
+        return filtered_df
 
     def global_molecular_generation(self, n_samples, sample_type='normal'):
         """

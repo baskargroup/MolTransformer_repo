@@ -307,6 +307,7 @@
 2024-05-06 00:47:56,848 - INFO - For vector 15 , the direction:1  failed to find new molecule    ,count: 20
 2024-05-06 00:48:12,933 - INFO - For vector 32 , the direction:1  failed to find new molecule    ,count: 20
 2024-05-06 00:48:22,651 - INFO - For vector 42 , the direction:-1  failed to find new molecule    ,count: 20
+<<<<<<< HEAD
 2024-05-06 00:48:45,137 - INFO - For vector 64 , the direction:1  failed to find new molecule    ,count: 20
 2024-05-06 00:49:01,354 - INFO - For vector 78 , the direction:1  failed to find new molecule    ,count: 20
 2024-05-06 00:49:04,023 - INFO - For vector 81 , the direction:-1  failed to find new molecule    ,count: 20
@@ -920,3 +921,15 @@ lue' assignment exists.
 2024-05-06 15:44:40,550 - INFO - Mean of r: 17.645327854156495
 2024-05-06 15:44:40,551 - INFO - Standard Deviation of r: 2.7103211129186757
 2024-05-06 15:44:40,551 - INFO - Ratio of fail: 0.0
+=======
+2024-05-06 14:56:21,151 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 14:58:27,265 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 14:59:29,118 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 15:00:23,956 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 15:02:25,904 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+>>>>>>> 1fa726c878761de1bfe34365553e7753131adec4
+2024-05-06 16:18:26,364 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 16:23:51,306 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 16:30:18,123 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 16:33:56,362 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 16:39:06,235 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.

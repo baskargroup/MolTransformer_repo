@@ -158,7 +158,60 @@ def draw_all_structures(smiles_list, out_dir, mols_per_image=30, molsPerRow=5, n
 
 
 
+def plot_tanimoto_histogram(df, out_dir):
+    """
+    Plots Tanimoto Similarity vs. Distance Ratio from a DataFrame as histograms,
+    comparing 'similarity_start' and 'similarity_end' to 'distance_ratio'.
 
+    Parameters:
+    - df: A pandas DataFrame that must contain 'TanimotoSimilarity', 'similarity_start',
+          'similarity_end', and 'distance_ratio' columns.
+    - out_dir: Directory path where the plot image will be saved.
+
+    Returns:
+    - A histogram showing both 'similarity_start' and 'similarity_end' against 'distance_ratio',
+      each with unique colors and legends.
+    """
+    # Assuming 'step' is a column representing the order of molecules, if not you can use df.reset_index()
+    df['step'] = df.index + 1  # if 'step' is not already a column
+
+    # Extract 'similarity_start' and 'similarity_end'
+    similarity_start = df['similarity_start']
+    similarity_end = df['similarity_end']
+
+    # Plotting
+    plt.figure(figsize=(12, 6))
+    
+    # Calculate bar width and offset
+    bar_width = 0.3  # width of each bar
+    offset = 0.2     # distance between the groups of bars
+
+    # Plot 'similarity_start' histogram
+    plt.bar(df['step'] - offset , similarity_start, width=bar_width, label='Generated vs. Start Molecule Similarity', color='blue', alpha=0.6)
+    
+    # Plot 'similarity_end' histogram
+    plt.bar(df['step'] + offset, similarity_end, width=bar_width, label='Generated vs. End Molecule Similarity', color='green', alpha=0.6)
+    
+    # Setting the title and labels
+    plt.title('Histogram of Tanimoto Similarity vs. Step')
+    plt.xlabel('Step')
+    plt.ylabel('Tanimoto Similarity')
+
+    # Adding grid for better readability
+    plt.grid(True, which='both', linestyle='--', linewidth=0.5)
+    
+    # Adding a legend to distinguish between the histograms
+    plt.legend()
+
+    # Adjust x-axis ticks to center labels under the groups of bars
+    plt.xticks(ticks=df['step'], labels=df['step'])
+
+    # Save the plot to the specified directory
+    plt.savefig(out_dir + 'Histogram_Tanimoto_Similarity_vs_Step.png')
+    
+    # Close the plot to free up memory
+    plt.close()
+# may delete if plot_tanimoto_histogram pass test
 def plot_tanimoto(df, out_dir):
     """
     Plots Tanimoto Similarity vs. Distance Ratio from a DataFrame, comparing 'similarity_start'
