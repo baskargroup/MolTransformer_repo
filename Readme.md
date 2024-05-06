@@ -54,6 +54,9 @@ print('Latent Space Shape:', ls.shape)
 edit_results = GM.latent_space_2_strings(ls)
 print('Edited SMILE:', edit_results['SMILES'][0])
 print('Edited SELFIES:', edit_results['SELFIES'][0])
+properties = GM.smiles_2_properties(edit_results['SMILES'])
+print('properties_2: ', float(properties[0][0]))
+print('properties_2: shape', properties.shape)
 ```
 #### Example 5: Optimistic Property-Driven Molecule Generation
 This example showcases property-driven generation aimed at optimizing molecule properties through iterative exploration of the latent space. The k parameter selects the top k most similar neighboring molecules in each iteration, from which the molecule showing the most significant improvement in properties is chosen for the next cycle. This process necessitates defining the dataset, the number of latent space vectors to sample, and the k parameter that dictates the extent of the neighborhood search.
