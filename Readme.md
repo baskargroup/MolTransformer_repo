@@ -67,9 +67,24 @@ print('Generated SMILES:', molecules_generation_record['SMILES'])
 print('Properties:', molecules_generation_record['Property'])
 ```
 
+#### Example 6: Simplified Molecular Evolution Between Two Molecules
+The `molecular_evolution` function conducts a series of operations to transition from the structure of `start_molecule` to `end_molecule`. It explores the latent space to propose potential intermediates and applies property optimization techniques to refine the transformation pathway. This process helps in understanding how one molecular configuration can be converted into another, potentially uncovering viable synthetic routes or novel molecular structures.
 
+```python
+# Import the GenerateMethods class
+from MolTransformer.generative import GenerateMethods
 
+# Initialize the GenerateMethods with an output path
+GM = GenerateMethods(report_save_path='/path/to/save/reports/')
 
+# Randomly pick one molecule from each dataset
+start_molecule = 'c1ccccc1'  # Example SMILE from 'qm9'
+end_molecule = 'c2ccc(c1ccccc1)cc2'  # Example SMILE from 'ocelot'
+
+# Perform molecular evolution and observe the transformation
+GM.molecular_evolution(start_molecule, end_molecule, number=100)
+print('Molecular evolution completed from qm9 to ocelot molecule.')
+```
 
 ## BuildModel Configuratiom;
 ### Overview
