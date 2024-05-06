@@ -3,7 +3,8 @@
 # Copy/paste this job script into a text file and submit with the command:
 #    sbatch thefilename
 # job standard output will go to the file slurm-%j.out (where %j is the job ID)
-#SBATCH --time=24:00:00   # walltime limit (HH:MM:SS)
+
+#SBATCH --time=24:0:00   # walltime limit (HH:MM:SS)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --ntasks-per-node=36   # 36 processor core(s) per node 
 #SBATCH --mem=369G   # maximum memory per node
@@ -16,4 +17,4 @@
 
 module load miniconda3
 source activate /work/mech-ai/bella/selfies_envs
-python3 /work/mech-ai/bella/MolTransformer/main.py  
+python3 /work/mech-ai/bella/MolTransformer_repo/main.py  

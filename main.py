@@ -24,11 +24,11 @@ interest_molecules = {
 			'Oc4ccc(c1cc(O)c(O)cc1c2cc(O)c(O)cc2c3ccc(O)c(O)c3)cc4O']}
 dataset = 'qm9'
 target_molecule = 0
-report_save_path_base = ''
+report_save_path_base = '/work/mech-ai/bella/ChemTransformer/report/GenerativeMethods/optimistic_property_driven_molecules_generation/'
 report_save_path = report_save_path_base +'/'+dataset+'/'+str(target_molecule)+'/'
 GM = GenerateMethods(save = True,report_save_path = report_save_path)
 
-molecules_generation_record = GM.optimistic_property_driven_molecules_generation(initial_smile = interest_molecules[dataset][target_molecule],dataset = dataset,k = 100,num_vector = 10000, sa_threshold = 6,initial_smile = '',resolution = 0.0001,search_range = 60,max_step = 10,alpha = 0.5) # dataset can be your own csv file, make sure the files contains 'SELFIES' 
+molecules_generation_record = GM.optimistic_property_driven_molecules_generation(initial_smile = interest_molecules[dataset][target_molecule],dataset = dataset,k = 100,num_vector = 10000, sa_threshold = 6,resolution = 0.0001,search_range = 60,max_step = 10,alpha = 0.5) # dataset can be your own csv file, make sure the files contains 'SELFIES' 
 print('smiles', molecules_generation_record['SMILES'])
 print('properties', molecules_generation_record['Property'])
 
