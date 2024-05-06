@@ -450,18 +450,22 @@ class GenerateMethods(IndexConvert):
                 molecules_generation_record['SMILES'].append(top_k_neighbors['SMILES'][index_max_neighbor_properties])
                 molecules_generation_record['Property'].append(max_neighbor_properties)
                 molecules_generation_record['SELFIES'].append(top_k_neighbors['SELFIES'][index_max_neighbor_properties])
-                plot_molecules(top_k_neighbors['SMILES'][index_max_neighbor_properties],path = optimistic_property_driven_molecules_generation_report_path + 'step_'+ str(step+1))
                 current_property = max_neighbor_properties
+                if self.save:
+                    plot_molecules(top_k_neighbors['SMILES'][index_max_neighbor_properties],path = optimistic_property_driven_molecules_generation_report_path + 'step_'+ str(step+1))
+                
             else:
                 improvement = False
             step += 1
 
         #save revolution_record to csv file 
-        csv_file_path = optimistic_property_driven_molecules_generation_report_path + 'molecules_generation_record' + '.csv'
-        df = pd.DataFrame(molecules_generation_record)
-        # check pubchem_api
-        df = validate_smiles_in_pubchem(df) 
-        df.to_csv(csv_file_path, index=True)
+        if self.save:
+            draw_all_structures(molecules_generation_record['SMILES'], out_dir = optimistic_property_driven_molecules_generation_report_path, mols_per_image = 10, molsPerRow = 5, name_tag = '', file_prefix= 'molecules_generation_',pop_first = False,molecule_prefix = 'step :  ')
+            csv_file_path = optimistic_property_driven_molecules_generation_report_path + 'molecules_generation_record' + '.csv'
+            df = pd.DataFrame(molecules_generation_record)
+            # check pubchem_api
+            df = validate_smiles_in_pubchem(df) 
+            df.to_csv(csv_file_path, index=True)
         return molecules_generation_record
 
     def neighboring_search(self, initial_smile, search_range=40, resolution=0.001, num_vector=100):

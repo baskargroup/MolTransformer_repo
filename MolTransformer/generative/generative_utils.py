@@ -211,7 +211,7 @@ def plot_tanimoto_histogram(df, out_dir):
     
     # Close the plot to free up memory
     plt.close()
-# may delete if plot_tanimoto_histogram pass test
+
 def plot_tanimoto(df, out_dir):
     """
     Plots Tanimoto Similarity vs. Distance Ratio from a DataFrame, comparing 'similarity_start'
