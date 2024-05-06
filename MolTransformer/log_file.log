@@ -307,3 +307,616 @@
 2024-05-06 00:47:56,848 - INFO - For vector 15 , the direction:1  failed to find new molecule    ,count: 20
 2024-05-06 00:48:12,933 - INFO - For vector 32 , the direction:1  failed to find new molecule    ,count: 20
 2024-05-06 00:48:22,651 - INFO - For vector 42 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:48:45,137 - INFO - For vector 64 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:49:01,354 - INFO - For vector 78 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:49:04,023 - INFO - For vector 81 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:50:12,898 - INFO - For vector 148 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:50:35,027 - INFO - For vector 170 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:50:43,532 - INFO - For vector 179 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:50:50,853 - INFO - For vector 186 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:51:06,137 - INFO - For vector 201 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:52:01,598 - INFO - For vector 253 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:52:21,936 - INFO - For vector 274 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:52:40,833 - INFO - For vector 293 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:52:48,477 - INFO - For vector 301 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:52:59,861 - INFO - For vector 312 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:54:01,012 - INFO - For vector 372 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:54:16,444 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = v2024-05-06 00:54:29,856 - INFO - For vector 400 , the direction:1  failed to find new molecule    ,count: 20
+r than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 00:54:17,010 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 00:54:46,993 - INFO - For vector 416 , the direction:1  failed to find new molecule    ,count: 20
+alue' assignment exists.
+2024-05-06 00:54:33,097 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 00:54:33,109 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 00:55:05,783 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 00:55:06,068 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 00:55:06,071 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 00:55:27,345 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 00:55:28,028 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 00:55:28,033 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 00:55:40,507 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 00:55:57,947 - INFO - For vector 485 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:56:13,236 - INFO - For vector 500 , the direction:1  failed to find new molecule    ,count: 20
+alue' assignment exists.
+2024-05-06 00:56:09,816 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 00:56:09,821 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 00:56:31,356 - INFO - For vector 517 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:56:34,417 - INFO - For vector 520 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:56:49,865 - INFO - For vector 536 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:57:05,935 - INFO - For vector 550 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:57:57,260 - INFO - For vector 599 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:58:40,468 - INFO - For vector 626 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      2024-05-06 00:59:05,591 - INFO - For vector 648 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 00:59:32,831 - INFO - For vector 674 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 00:59:58,335 - INFO - For vector 698 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:00:04,353 - INFO - For vector 705 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                2024-05-06 01:01:47,540 - INFO - For vector 801 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:02:30,158 - INFO - For vector 843 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:02:46,852 - INFO - For vector 859 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:03:29,346 - INFO - For vector 901 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:03:43,063 - INFO - For vector 913 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:04:11,603 - INFO - For vector 942 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:04:27,873 - INFO - For vector 957 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:04:46,718 - INFO - For vector 977 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:04:54,208 - INFO - For vector 985 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:05:07,499 - INFO - For vector 999 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:05:09,364 - INFO - For vector 1001 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:06:45,151 - INFO - For vector 1079 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:06:50,278 - INFO - For vector 1085 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:08:02,590 - INFO - For vector 1142 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:08:19,308 - INFO - For vector 1158 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:08:22,545 - INFO - For vector 1162 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:08:43,910 - INFO - For vector 1182 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:09:02,144 - INFO - For vector 1201 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:09:23,769 - INFO - For vector 1222 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:10:00,652 - INFO - For vector 1251 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:10:10,441 - INFO - For vector 1259 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:10:46,062 - INFO - For vector 1295 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:10:59,375 - INFO - For vector 1308 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:11:02,413 - INFO - For vector 1310 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:11:10,074 - INFO - For vector 1318 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:11:25,777 - INFO - For vector 1333 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2024-05-06 01:11:59,936 - INFO - For vector 1366 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:12:14,138 - INFO - For vector 1380 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:12:15,404 - INFO - For vector 1381 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:12:29,159 - INFO - For vector 1394 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:12:33,732 - INFO - For vector 1398 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:12:41,864 - INFO - For vector 1406 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:13:03,257 - INFO - For vector 1428 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:13:12,828 - INFO - For vector 1435 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:13:19,146 - INFO - For vector 1439 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:13:42,825 - INFO - For vector 1462 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:13:52,340 - INFO - For vector 1469 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:13:56,951 - INFO - For vector 1474 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:14:14,507 - INFO - For vector 1493 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:15:53,547 - INFO - For vector 1592 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:16:01,448 - INFO - For vector 1595 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:16:29,825 - INFO - For vector 1619 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:16:42,122 - INFO - For vector 1632 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:17:09,459 - INFO - For vector 1659 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:17:46,887 - INFO - For vector 1696 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:17:52,867 - INFO - For vector 1701 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:17:55,362 - INFO - For vector 1703 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:17:58,489 - INFO - For vector 1707 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:18:11,808 - INFO - For vector 1720 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:18:23,479 - INFO - For vector 1731 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:19:01,646 - INFO - For vector 1768 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:19:18,993 - INFO - For vector 1784 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:20:03,125 - INFO - For vector 1828 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:20:05,726 - INFO - For vector 1830 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:20:44,172 - INFO - For vector 1868 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:21:01,734 - INFO - For vector 1886 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:21:24,016 - INFO - For vector 1909 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:21:49,045 - INFO - For vector 1934 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:21:53,654 - INFO - For vector 1938 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:22:25,288 - INFO - For vector 1971 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:22:48,368 - INFO - For vector 1994 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:22:56,415 - INFO - For vector 2002 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:23:27,252 - INFO - For vector 2032 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:23:56,771 - INFO - For vector 2061 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:23:58,983 - INFO - For vector 2064 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:24:14,631 - INFO - For vector 2080 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:26:14,281 - INFO - For vector 2184 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:27:08,139 - INFO - For vector 2238 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:27:19,755 - INFO - For vector 2248 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:28:08,813 - INFO - For vector 2296 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:28:14,613 - INFO - For vector 2302 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:28:43,496 - INFO - For vector 2332 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:28:58,023 - INFO - For vector 2347 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:30:11,781 - INFO - For vector 2420 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:30:15,672 - INFO - For vector 2423 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:31:27,888 - INFO - For vector 2497 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:31:38,828 - INFO - For vector 2508 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:31:44,310 - INFO - For vector 2513 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:32:59,141 - INFO - For vector 2589 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:33:06,215 - INFO - For vector 2592 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:33:33,814 - INFO - For vector 2613 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:34:24,162 - INFO - For vector 2653 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:36:06,922 - INFO - For vector 2738 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:36:44,481 - INFO - For vector 2773 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:37:57,103 - INFO - For vector 2839 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:37:59,579 - INFO - For vector 2842 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:38:41,103 - INFO - For vector 2881 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:39:14,992 - INFO - For vector 2915 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:39:26,769 - INFO - For vector 2927 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:39:44,642 - INFO - For vector 2946 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:40:32,786 - INFO - For vector 2989 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:40:42,291 - INFO - For vector 2996 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:40:43,222 - INFO - For vector 2997 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:41:11,384 - INFO - For vector 3024 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:41:14,453 - INFO - For vector 3027 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:41:19,468 - INFO - For vector 3032 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:42:49,342 - INFO - For vector 3124 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:42:54,852 - INFO - For vector 3130 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:43:15,700 - INFO - For vector 3151 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:43:38,318 - INFO - For vector 3174 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:43:52,528 - INFO - For vector 3185 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:45:47,756 - INFO - For vector 3301 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:46:19,551 - INFO - For vector 3332 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:46:26,456 - INFO - For vector 3338 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:46:37,346 - INFO - For vector 3349 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:48:32,662 - INFO - For vector 3468 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:48:45,151 - INFO - For vector 3481 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:50:01,168 - INFO - For vector 3556 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:50:07,471 - INFO - For vector 3563 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:50:09,203 - INFO - For vector 3564 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:50:12,101 - INFO - For vector 3567 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:50:41,717 - INFO - For vector 3598 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:51:27,800 - INFO - For vector 3645 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:52:07,757 - INFO - For vector 3684 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:52:45,239 - INFO - For vector 3723 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:53:10,976 - INFO - For vector 3749 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:53:35,295 - INFO - For vector 3774 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:53:59,005 - INFO - For vector 3798 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:54:41,469 - INFO - For vector 3841 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:55:11,085 - INFO - For vector 3871 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:55:32,617 - INFO - For vector 3891 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:57:13,572 - INFO - For vector 3992 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:57:44,133 - INFO - For vector 4023 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:58:08,962 - INFO - For vector 4048 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:58:09,561 - INFO - For vector 4049 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:58:15,515 - INFO - For vector 4055 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:58:35,314 - INFO - For vector 4074 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:58:38,604 - INFO - For vector 4076 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:59:02,133 - INFO - For vector 4101 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:59:22,832 - INFO - For vector 4122 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 01:59:26,182 - INFO - For vector 4125 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 01:59:40,478 - INFO - For vector 4139 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:00:06,797 - INFO - For vector 4164 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            2024-05-06 02:01:41,639 - INFO - For vector 4259 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:01:51,703 - INFO - For vector 4269 , the direction:1  failed to find new molecule    ,count: 20
+lue' assignment exists.
+2024-05-06 02:01:48,263 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:01:48,268 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:01:58,368 - INFO - For vector 4276 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:02:03,183 - INFO - For vector 4280 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:02:28,132 - INFO - For vector 4304 , the direction:-1  failed to find new molecule    ,count: 20
+ue' assignment exists.
+2024-05-06 02:02:18,471 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:02:18,479 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:02:35,357 - INFO - For vector 4311 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:03:18,154 - INFO - For vector 4354 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:03:54,738 - INFO - For vector 4390 , the direction:-1  failed to find new molecule    ,count: 20
+024-05-06 02:03:25,554 - INFO - For vector 114 , the direction:-1  failed to find new molecule    ,count: 20
+than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:03:19,343 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:03:39,442 - INFO - For vector 127 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:03:56,355 - INFO - For vector 144 , the direction:-1  failed to find new molecule    ,count: 20
+lue' assignment exists.
+2024-05-06 02:03:50,026 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:03:50,030 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:04:22,633 - INFO - For vector 4413 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:04:57,448 - INFO - For vector 4445 , the direction:-1  failed to find new molecule    ,count: 20
+024-05-06 02:04:30,678 - INFO - For vector 177 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:05:02,930 - INFO - For vector 208 , the direction:1  failed to find new molecule    ,count: 20
+alue' assignment exists.
+2024-05-06 02:04:51,004 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:04:51,009 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:05:19,020 - INFO - For vector 225 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:05:18,743 - INFO - For vector 4465 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:05:34,449 - INFO - For vector 4480 , the direction:-1  failed to find new molecule    ,count: 20
+ue' assignment exists.
+2024-05-06 02:05:21,491 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:05:21,496 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:06:06,447 - INFO - For vector 270 , the direction:1  failed to find new molecule    ,count: 20
+
+lue' assignment exists.
+2024-05-06 02:05:51,989 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 02:05:51,994 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 02:06:47,171 - INFO - For vector 309 , the direction:1  failed to find new molecule    ,count: 20
+0
+2024-05-06 02:06:20,381 - INFO - For vector 4524 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:06:50,572 - INFO - For vector 4551 , the direction:-1  failed to find new molecule    ,count: 2022024-05-06 02:07:39,147 - INFO - For vector 4597 , the direction:1  failed to find new molecule    ,count: 202024-05-06 02:07:57,225 - INFO - For vector 380 , the direction:1  failed to find new molecule    ,count: 20
+20
+2024-05-06 02:07:52,433 - INFO - For vector 4612 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:07:59,085 - INFO - For vector 4619 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2024-05-06 02:08:32,261 - INFO - For vector 4650 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 02:09:05,965 - INFO - For vector 4684 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2024-05-06 02:09:15,961 - INFO - For vector 4694 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      2024-05-06 02:10:32,181 - INFO - For vector 4750 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:11:22,133 - INFO - For vector 4800 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                            2024-05-06 02:11:24,921 - INFO - For vector 4803 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:11:47,815 - INFO - For vector 4827 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:12:34,779 - INFO - For vector 4875 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                         2024-05-06 02:12:58,098 - INFO - For vector 4897 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:13:12,255 - INFO - For vector 4911 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:13:20,023 - INFO - For vector 4918 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:14:00,413 - INFO - For vector 4960 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                       2024-05-06 02:14:20,546 - INFO - For vector 758 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:14:40,512 - INFO - For vector 4997 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                             2024-05-06 02:14:43,011 - INFO - For vector 4999 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:15:06,019 - INFO - For vector 5018 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:15:46,633 - INFO - For vector 5052 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:16:09,418 - INFO - For vector 5069 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:16:28,183 - INFO - For vector 5085 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:16:51,636 - INFO - For vector 5104 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:16:51,985 - INFO - For vector 5105 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                            2024-05-06 02:16:56,352 - INFO - For vector 5108 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:17:26,989 - INFO - For vector 5133 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:17:59,063 - INFO - For vector 5160 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:18:28,748 - INFO - For vector 5184 , the direction:1  failed to find new molecule    ,count: 20
+ 2024-05-06 02:19:11,429 - INFO - For vector 5219 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          2024-05-06 02:20:14,079 - INFO - For vector 5271 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:20:25,744 - INFO - For vector 5281 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:20:27,198 - INFO - For vector 5282 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:20:36,742 - INFO - For vector 5288 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:20:39,985 - INFO - For vector 5292 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:20:55,392 - INFO - For vector 5303 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:21:11,677 - INFO - For vector 5320 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:21:24,587 - INFO - For vector 5329 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                 2024-05-06 02:21:26,941 - INFO - For vector 5330 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:22:22,999 - INFO - For vector 5381 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 02:22:49,931 - INFO - For vector 5401 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:23:14,146 - INFO - For vector 5419 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:24:01,166 - INFO - For vector 5468 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:24:04,562 - INFO - For vector 5471 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:24:15,581 - INFO - For vector 5482 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                               2024-05-06 02:25:26,972 - INFO - For vector 5555 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:26:03,998 - INFO - For vector 5591 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:26:39,174 - INFO - For vector 5627 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                             2024-05-06 02:27:05,152 - INFO - For vector 5653 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                            2024-05-06 02:27:51,686 - INFO - For vector 5702 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:27:53,045 - INFO - For vector 5704 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:28:13,686 - INFO - For vector 5725 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:28:42,078 - INFO - For vector 5753 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                               2024-05-06 02:29:09,795 - INFO - For vector 5781 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                               2024-05-06 02:29:23,525 - INFO - For vector 5794 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:30:05,369 - INFO - For vector 5835 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:30:56,828 - INFO - For vector 5888 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                           2024-05-06 02:31:20,021 - INFO - For vector 5910 , the direction:1  failed to find new molecule    ,count: 20
+ 2024-05-06 02:31:27,944 - INFO - For vector 5918 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        2024-05-06 02:32:32,806 - INFO - For vector 5984 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:33:05,979 - INFO - For vector 6018 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:33:30,828 - INFO - For vector 6043 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:33:36,412 - INFO - For vector 6048 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:34:19,408 - INFO - For vector 6091 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:34:20,643 - INFO - For vector 6092 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:34:38,022 - INFO - For vector 6109 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:35:07,880 - INFO - For vector 6134 , the direction:1  failed to find new molecule    ,count: 20
+22024-05-06 02:36:15,152 - INFO - For vector 2072 , the direction:-1  failed to find new molecule    ,count: 20
+024-05-06 02:35:34,844 - INFO - For vector 6153 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:35:36,390 - INFO - For vector 6154 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:35:42,579 - INFO - For vector 6159 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:36:08,000 - INFO - For vector 6183 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 02:37:28,846 - INFO - For vector 6264 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:37:50,319 - INFO - For vector 6284 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:38:26,578 - INFO - For vector 6318 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2024-05-06 02:41:03,571 - INFO - For vector 6464 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:41:11,409 - INFO - For vector 6472 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:41:20,503 - INFO - For vector 6480 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     2024-05-06 02:42:33,515 - INFO - For vector 6554 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:43:02,230 - INFO - For vector 6582 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                           2024-05-06 02:43:10,794 - INFO - For vector 6591 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:43:30,170 - INFO - For vector 6612 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:43:37,373 - INFO - For vector 6619 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:43:58,247 - INFO - For vector 6640 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:44:03,180 - INFO - For vector 6644 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:44:13,409 - INFO - For vector 6655 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:44:35,197 - INFO - For vector 6676 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:44:56,712 - INFO - For vector 6698 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:45:43,829 - INFO - For vector 6745 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:45:55,870 - INFO - For vector 6757 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:46:04,176 - INFO - For vector 6766 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:46:43,706 - INFO - For vector 6805 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                             2024-05-06 02:46:49,563 - INFO - For vector 6810 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:47:14,502 - INFO - For vector 6834 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:47:33,645 - INFO - For vector 6852 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:47:40,733 - INFO - For vector 6858 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:48:09,957 - INFO - For vector 6885 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:49:08,474 - INFO - For vector 6942 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      2024-05-06 02:50:01,802 - INFO - For vector 6995 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     2024-05-06 02:51:08,283 - INFO - For vector 7062 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:51:26,482 - INFO - For vector 7079 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:51:36,676 - INFO - For vector 7089 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:51:45,938 - INFO - For vector 7098 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:52:25,395 - INFO - For vector 7138 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       2024-05-06 02:52:43,703 - INFO - For vector 7157 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:52:45,612 - INFO - For vector 7159 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:52:55,920 - INFO - For vector 7170 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:53:48,071 - INFO - For vector 553 , the ddirection:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:53:15,179 - INFO - For vector 7191 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       2024-05-06 02:54:53,443 - INFO - For vector 7289 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 02:55:40,993 - INFO - For vector 7337 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                             2024-05-06 02:56:53,355 - INFO - For vector 7408 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      2024-05-06 02:59:23,654 - INFO - For vector 7558 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:59:30,265 - INFO - For vector 7565 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:59:44,871 - INFO - For vector 7580 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 02:59:50,112 - INFO - For vector 7585 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:00:29,783 - INFO - For vector 7624 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 03:00:35,491 - INFO - For vector 7630 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:01:01,596 - INFO - For vector 7656 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:01:18,702 - INFO - For vector 7673 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:01:19,969 - INFO - For vector 7674 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:01:38,195 - INFO - For vector 7693 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:02:21,701 - INFO - For vector 7736 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                              2024-05-06 03:03:30,713 - INFO - For vector 7805 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:03:37,124 - INFO - For vector 7811 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:04:32,946 - INFO - For vector 7868 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                                                                                                                                          2024-05-06 03:04:37,803 - INFO - For vector 7873 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:05:23,283 - INFO - For vector 7916 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:05:55,372 - INFO - For vector 7949 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:05:42,113 - INFO - For vector 1256 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:05:59,972 - INFO - For vector 1274 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:06:02,740 - INFO - For vector 1276 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:06:58,857 - INFO - For vector 1333 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 03:07:23,537 - INFO - For vector 1358 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:07:24,059 - INFO - For vector 1359 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                             2024-05-06 03:07:35,495 - INFO - For vector 1371 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:07:39,181 - INFO - For vector 1375 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:08:11,712 - INFO - For vector 1408 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:08:55,283 - INFO - For vector 1452 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                            2024-05-06 03:09:12,927 - INFO - For vector 1470 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:09:14,504 - INFO - For vector 1471 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:09:29,597 - INFO - For vector 1486 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:09:55,696 - INFO - For vector 1513 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:10:27,571 - INFO - For vector 1544 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:11:01,981 - INFO - For vector 1580 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 03:11:35,902 - INFO - For vector 1615 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:11:40,936 - INFO - For vector 1620 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:11:58,584 - INFO - For vector 1636 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:12:56,640 - INFO - For vector 1695 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                               2024-05-06 03:13:06,351 - INFO - For vector 1705 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:13:09,685 - INFO - For vector 1708 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:13:14,742 - INFO - For vector 1713 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:13:25,580 - INFO - For vector 1723 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:13:49,814 - INFO - For vector 1746 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:14:25,203 - INFO - For vector 1781 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:14:28,447 - INFO - For vector 1784 , the direction:1  failed to find new molecule    ,count: 20
+ 2024-05-06 03:14:47,224 - INFO - For vector 1803 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:14:50,331 - INFO - For vector 1806 , the direction:1  failed to find new molecule    ,count: 20
+
+2024-05-06 03:14:59,898 - INFO - For vector 8460 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:15:09,134 - INFO - For vector 8468 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:15:16,574 - INFO - For vector 8475 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:15:35,769 - INFO - For vector 8491 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:15:38,813 - INFO - For vector 8494 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:16:15,460 - INFO - For vector 8525 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:16:53,821 - INFO - For vector 8556 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                2024-05-06 03:16:55,618 - INFO - For vector 8558 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:17:17,774 - INFO - For vector 8577 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:17:49,076 - INFO - For vector 8602 , the direction:1  failed to find new molecule    ,count: 20
+ 2024-05-06 03:18:12,374 - INFO - For vector 8621 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:18:21,185 - INFO - For vector 8628 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:18:52,581 - INFO - For vector 8654 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:19:01,752 - INFO - For vector 8661 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:19:09,005 - INFO - For vector 8667 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:19:31,451 - INFO - For vector 8686 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:19:58,610 - INFO - For vector 8708 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                 2024-05-06 03:20:08,935 - INFO - For vector 8717 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:20:11,268 - INFO - For vector 8719 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:21:05,857 - INFO - For vector 8763 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:21:08,615 - INFO - For vector 8764 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                            2024-05-06 03:21:22,946 - INFO - For vector 8774 , the direction:1  failed to find new molecule    ,count: 20
+                                                                                                                                                                                                                              2024-05-06 03:22:58,567 - INFO - For vector 8853 , the direction:-1  failed to find new molecule    ,count: 20
+                                                                                                              2024-05-06 03:24:26,993 - INFO - For vector 8925 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:24:34,010 - INFO - For vector 8931 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:24:40,901 - INFO - For vector 8936 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:24:57,742 - INFO - For vector 8950 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:25:00,709 - INFO - For vector 8953 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:25:37,188 - INFO - For vector 8982 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:25:59,295 - INFO - For vector 9000 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:26:02,348 - INFO - For vector 9003 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:26:25,447 - INFO - For vector 9022 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:27:10,870 - INFO - For vector 2462 , the direction:1  failed to find new molecule    ,count: 20
+
+2024-05-06 03:27:17,068 - INFO - For vector 9063 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:27:30,842 - INFO - For vector 9077 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:27:33,708 - INFO - For vector 9080 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:27:41,734 - INFO - For vector 9088 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:27:55,892 - INFO - For vector 9101 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:28:07,224 - INFO - For vector 9112 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:28:45,543 - INFO - For vector 9149 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:28:52,042 - INFO - For vector 9155 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:29:03,856 - INFO - For vector 9164 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:29:11,021 - INFO - For vector 9170 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:30:23,745 - INFO - For vector 9230 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:30:39,594 - INFO - For vector 9242 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:31:13,362 - INFO - For vector 9265 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:31:15,265 - INFO - For vector 9267 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:31:46,328 - INFO - For vector 9293 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:32:04,188 - INFO - For vector 9310 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:32:21,653 - INFO - For vector 9328 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:32:26,149 - INFO - For vector 9333 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:34:04,686 - INFO - For vector 9409 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:34:12,252 - INFO - For vector 9416 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:35:13,221 - INFO - For vector 9468 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:35:27,777 - INFO - For vector 9482 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:36:08,995 - INFO - For vector 9518 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:36:36,520 - INFO - For vector 9541 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:36:43,228 - INFO - For vector 9548 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:36:44,075 - INFO - For vector 9549 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:36:47,791 - INFO - For vector 9552 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:36:58,138 - INFO - For vector 9562 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:37:07,942 - INFO - For vector 9572 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:38:21,377 - INFO - For vector 9645 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:38:57,547 - INFO - For vector 9679 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:39:42,508 - INFO - For vector 9719 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:39:47,327 - INFO - For vector 9724 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:39:50,867 - INFO - For vector 9728 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:40:30,996 - INFO - For vector 9754 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:40:47,853 - INFO - For vector 9770 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:40:51,202 - INFO - For vector 9773 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:41:23,854 - INFO - For vector 9801 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:42:26,641 - INFO - For vector 9862 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:43:10,082 - INFO - For vector 9906 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:43:30,016 - INFO - For vector 9925 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:43:45,773 - INFO - For vector 9936 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 03:44:21,708 - INFO - For vector 9966 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 03:45:04,102 - INFO - Min of r: 10.25115966796875
+2024-05-06 03:45:04,102 - INFO - Max of r: 60.0
+2024-05-06 03:45:04,102 - INFO - Mean of r: 30.90361843299866
+2024-05-06 03:45:04,103 - INFO - Standard Deviation of r: 9.587040393442496
+2024-05-06 03:45:04,103 - INFO - Ratio of fail: 0.02055
+2024-05-06 03:48:09,153 - INFO - Min of r: 7.8586578369140625
+2024-05-06 03:48:09,154 - INFO - Max of r: 24.498882293701172
+2024-05-06 03:48:09,154 - INFO - Mean of r: 16.134547348022462
+2024-05-06 03:48:09,154 - INFO - Standard Deviation of r: 2.692580013715673
+2024-05-06 03:48:09,154 - INFO - Ratio of fail: 0.0
+2024-05-06 04:15:41,447 - INFO - Error for SMILES '[H]C=C(NC=O)C=[Cl+3]([H])=C[H]' at radius 30.0
+2024-05-06 04:40:37,767 - INFO - Min of r: 6.3116455078125
+2024-05-06 04:40:37,767 - INFO - Max of r: 23.258914947509766
+2024-05-06 04:40:37,767 - INFO - Mean of r: 15.306252250671387
+2024-05-06 04:40:37,767 - INFO - Standard Deviation of r: 2.685114397572287
+2024-05-06 04:40:37,767 - INFO - Ratio of fail: 0.0
+2024-05-06 04:43:52,668 - INFO - Min of r: 6.398277282714844
+2024-05-06 04:43:52,669 - INFO - Max of r: 25.14026641845703
+2024-05-06 04:43:52,670 - INFO - Mean of r: 15.505636081695556
+2024-05-06 04:43:52,670 - INFO - Standard Deviation of r: 2.6188932027697245
+2024-05-06 04:43:52,670 - INFO - Ratio of fail: 0.0
+2024-05-06 04:52:21,394 - INFO - Error for SMILES '[H]O[Cl+3]([N+1]C)([H])=C([H])OCCC[H]' at radius 30.0
+2024-05-06 05:00:33,151 - INFO - Error for SMILES '[H]C=C([H])C([H])=C(C([H])[I-1]([H])(NCC[H])(C[H])C[H])C([H])=C[H]' at radius 22.5
+2024-05-06 05:36:05,805 - INFO - Min of r: 8.426799774169922
+2024-05-06 05:36:05,806 - INFO - Max of r: 25.27301788330078
+2024-05-06 05:36:05,806 - INFO - Mean of r: 16.166228553771973
+2024-05-06 05:36:05,806 - INFO - Standard Deviation of r: 2.5652781098844324
+2024-05-06 05:36:05,806 - INFO - Ratio of fail: 0.0
+2024-05-06 07:16:31,247 - INFO - Min of r: 7.3821258544921875
+2024-05-06 07:16:31,248 - INFO - Max of r: 23.299827575683594
+2024-05-06 07:16:31,248 - INFO - Mean of r: 15.296050930023194
+2024-05-06 07:16:31,248 - INFO - Standard Deviation of r: 2.574321468397637
+2024-05-06 07:16:31,248 - INFO - Ratio of fail: 0.0
+2024-05-06 07:25:25,105 - INFO - Min of r: 8.639373779296875
+2024-05-06 07:25:25,106 - INFO - Max of r: 35.759639739990234
+2024-05-06 07:25:25,107 - INFO - Mean of r: 20.592462816238402
+2024-05-06 07:25:25,107 - INFO - Standard Deviation of r: 3.570111389290266
+2024-05-06 07:25:25,107 - INFO - Ratio of fail: 0.0
+2024-05-06 07:50:48,148 - INFO - Min of r: 6.443309783935547
+2024-05-06 07:50:48,148 - INFO - Max of r: 24.198589324951172
+2024-05-06 07:50:48,149 - INFO - Mean of r: 15.439199787139893
+2024-05-06 07:50:48,149 - INFO - Standard Deviation of r: 2.60559170514799
+2024-05-06 07:50:48,149 - INFO - Ratio of fail: 0.0
+2024-05-06 08:04:35,079 - INFO - Min of r: 6.662178039550781
+2024-05-06 08:04:35,080 - INFO - Max of r: 24.232234954833984
+2024-05-06 08:04:35,080 - INFO - Mean of r: 15.363929889678955
+2024-05-06 08:04:35,080 - INFO - Standard Deviation of r: 2.5595958277040674
+2024-05-06 08:04:35,080 - INFO - Ratio of fail: 0.0
+2024-05-06 09:16:42,739 - INFO - Min of r: 8.040275573730469
+2024-05-06 09:16:42,740 - INFO - Max of r: 25.717735290527344
+2024-05-06 09:16:42,740 - INFO - Mean of r: 16.069341522216796
+2024-05-06 09:16:42,741 - INFO - Standard Deviation of r: 2.592140864281234
+2024-05-06 09:16:42,741 - INFO - Ratio of fail: 0.0
+2024-05-06 10:06:14,429 - INFO - Error for SMILES '[N-1][I-1](C[H])#N' at radius 30.0
+2024-05-06 10:14:30,666 - INFO - Error for SMILES '[H]C1=C([H])C([H])=CN[I+1]1(=O)(N)([H])C[NH0]C([H])[H]' at radius 30.0
+2024-05-06 11:08:29,041 - INFO - Error for SMILES '[H]OC=CPCC([H])C=C[Cl+3]([H])(O[H])=C(N=C)CC[H]' at radius 30.0
+2024-05-06 11:48:38,939 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:48:39,632 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:48:39,636 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:48:52,279 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:48:52,946 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:48:52,950 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:49:00,285 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:49:00,882 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:49:00,886 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:49:24,478 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:49:25,078 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:49:25,083 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:49:49,176 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:49:49,810 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:49:49,814 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:50:42,788 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:50:43,431 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:50:43,436 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:51:03,826 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:51:04,510 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:51:04,514 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:51:17,243 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:51:17,883 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:51:17,887 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:51:31,740 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:51:32,464 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:51:32,469 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 11:51:46,644 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 11:51:47,185 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 11:51:47,188 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 12:11:37,938 - INFO - Error for SMILES '[H]OC([H])C([H])=CC=C=C(OO[H])O[Cl+3](OCC=C[H])(CC(O[H])=C)#N' at radius 30.0
+2024-05-06 12:44:36,660 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 22.5
+2024-05-06 12:44:36,823 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.5625
+2024-05-06 12:44:36,932 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.328125
+2024-05-06 12:44:36,986 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.2109375
+2024-05-06 12:44:37,040 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.15234375
+2024-05-06 12:44:37,094 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.123046875
+2024-05-06 12:44:37,364 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.12213134765625
+2024-05-06 12:44:37,419 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.121673583984375
+2024-05-06 12:44:37,473 - INFO - Error for SMILES '[H]C1=C([H])C([H])=C[Cl+3]([H])([H])=C1[H]' at radius 21.121444702148438
+2024-05-06 13:00:30,865 - INFO - Min of r: 8.47463607788086
+2024-05-06 13:00:30,865 - INFO - Max of r: 25.260486602783203
+2024-05-06 13:00:30,865 - INFO - Mean of r: 16.26803575515747
+2024-05-06 13:00:30,866 - INFO - Standard Deviation of r: 2.6514012211402362
+2024-05-06 13:00:30,866 - INFO - Ratio of fail: 0.0
+2024-05-06 13:07:55,069 - INFO - Min of r: 9.300270080566406
+2024-05-06 13:07:55,070 - INFO - Max of r: 26.239700317382812
+2024-05-06 13:07:55,070 - INFO - Mean of r: 17.539628276824953
+2024-05-06 13:07:55,070 - INFO - Standard Deviation of r: 2.7376678945142703
+2024-05-06 13:07:55,070 - INFO - Ratio of fail: 0.0
+2024-05-06 13:17:08,045 - INFO - Min of r: 6.722145080566406
+2024-05-06 13:17:08,046 - INFO - Max of r: 27.640399932861328
+2024-05-06 13:17:08,046 - INFO - Mean of r: 16.32525173664093
+2024-05-06 13:17:08,046 - INFO - Standard Deviation of r: 2.591139477456312
+2024-05-06 13:17:08,046 - INFO - Ratio of fail: 0.0
+2024-05-06 13:26:49,803 - INFO - Error for SMILES '[H]C=C([H])[I-1]([H])#[N+1]' at radius 30.0
+2024-05-06 13:41:42,744 - INFO - Error for SMILES '[H]C=C([H])[I-1](Cl)([H])([H])(C)(C)[H]' at radius 30.0
+2024-05-06 13:52:02,622 - INFO - Min of r: 6.616687774658203
+2024-05-06 13:52:02,623 - INFO - Max of r: 24.10818099975586
+2024-05-06 13:52:02,623 - INFO - Mean of r: 15.302976322174072
+2024-05-06 13:52:02,623 - INFO - Standard Deviation of r: 2.6096082133944956
+2024-05-06 13:52:02,623 - INFO - Ratio of fail: 0.0
+2024-05-06 14:00:58,418 - INFO - Min of r: 8.632793426513672
+2024-05-06 14:00:58,418 - INFO - Max of r: 22.796802520751953
+2024-05-06 14:00:58,418 - INFO - Mean of r: 15.502947120666503
+2024-05-06 14:00:58,418 - INFO - Standard Deviation of r: 2.264437874362676
+2024-05-06 14:00:58,418 - INFO - Ratio of fail: 0.0
+2024-05-06 14:03:28,096 - INFO - Min of r: 8.887310028076172
+2024-05-06 14:03:28,110 - INFO - Max of r: 35.4356575012207
+2024-05-06 14:03:28,110 - INFO - Mean of r: 20.65604771518707
+2024-05-06 14:03:28,110 - INFO - Standard Deviation of r: 3.5838965853886022
+2024-05-06 14:03:28,110 - INFO - Ratio of fail: 0.0
+2024-05-06 14:13:01,891 - INFO - Min of r: 7.444438934326172
+2024-05-06 14:13:01,895 - INFO - Max of r: 25.071544647216797
+2024-05-06 14:13:01,896 - INFO - Mean of r: 16.29824320793152
+2024-05-06 14:13:01,896 - INFO - Standard Deviation of r: 2.577412409021478
+2024-05-06 14:13:01,896 - INFO - Ratio of fail: 0.0
+2024-05-06 14:23:26,082 - INFO - Min of r: 7.940998077392578
+2024-05-06 14:23:26,082 - INFO - Max of r: 22.906208038330078
+2024-05-06 14:23:26,082 - INFO - Mean of r: 14.412633390426636
+2024-05-06 14:23:26,083 - INFO - Standard Deviation of r: 2.1775507478511362
+2024-05-06 14:23:26,083 - INFO - Ratio of fail: 0.0
+2024-05-06 14:25:47,148 - INFO - Min of r: 9.661674499511719
+2024-05-06 14:25:47,149 - INFO - Max of r: 26.78335189819336
+2024-05-06 14:25:47,149 - INFO - Mean of r: 17.596422843933105
+2024-05-06 14:25:47,149 - INFO - Standard Deviation of r: 2.6820050065919965
+2024-05-06 14:25:47,149 - INFO - Ratio of fail: 0.0
+2024-05-06 14:40:14,528 - INFO - Min of r: 8.655853271484375
+2024-05-06 14:40:14,528 - INFO - Max of r: 25.49732208251953
+2024-05-06 14:40:14,528 - INFO - Mean of r: 16.39116292190552
+2024-05-06 14:40:14,528 - INFO - Standard Deviation of r: 2.590402933550748
+2024-05-06 14:40:14,528 - INFO - Ratio of fail: 0.0
+2024-05-06 14:49:11,801 - INFO - Min of r: 8.336563110351562
+2024-05-06 14:49:11,801 - INFO - Max of r: 26.481800079345703
+2024-05-06 14:49:11,801 - INFO - Mean of r: 17.53670018005371
+2024-05-06 14:49:11,802 - INFO - Standard Deviation of r: 2.7591024703384495
+2024-05-06 14:49:11,802 - INFO - Ratio of fail: 0.0
+2024-05-06 15:44:40,550 - INFO - Min of r: 8.604297637939453
+2024-05-06 15:44:40,550 - INFO - Max of r: 28.475990295410156
+2024-05-06 15:44:40,550 - INFO - Mean of r: 17.645327854156495
+2024-05-06 15:44:40,551 - INFO - Standard Deviation of r: 2.7103211129186757
+2024-05-06 15:44:40,551 - INFO - Ratio of fail: 0.0
