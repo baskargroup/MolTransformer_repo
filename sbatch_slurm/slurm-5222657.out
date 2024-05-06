@@ -3143,3 +3143,931 @@
 [17:19:52] WARNING: Omitted undefined stereo
 [17:19:52] WARNING: Omitted undefined stereo
 [17:19:53] WARNING: Omitted undefined stereo
+[17:19:53] WARNING: Omitted undefined stereo
+[17:19:53] WARNING: Omitted undefined stereo
+[17:19:53] WARNING: Accepted unusual valence(s): C(3); N+1(3); Omitted undefined stereo
+[17:19:53] WARNING: Omitted undefined stereo
+[17:19:53] WARNING: Omitted undefined stereo
+[17:19:54] WARNING: Omitted undefined stereo
+[17:19:54] WARNING: Omitted undefined stereo
+[17:19:54] WARNING: Omitted undefined stereo
+[17:19:55] WARNING: Omitted undefined stereo
+[17:19:55] WARNING: Omitted undefined stereo
+[17:19:55] WARNING: Omitted undefined stereo
+[17:19:55] WARNING: Omitted undefined stereo
+[17:19:56] WARNING: Omitted undefined stereo
+[17:19:56] WARNING: Omitted undefined stereo
+[17:19:58] WARNING: Omitted undefined stereo
+[17:19:58] WARNING: Omitted undefined stereo
+[17:19:59] WARNING: Omitted undefined stereo
+[17:19:59] WARNING: Omitted undefined stereo
+[17:19:59] WARNING: Omitted undefined stereo
+[17:19:59] WARNING: Omitted undefined stereo
+[17:19:59] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Proton(s) added/removed
+[17:20:00] WARNING: Proton(s) added/removed
+[17:20:00] WARNING: Accepted unusual valence(s): S(3)
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+[17:20:00] WARNING: Omitted undefined stereo
+<frozen importlib._bootstrap>:219: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+/work/mech-ai/bella/MolTransformer_repo/MolTransformer/generative/generative_utils.py:558: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_no_dupes_smiles['InChI'] = df_no_dupes_smiles['SMILES'].apply(safe_smiles_to_inchi)
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/train_config.json
+Log file will be located at:  /work/mech-ai/bella/MolTransformer_repo/MolTransformer/log_file.log
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/train_config.json
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/train_config.json
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/config.json
+self.mode SS
+done intialized
+loading SS model
+load the cpu model!! 
+Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+self.mode multiF_HF
+done intialized
+Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+load the cpu model!! 
+step:  0
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+vector_generator shape  (100, 12030)
+Initial molecule: c2ccc(c1ccccc1)cc2
+Vector: 0
+vector shape:  (1, 12030)
+Vector: 1
+vector shape:  (1, 12030)
+Vector: 2
+vector shape:  (1, 12030)
+Vector: 3
+vector shape:  (1, 12030)
+Vector: 4
+vector shape:  (1, 12030)
+Vector: 5
+vector shape:  (1, 12030)
+Vector: 6
+vector shape:  (1, 12030)
+Vector: 7
+vector shape:  (1, 12030)
+Vector: 8
+vector shape:  (1, 12030)
+Vector: 9
+vector shape:  (1, 12030)
+Vector: 10
+vector shape:  (1, 12030)
+Vector: 11
+vector shape:  (1, 12030)
+Vector: 12
+vector shape:  (1, 12030)
+Vector: 13
+vector shape:  (1, 12030)
+Vector: 14
+vector shape:  (1, 12030)
+Vector: 15
+vector shape:  (1, 12030)
+Vector: 16
+vector shape:  (1, 12030)
+Vector: 17
+vector shape:  (1, 12030)
+Vector: 18
+vector shape:  (1, 12030)
+Vector: 19
+vector shape:  (1, 12030)
+Vector: 20
+vector shape:  (1, 12030)
+Vector: 21
+vector shape:  (1, 12030)
+Vector: 22
+vector shape:  (1, 12030)
+Vector: 23
+vector shape:  (1, 12030)
+Vector: 24
+vector shape:  (1, 12030)
+Vector: 25
+vector shape:  (1, 12030)
+Vector: 26
+vector shape:  (1, 12030)
+Vector: 27
+vector shape:  (1, 12030)
+Vector: 28
+vector shape:  (1, 12030)
+Vector: 29
+vector shape:  (1, 12030)
+Vector: 30
+vector shape:  (1, 12030)
+Vector: 31
+vector shape:  (1, 12030)
+Vector: 32
+vector shape:  (1, 12030)
+Vector: 33
+vector shape:  (1, 12030)
+Vector: 34
+vector shape:  (1, 12030)
+Vector: 35
+vector shape:  (1, 12030)
+Vector: 36
+vector shape:  (1, 12030)
+Vector: 37
+vector shape:  (1, 12030)
+Vector: 38
+vector shape:  (1, 12030)
+Vector: 39
+vector shape:  (1, 12030)
+Vector: 40
+vector shape:  (1, 12030)
+Vector: 41
+vector shape:  (1, 12030)
+Vector: 42
+vector shape:  (1, 12030)
+Vector: 43
+vector shape:  (1, 12030)
+Vector: 44
+vector shape:  (1, 12030)
+Vector: 45
+vector shape:  (1, 12030)
+Vector: 46
+vector shape:  (1, 12030)
+Vector: 47
+vector shape:  (1, 12030)
+Vector: 48
+vector shape:  (1, 12030)
+Vector: 49
+vector shape:  (1, 12030)
+Vector: 50
+vector shape:  (1, 12030)
+Vector: 51
+vector shape:  (1, 12030)
+Vector: 52
+vector shape:  (1, 12030)
+Vector: 53
+vector shape:  (1, 12030)
+Vector: 54
+vector shape:  (1, 12030)
+Vector: 55
+vector shape:  (1, 12030)
+Vector: 56
+vector shape:  (1, 12030)
+Vector: 57
+vector shape:  (1, 12030)
+Vector: 58
+vector shape:  (1, 12030)
+Vector: 59
+vector shape:  (1, 12030)
+Vector: 60
+vector shape:  (1, 12030)
+Vector: 61
+vector shape:  (1, 12030)
+Vector: 62
+vector shape:  (1, 12030)
+Vector: 63
+vector shape:  (1, 12030)
+Vector: 64
+vector shape:  (1, 12030)
+Vector: 65
+vector shape:  (1, 12030)
+Vector: 66
+vector shape:  (1, 12030)
+Vector: 67
+vector shape:  (1, 12030)
+Vector: 68
+vector shape:  (1, 12030)
+Vector: 69
+vector shape:  (1, 12030)
+Vector: 70
+vector shape:  (1, 12030)
+Vector: 71
+vector shape:  (1, 12030)
+Vector: 72
+vector shape:  (1, 12030)
+Vector: 73
+vector shape:  (1, 12030)
+Vector: 74
+vector shape:  (1, 12030)
+Vector: 75
+vector shape:  (1, 12030)
+Vector: 76
+vector shape:  (1, 12030)
+Vector: 77
+vector shape:  (1, 12030)
+Vector: 78
+vector shape:  (1, 12030)
+Vector: 79
+vector shape:  (1, 12030)
+Vector: 80
+vector shape:  (1, 12030)
+Vector: 81
+vector shape:  (1, 12030)
+Vector: 82
+vector shape:  (1, 12030)
+Vector: 83
+vector shape:  (1, 12030)
+Vector: 84
+vector shape:  (1, 12030)
+Vector: 85
+vector shape:  (1, 12030)
+Vector: 86
+vector shape:  (1, 12030)
+Vector: 87
+vector shape:  (1, 12030)
+Vector: 88
+vector shape:  (1, 12030)
+Vector: 89
+vector shape:  (1, 12030)
+Vector: 90
+vector shape:  (1, 12030)
+Vector: 91
+vector shape:  (1, 12030)
+Vector: 92
+vector shape:  (1, 12030)
+Vector: 93
+vector shape:  (1, 12030)
+Vector: 94
+vector shape:  (1, 12030)
+Vector: 95
+vector shape:  (1, 12030)
+Vector: 96
+vector shape:  (1, 12030)
+Vector: 97
+vector shape:  (1, 12030)
+Vector: 98
+vector shape:  (1, 12030)
+Vector: 99
+vector shape:  (1, 12030)
+Number of failures: 0
+Ratio of fail: 0.0
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][Branch2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][Cl][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][#Branch1][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][F][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][F][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][C][=O][C][Branch1][C][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][=C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][Branch1][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Branch2][Ring1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][C][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][=Branch1][Ring1][Branch1][C][H][Ring2][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][2H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][/C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][=C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][\\N][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][C][Branch1][C][H][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][F]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][Br][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][C][Branch1][C][H][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][C][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][S][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][Branch1][C][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][Branch1][C][H][C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H][S]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][F][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][H][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Cl]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][C][Branch1][C][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][C][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][C][Branch1][C][H][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][Branch1][C][H][N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][=C][Ring1][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][Branch1][C][H][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][F][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][Branch1][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=O][Branch3][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][Br][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][Branch1][C][F][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][C][Branch1][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][F][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][=N][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][H][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][C][Branch1][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][=C][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][C][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][Branch1][C][H][=C][Branch1][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][=Branch1][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][\\C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][=Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][Branch1][C][H][=C][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C@@][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][#Branch2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][C][Branch1][C][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=N][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][C][H][Branch1][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=S][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][Branch1][C][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][Cl][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][C][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][Branch1][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][C][Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][C][=C][Ring2][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][=C][Branch1][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring1][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][F][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][#Branch2][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Branch1][N+1]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=N][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][#C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][C][H][Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][Branch1][C][#N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring1][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][C][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][Branch1][C][H][C][Branch1][C][H][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][=Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][P][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][H][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][=N][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Branch1][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][=C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][N][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][C-1][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][Branch1][C][H][=C][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][C][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][Branch2][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][Branch1][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][H][=C][Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][C][H][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][Ring1][C][Branch1][C][H][Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][=Branch2][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][H][N][Branch1][C][H][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][F][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Branch2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][C][Branch1][C][H][C][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][#C]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][Branch1][Ring1][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][C][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][Branch1][C][H][C][H][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][#N][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][N][Ring2][Ring2][=O]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][Ring1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][Br][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][P][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][=C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Branch2][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][F]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][H][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][Branch1][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][=N-1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][Ring1][H][=C][Ring2][Ring1][Ring2][H][N+1]']
+selfies  ['[H][/C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][F][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][S][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][I][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][H][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][=C][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][O][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][Cl][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][F][Ring1][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][F][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][Branch1][C][H][C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Br]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][C][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][C][=C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+------------------------memory_distance_min------------------ 1.1246823
+------------------------tanimoto_similarity_max------------------ 0.5
+step:  1
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+vector_generator shape  (100, 12030)
+Initial molecule: c2ccc(c1ccccc1)cc2
+Vector: 0
+vector shape:  (1, 12030)
+Vector: 1
+vector shape:  (1, 12030)
+Vector: 2
+vector shape:  (1, 12030)
+Vector: 3
+vector shape:  (1, 12030)
+Vector: 4
+vector shape:  (1, 12030)
+Vector: 5
+vector shape:  (1, 12030)
+Vector: 6
+vector shape:  (1, 12030)
+Vector: 7
+vector shape:  (1, 12030)
+Vector: 8
+vector shape:  (1, 12030)
+Vector: 9
+vector shape:  (1, 12030)
+Vector: 10
+vector shape:  (1, 12030)
+Vector: 11
+vector shape:  (1, 12030)
+Vector: 12
+vector shape:  (1, 12030)
+Vector: 13
+vector shape:  (1, 12030)
+Vector: 14
+vector shape:  (1, 12030)
+Vector: 15
+vector shape:  (1, 12030)
+Vector: 16
+vector shape:  (1, 12030)
+Vector: 17
+vector shape:  (1, 12030)
+Vector: 18
+vector shape:  (1, 12030)
+Vector: 19
+vector shape:  (1, 12030)
+Vector: 20
+vector shape:  (1, 12030)
+Vector: 21
+vector shape:  (1, 12030)
+Vector: 22
+vector shape:  (1, 12030)
+Vector: 23
+vector shape:  (1, 12030)
+Vector: 24
+vector shape:  (1, 12030)
+Vector: 25
+vector shape:  (1, 12030)
+Vector: 26
+vector shape:  (1, 12030)
+Vector: 27
+vector shape:  (1, 12030)
+Vector: 28
+vector shape:  (1, 12030)
+Vector: 29
+vector shape:  (1, 12030)
+Vector: 30
+vector shape:  (1, 12030)
+Vector: 31
+vector shape:  (1, 12030)
+Vector: 32
+vector shape:  (1, 12030)
+Vector: 33
+vector shape:  (1, 12030)
+Vector: 34
+vector shape:  (1, 12030)
+Vector: 35
+vector shape:  (1, 12030)
+Vector: 36
+vector shape:  (1, 12030)
+Vector: 37
+vector shape:  (1, 12030)
+Vector: 38
+vector shape:  (1, 12030)
+Vector: 39
+vector shape:  (1, 12030)
+Vector: 40
+vector shape:  (1, 12030)
+Vector: 41
+vector shape:  (1, 12030)
+Vector: 42
+vector shape:  (1, 12030)
+Vector: 43
+vector shape:  (1, 12030)
+Vector: 44
+vector shape:  (1, 12030)
+Vector: 45
+vector shape:  (1, 12030)
+Vector: 46
+vector shape:  (1, 12030)
+Vector: 47
+vector shape:  (1, 12030)
+Vector: 48
+vector shape:  (1, 12030)
+Vector: 49
+vector shape:  (1, 12030)
+Vector: 50
+vector shape:  (1, 12030)
+Vector: 51
+vector shape:  (1, 12030)
+Vector: 52
+vector shape:  (1, 12030)
+Vector: 53
+vector shape:  (1, 12030)
+Vector: 54
+vector shape:  (1, 12030)
+Vector: 55
+vector shape:  (1, 12030)
+Vector: 56
+vector shape:  (1, 12030)
+Vector: 57
+vector shape:  (1, 12030)
+Vector: 58
+vector shape:  (1, 12030)
+Vector: 59
+vector shape:  (1, 12030)
+Vector: 60
+vector shape:  (1, 12030)
+Vector: 61
+vector shape:  (1, 12030)
+Vector: 62
+vector shape:  (1, 12030)
+Vector: 63
+vector shape:  (1, 12030)
+Vector: 64
+vector shape:  (1, 12030)
+Vector: 65
+vector shape:  (1, 12030)
+Vector: 66
+vector shape:  (1, 12030)
+Vector: 67
+vector shape:  (1, 12030)
+Vector: 68
+vector shape:  (1, 12030)
+Vector: 69
+vector shape:  (1, 12030)
+Vector: 70
+vector shape:  (1, 12030)
+Vector: 71
+vector shape:  (1, 12030)
+Vector: 72
+vector shape:  (1, 12030)
+Vector: 73
+vector shape:  (1, 12030)
+Vector: 74
+vector shape:  (1, 12030)
+Vector: 75
+vector shape:  (1, 12030)
+Vector: 76
+vector shape:  (1, 12030)
+Vector: 77
+vector shape:  (1, 12030)
+Vector: 78
+vector shape:  (1, 12030)
+Vector: 79
+vector shape:  (1, 12030)
+Vector: 80
+vector shape:  (1, 12030)
+Vector: 81
+vector shape:  (1, 12030)
+Vector: 82
+vector shape:  (1, 12030)
+Vector: 83
+vector shape:  (1, 12030)
+Vector: 84
+vector shape:  (1, 12030)
+Vector: 85
+vector shape:  (1, 12030)
+Vector: 86
+vector shape:  (1, 12030)
+Vector: 87
+vector shape:  (1, 12030)
+Vector: 88
+vector shape:  (1, 12030)
+Vector: 89
+vector shape:  (1, 12030)
+Vector: 90
+vector shape:  (1, 12030)
+Vector: 91
+vector shape:  (1, 12030)
+Vector: 92
+vector shape:  (1, 12030)
+Vector: 93
+vector shape:  (1, 12030)
+Vector: 94
+vector shape:  (1, 12030)
+Vector: 95
+vector shape:  (1, 12030)
+Vector: 96
+vector shape:  (1, 12030)
+Vector: 97
+vector shape:  (1, 12030)
+Vector: 98
+vector shape:  (1, 12030)
+Vector: 99
+vector shape:  (1, 12030)
+Number of failures: 0
+Ratio of fail: 0.0
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][C][Branch1][C][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][#C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][F]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Cl][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][NH0][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][H][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Ring1][=Branch1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=N+1][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][C][H][H][C][Branch1][C][Cl][=C][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=O][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][Ring2]']
+selfies  ['[H][C][=C][=C][Branch1][C][C][F][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=C][=C][Branch1][C][H][C][=C][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][H][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][=Branch1][C][=S][=C][Branch1][Branch1][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][C@@][Branch1][C][H][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][H][C][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][I][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring1][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][S]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][=Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][N][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][N+1][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][S][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][C][Branch1][C][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][Branch1][C][H][=C][Ring1][#Branch2][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][C][Branch1][C][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=N][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring1][Ring2][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][=N][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][=C][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][#N][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][Cl][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][C][Ring2][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][Ring1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][=Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring1][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][C][Branch1][C][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][#Branch1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Branch2][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][C][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][#C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][Branch1][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][F][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=O][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][\\N][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][=C][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=N][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][Branch1][C][H][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=O][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][=Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][=C][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][Branch1][C][H][C][I][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch2][Ring1][=C][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][F][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][C][Branch1][C][H][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Branch2][Ring1][=Branch1][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][O][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][#C][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][Branch1][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][#Branch2][H][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][I][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][H][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][=C][Branch1][C][H][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][C][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][C][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][C][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][C][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][Branch1][C][H][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][=C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][C][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Ring1][H][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][C][H][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H]']
+selfies  ['[H][C][=C][C][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][S][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][S][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=O][=C][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][F][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][C][H][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][=O]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][Branch2][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][H][C][\\H][C][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][#N][C][Branch2][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][S][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][=Branch2][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][-\\Ring2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][H][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][=S][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][Branch1][C][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][C][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][=C][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][Branch1][C][H][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][C][#N][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=N][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][O][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][#N][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][O-1][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][=C][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][Branch1][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][Branch1][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][O][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][Branch1][C][H][Ring2][Ring1][H][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Branch2][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][Cl][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring1][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][Ring2][Ring2][Ring1][Ring2][=O]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Branch1][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][=C][=C][Branch1][C][H][C][Branch1][C][I][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=N][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=N+1][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][S][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][Ring1][#C][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][C][Branch1][C][H][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][Branch1][C][Br][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][Br][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][C][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][Branch1][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][H][C][C][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring2][C]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring1][Ring1][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][=C][Ring2][Ring2][Ring2][H]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][=Branch1][C][H][=C][Ring2][Ring1][Ring2]']
+selfies  ['[H][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch2][Ring1][=Branch1][C][=C][Branch1][C][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][=C][Ring1][#Branch2][H][C][Branch1][C][H][H][=C][Ring2][H][H]']
+------------------------memory_distance_min------------------ 1.1246823
+------------------------tanimoto_similarity_max------------------ 0.48148148148148145
+Saved visualization to /work/mech-ai/bella/ChemTransformer/report/GenerativeMethods/test_optimistic_property_driven_molecules_generation//ocelot/0/optimistic_property_driven_molecules_generation/molecules_generation_1.png
+smiles ['c2ccc(c1ccccc1)cc2', '[H]C1=C([H])C([H])=C(C2C=C([H])C([H])([H])C([H])=C2[H])C([H])=C1[H]']
+properties [0.29720133543014526, 1.191831350326538]

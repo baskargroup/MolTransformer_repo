@@ -942,4 +942,72 @@ lue' assignment exists.
 2024-05-06 17:11:44,002 - INFO - Mean of r: 17.594655418395995
 2024-05-06 17:11:44,002 - INFO - Standard Deviation of r: 2.7070506184273135
 2024-05-06 17:11:44,002 - INFO - Ratio of fail: 0.0
-2024-05-06 17:13:33,116 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+                                                                                                                                      2024-05-06 17:20:00,239 - INFO - Min of r: 10.729694366455078
+2024-05-06 17:20:00,239 - INFO - Max of r: 25.824508666992188
+2024-05-06 17:20:00,239 - INFO - Mean of r: 17.741084003448485
+2024-05-06 17:20:00,240 - INFO - Standard Deviation of r: 3.0468038228181724
+2024-05-06 17:20:00,240 - INFO - Ratio of fail: 0.0
+2024-05-06 17:24:38,552 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:24:39,062 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:24:39,066 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:25:02,153 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:25:02,633 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:25:02,638 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:25:33,717 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:25:34,321 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:25:34,325 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:26:33,309 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:26:33,813 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:26:33,817 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:27:03,800 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:27:04,430 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:27:04,434 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:39:34,995 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:39:35,642 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:39:35,647 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:39:45,511 - INFO - For vector 6 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:39:49,237 - INFO - For vector 9 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:39:53,417 - INFO - For vector 14 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:39:56,013 - INFO - For vector 16 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:40:04,906 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:40:05,455 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:40:05,459 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:40:14,758 - INFO - For vector 36 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:40:34,718 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-06 17:40:35,225 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:40:35,229 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:41:04,619 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = 2024-05-06 17:41:29,907 - INFO - For vector 114 , the direction:1  failed to find new molecule    ,count: 20
+er than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:41:05,109 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:41:34,700 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = v2024-05-06 17:41:39,457 - INFO - For vector 127 , the direction:1  failed to find new molecule    ,count: 20
+r than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-06 17:41:35,199 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-06 17:42:35,826 - INFO - For vector 201 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:42:37,655 - INFO - For vector 204 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:42:38,019 - INFO - For vector 204 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:42:45,217 - INFO - For vector 214 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:42:59,494 - INFO - For vector 233 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:43:31,315 - INFO - For vector 276 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:43:42,457 - INFO - For vector 289 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:44:16,711 - INFO - For vector 336 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:45:04,577 - INFO - For vector 400 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:45:39,001 - INFO - For vector 446 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:45:41,037 - INFO - For vector 448 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:45:49,524 - INFO - For vector 459 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:45:55,490 - INFO - For vector 467 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:45:57,975 - INFO - For vector 470 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:46:08,962 - INFO - For vector 483 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:46:26,337 - INFO - For vector 507 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:46:46,370 - INFO - For vector 532 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:47:17,836 - INFO - For vector 569 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:47:23,251 - INFO - For vector 574 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:48:07,783 - INFO - For vector 626 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:48:20,467 - INFO - For vector 640 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:48:26,201 - INFO - For vector 646 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:48:27,885 - INFO - For vector 648 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:49:26,978 - INFO - For vector 688 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:49:34,855 - INFO - For vector 696 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:49:44,068 - INFO - For vector 703 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:49:56,139 - INFO - For vector 716 , the direction:-1  failed to find new molecule    ,count: 20
+2024-05-06 17:50:11,619 - INFO - For vector 732 , the direction:1  failed to find new molecule    ,count: 20
+2024-05-06 17:50:44,474 - INFO - For vector 765 , the direction:1  failed to find new molecule    ,count: 20
