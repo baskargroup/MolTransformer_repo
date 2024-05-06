@@ -158,7 +158,55 @@ def draw_all_structures(smiles_list, out_dir, mols_per_image=30, molsPerRow=5, n
 
 
 
+def plot_tanimoto_histogram(df, out_dir):
+    """
+    Plots Tanimoto Similarity vs. Distance Ratio from a DataFrame as histograms,
+    comparing 'similarity_start' and 'similarity_end' to 'distance_ratio'.
 
+    Parameters:
+    - df: A pandas DataFrame that must contain 'TanimotoSimilarity', 'similarity_start',
+          'similarity_end', and 'distance_ratio' columns.
+    - out_dir: Directory path where the plot image will be saved.
+
+    Returns:
+    - A histogram showing both 'similarity_start' and 'similarity_end' against 'distance_ratio',
+      each with unique colors and legends.
+    """
+    # Normalize 'distance_ratio' by dividing by the last value
+    last_value = df['distance_ratio'].iloc[-1]
+    normalized_distance_ratio = df['distance_ratio'] / last_value
+
+    # Extract 'similarity_start' and 'similarity_end'
+    similarity_start = df['similarity_start']
+    similarity_end = df['similarity_end']
+
+    # Plotting
+    plt.figure(figsize=(10, 6))
+    
+    # Plot 'similarity_start' histogram
+    plt.bar(normalized_distance_ratio - 0.02, similarity_start, width=0.04, label='Generated vs. Start Molecule Similarity', color='blue', alpha=0.6)
+    
+    # Plot 'similarity_end' histogram
+    plt.bar(normalized_distance_ratio + 0.02, similarity_end, width=0.04, label='Generated vs. End Molecule Similarity', color='green', alpha=0.6)
+    
+    # Setting the title and labels
+    plt.title('Histogram of Tanimoto Similarity vs. Normalized Distance Ratio')
+    plt.xlabel('Normalized Distance Ratio')
+    plt.ylabel('Tanimoto Similarity')
+
+    # Adding grid for better readability
+    plt.grid(True)
+    
+    # Adding a legend to distinguish between the histograms
+    plt.legend()
+
+    # Save the plot to the specified directory
+    plt.savefig(out_dir + 'Histogram_Tanimoto_Similarity_vs_Distance_Ratio.png')
+    
+    # Close the plot to free up memory
+    plt.close()
+
+# may delete if plot_tanimoto_histogram pass test
 def plot_tanimoto(df, out_dir):
     """
     Plots Tanimoto Similarity vs. Distance Ratio from a DataFrame, comparing 'similarity_start'
