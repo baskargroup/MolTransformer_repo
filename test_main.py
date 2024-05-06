@@ -18,32 +18,12 @@ import numpy as np
 #generated_results,_ = GM.neighboring_search(initial_smile = initial_smile,num_vector= 20)
 #print('SMILES: ',generated_results['SMILES'])
 #print('SELFIES: ',generated_results['SELFIES'])
-
-# use the code to form a proper example with good command to be a example at readme.
-GM = GenerateMethods()
-initial_smile = GM.random_smile(dataset = 'qm9') # dataset can be your own csv file, make sure the files contains 'SELFIES' 
-print('initial_smile', initial_smile)
-ls = GM.smiles_2_latent_space([initial_smile])
-print('ls shape', ls.shape)
-## you may do some small change to the ls by pertumate or so
-edit_strings = GM.latent_space_2_strings(ls)
-selfies = GM.smile_2_selfies(initial_smile)
-ls_selfies = GM.selfies_2_latent_space([selfies])
-edit_strings_from_selfies = GM.latent_space_2_strings(ls_selfies)
-#you can also do some pertubute on the ls and see whether the new ls give you a better property value by the following function 
-GM.set_property_model(dataset = 'qm9')
-properties_1 = GM.latent_spaces_2_properties(ls)
-print('properties_1: ', properties_1)
-#also we offer this function
-properties_2 = GM.smiles_2_properties(edit_strings_from_selfies['SMILES'])
-print('properties_2: ', properties_2)
-
-#we can compare the selfies we get to see whether they are same
-print('edit_smile: ',edit_strings['SMILES'][0])
-print('edit_smiles_selfies: ',edit_strings_from_selfies['SMILES'][0])
-
-
-
-
-
+interest_molecules = {
+    'qm9':['C','c1ccccc1', 'NC2NC(=O)c1ncn(COCCO)c1N2',"Cc2c(N(C)C)c(=O)n(c1ccccc1)n2C",'CCNC2C1CCC(C1)C2c3ccccc3'],
+	'ocelot': ['c2ccc(c1ccccc1)cc2','c5ccc4cc3cc2cc1ccccc1cc2cc3cc4c5','c1ccc3c(c1)sc4c2ccccc2sc34','CC1CC2CC(C)[Si]12C#Cc8c4cc3ccccc3cc4c(C#C[Si]56C(C)CC5CC6C)c9cc7ccccc7cc89',
+			'Oc4ccc(c1cc(O)c(O)cc1c2cc(O)c(O)cc2c3ccc(O)c(O)c3)cc4O']}
+GM = GenerateMethods(save = True)
+molecules_generation_record = GM.optimistic_property_driven_molecules_generation(dataset = 'qm9',k = 100,num_vector = 10000, sa_threshold = 6,initial_smile = '',resolution = 0.0001,search_range = 60,max_step = 10,alpha = 0.5) # dataset can be your own csv file, make sure the files contains 'SELFIES' 
+print('smiles', molecules_generation_record['SMILES'])
+print('properties', molecules_generation_record['Property'])
 

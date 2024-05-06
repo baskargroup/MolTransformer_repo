@@ -487,9 +487,12 @@ def filter_duplicates(df):
     """
     Filter out duplicates based on SMILES and molecular identity (using InChI).
     """
+    # Ensure df_ is a copy to avoid SettingWithCopyWarning when modifying it later
+    df_ = df.dropna(subset=['SMILES']).copy()
+
     # Remove duplicate SMILES strings
-    df_ = df.dropna(subset=['SMILES'])
     df_no_dupes_smiles = df_.drop_duplicates(subset='SMILES', keep='first')
+
     # Function to safely convert SMILES to InChI, returning None for invalid molecules
     def safe_smiles_to_inchi(smiles):
         mol = Chem.MolFromSmiles(smiles)
@@ -498,17 +501,16 @@ def filter_duplicates(df):
         else:
             return None
 
-    df_no_dupes_smiles.loc[:, 'InChI'] = df_no_dupes_smiles['SMILES'].apply(safe_smiles_to_inchi)
+    # Apply InChI conversion safely and directly using loc to avoid potential future SettingWithCopyWarning
+    df_no_dupes_smiles['InChI'] = df_no_dupes_smiles['SMILES'].apply(safe_smiles_to_inchi)
     df_no_dupes_smiles = df_no_dupes_smiles.dropna(subset=['InChI'])  # Drop rows where InChI conversion failed
 
-    
-    
     # Remove duplicates based on InChI
     df_no_dupes = df_no_dupes_smiles.drop_duplicates(subset='InChI', keep='first').reset_index(drop=True)
-    
+
     # Remove the InChI column as it's no longer needed
     df_no_dupes = df_no_dupes.drop(columns=['InChI'])
-    
+
     return df_no_dupes
 
 def sort_k_radius(generated_results, k):

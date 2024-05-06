@@ -32,7 +32,7 @@ class GenerateMethods(IndexConvert):
         Decode the k points, record them if they are unique molecules. 
         Plot and solve all the generative molecules. 
     5. smiles_2_latent_space v
-    6. latent_space_2_string v
+    6. latent_space_2_strings v
     7. !  latent_space_2_properties:
         to use the function, make sure you call .set_property_model(dataset = 'qm9') or 'ocelot'
     smiles_2_properties
@@ -326,74 +326,56 @@ class GenerateMethods(IndexConvert):
         data = data * std1 + mean1
         return data
     
-    def optimistic_property_driven_molecules_generation(self, k = 5,random = True,initial_smile = '',dataset = 'ocelot',accuracy_rate = 0.001,max_step = 5,sorting_method = 'radius'):
-
-        if not self.property_model:
+    def optimistic_property_driven_molecules_generation(self, dataset = 'qm9',k = 30,num_vector = 100, sa_threshold = 6,initial_smile = '',resolution = 0.001,search_range = 40,max_step = 5,alpha = 0.5):
+        #k: top k high score of the neighbors can be candidates for next molecule's next move
+        if not hasattr(self, 'property_model'):
             self.set_property_model(dataset = dataset)
+        
+        # neighbor_search
+        # get property
+        # if not improve
+        # stop
+        # plot all molecules and txt the property
+        # return {'SMILES','SELFIES', 'properties'}
 
-        if random:
-            if not initial_smile:
-                initial_smile = self._random_pick_initail_smiles(dataset)
-            else:
-                raise ValueError("please not define initial_smile or set random to False")
-        else:
-            if not initial_smile:
-                raise ValueError("please define initial_smile or set random to True")
-        print('model_path: ',model_path)
-        self._load_multiF_model(model_path,std_path)
-        if sorting_method == 'memory':
-            revolution_record = { 'SMILES':[initial_smile],'radius':[0], 'dimension':['0'],'direction':['initial'],'Property':[],'MemoryDistance':[0]}
-        elif sorting_method == 'radius':
-            revolution_record = { 'SMILES':[initial_smile],'radius':[0], 'dimension':['0'],'direction':['initial'],'Property':[]}
-        else: 
-            raise ValueError("please define valid sorting_method")
+        if not initial_smile:
+            initial_smile = self.random_smile(dataset = dataset)
+        initial_selfies = self.smile_2_selfies(initial_smile)
+        current_property_ = self.smiles_2_properties(initial_smile)
+        current_property = float(current_property_[0][0])
+        molecules_generation_record = { 'SMILES':[initial_smile], 'Property':[current_property] , 'SELFIES':[initial_selfies]}
         improvement = True
         step = 0
+        if self.save:
+            optimistic_property_driven_molecules_generation_report_path = self.report_save_path + 'optimistic_property_driven_molecules_generation/'
+            check_path(optimistic_property_driven_molecules_generation_report_path)
+            plot_molecules(initial_smile,path = optimistic_property_driven_molecules_generation_report_path + 'initial')
+        current_smile = initial_smile
         while improvement and step < max_step:
             print('step: ', str(step))
-            generated_results,_ = self.NeighboringSearch( initial_smile, accuracy_rate = accuracy_rate)
-            generated_results = pd.DataFrame(generated_results)
-            if sorting_method == 'radius':
-                generated_results = sort_k_radius(generated_results, k)
-            else:
-                generated_results = self.sort_memory_norm2(generated_results, k)
-        
-            model_input = self._smile_2_property_model_input(generated_results['SMILES'])
-            predicted_property,a = self.property_model(model_input['input'],model_input['descriptors'])  # need convert to numpy array
-            print('----- predicted_property ', predicted_property)
-            print('a ',a)
+            generated_results,_ = self.neighboring_search(initial_smile = current_smile, search_range=search_range, resolution=resolution, num_vector=num_vector)
+            top_k_neighbors = self.sort_pareto_frontier(generated_results = generated_results,alpha = alpha, k = k, save = False, sa_threshold=sa_threshold)
+            neighbor_properties = self.smiles_2_properties(top_k_neighbors['SMILES'])
+            max_neighbor_properties = float(np.max(neighbor_properties))
+            index_max_neighbor_properties = int(np.argmax(neighbor_properties))
 
-            predicted_property_np_ = predicted_property.detach().numpy()
-            predicted_property_np = self.recover_standardized_data(predicted_property_np_)
-
-            if step == 0:
-                revolution_record['Property'].append(predicted_property_np[0][0])
-                plot_molecules(generated_results['SMILES'][0],path = self.Args.report_save_path + 'initial')
-            
-            print('shpe of predicted_property_np: ', predicted_property_np.shape)
-            print('generative max Property: ', str(np.max(predicted_property_np[1:])))
-            print('initial Property: ', str(predicted_property_np[0][0]))
-            if np.max(predicted_property_np[1:]) > predicted_property_np[0][0]: # if improve
-                initial_smile = generated_results['SMILES'][np.argmax(predicted_property_np[1:])+1]
-                revolution_record['SMILES'].append(initial_smile)
-                revolution_record['radius'].append(generated_results['radius'][np.argmax(predicted_property_np[1:])+1])
-                revolution_record['dimension'].append(generated_results['dimension'][np.argmax(predicted_property_np[1:])+1])
-                revolution_record['direction'].append(generated_results['direction'][np.argmax(predicted_property_np[1:])+1])
-                revolution_record['Property'].append(np.max(predicted_property_np[1:]))
-                if sorting_method == 'memory':
-                    revolution_record['MemoryDistance'].append(generated_results['MemoryDistance'][np.argmax(predicted_property_np[1:])+1])
-                plot_molecules(generated_results['SMILES'][np.argmax(predicted_property_np[1:])+1],path = self.Args.report_save_path + 'step_'+ str(step+1))
+            if max_neighbor_properties > current_property: # if improve
+                molecules_generation_record['SMILES'].append(top_k_neighbors['SMILES'][index_max_neighbor_properties])
+                molecules_generation_record['Property'].append(max_neighbor_properties)
+                molecules_generation_record['SELFIES'].append(top_k_neighbors['SELFIES'][index_max_neighbor_properties])
+                plot_molecules(top_k_neighbors['SMILES'][index_max_neighbor_properties],path = optimistic_property_driven_molecules_generation_report_path + 'step_'+ str(step+1))
+                current_property = max_neighbor_properties
             else:
                 improvement = False
-
             step += 1
 
         #save revolution_record to csv file 
-        csv_file_path = self.Args.report_save_path + 'OptimisticMoleculesEvolution' + '.csv'
-        df = pd.DataFrame(revolution_record)
+        csv_file_path = optimistic_property_driven_molecules_generation_report_path + 'molecules_generation_record' + '.csv'
+        df = pd.DataFrame(molecules_generation_record)
         # check pubchem_api
         df = validate_smiles_in_pubchem(df) 
         df.to_csv(csv_file_path, index=True)
+        return molecules_generation_record
 
     def neighboring_search(self, initial_smile, search_range=40, resolution=0.001, num_vector=100):
         """
@@ -433,14 +415,12 @@ class GenerateMethods(IndexConvert):
         fail_count = 0
 
         # Result and failure case tracking
-        generated_results = {'dimension': ['initial'], 'direction': [0], 'radius': [0], 'SMILES': [initial_smile], 'SELFIES': [ori_selfies[0]]}
+        generated_results = {'dimension': ['initial'], 'direction': [0], 'radius': [0], 'SMILES': [initial_smile], 'SELFIES': [ori_selfies]}
         fail_case_check = {'SMILES': [], 'SELFIES': []}
 
         # Mode-specific initializations
         representation = self.smiles_2_latent_space([initial_smile])  # Use latent space representation for 'ls'
-        representation = representation.view(-1).numpy()  # Convert to 1D numpy array
         representation = representation.reshape((1,-1))
-        print("--------- in ls, representation shape", representation.shape)
         vector_generator = self._generate_normalized_vectors(dimensions=representation.shape[1], num_vectors=num_vector)
         directions = [-1,1]
         adjustment_scale = search_range
@@ -464,7 +444,8 @@ class GenerateMethods(IndexConvert):
                     adjusted_representation += (r_mid * direction) * vector
                     new_smiles, new_selfies = None, None
                     try:
-                        new_smiles, new_selfies = self.latent_space_2_smiles(adjusted_representation)
+                        strings = self.latent_space_2_strings(adjusted_representation)
+                        new_smiles, new_selfies  = strings['SMILES'], strings['SELFIES']
                         new_mol = Chem.MolFromSmiles(new_smiles[0])
                         new_inchi = inchi.MolToInchi(new_mol)
                         if new_inchi != ori_inchi:
@@ -509,10 +490,9 @@ class GenerateMethods(IndexConvert):
                 else:
                     fail_count += 1
                     logging.info( "For vector " + str(vector_idx) +' , the direction:'+ str(direction) + '  failed to find new molecule   ' + ' ,count: ' + str(count))
-
+                generated_results['radius'].append(min_success_r)
                 generated_results['dimension'].append('N/A')
                 generated_results['direction'].append(direction)
-                generated_results['radius'].append(min_success_r)
                 generated_results['SMILES'].append(final_smiles[0] if final_smiles else initial_smile)
                 generated_results['SELFIES'].append(final_selfies[0] if final_selfies else ori_selfies[0])
 
@@ -589,6 +569,7 @@ class GenerateMethods(IndexConvert):
         return latent_spaces
     
     def selfies_2_latent_space(self, selfies):
+        print('selfies ',selfies)
         # If the input is a single SELFIES string, convert it to a list
         if isinstance(selfies, str):
             selfies = [selfies]
@@ -631,7 +612,6 @@ class GenerateMethods(IndexConvert):
             raise TypeError("generated_results must be a dict or a pandas DataFrame")
         else:
             df = generated_results
-
         updated_df = self._calculate_memory_l2(df)  # Add 'MemoryDistance'
         updated_df = calculate_tanimoto_similarity(updated_df)  # Add 'TanimotoSimilarity'
 
@@ -681,7 +661,6 @@ class GenerateMethods(IndexConvert):
 
         columns_to_save = ['dimension', 'direction', 'radius', 'SMILES', 'SELFIES', 'TanimotoSimilarity', 'MemoryDistance', 'distances_norm', 'similarities_norm', 'distances_inverted', 'pareto_frontier','pubchem']
         if isinstance(sa_threshold, (float,int)):
-            print('------------- sa filter -----')
             count_select = [0]
             sa_values_list = [sa_score(df_filtered['SMILES'].iloc[0])]
             i = 1
@@ -691,9 +670,7 @@ class GenerateMethods(IndexConvert):
                 if sa_score_value is not None and sa_score_value <= float(sa_threshold):
                     count_select.append(i)
                     sa_values_list.append(sa_score_value)
-
                 i += 1
-                print('sa_score_value ', sa_score_value)
                 
             top_k_1 = df_filtered.iloc[count_select].copy()
             top_k_1['SA_score'] = sa_values_list
@@ -705,7 +682,6 @@ class GenerateMethods(IndexConvert):
         # check pubchem_api
         top_k_1 = validate_smiles_in_pubchem(top_k_1)
 
-
         if save:
             file_name = f"{alpha}_pareto_frontier_top_{k}.csv"
             top_k_1.to_csv(os.path.join(folder_path, file_name), index=False, columns=[col for col in columns_to_save if col in top_k_1.columns])
@@ -714,11 +690,13 @@ class GenerateMethods(IndexConvert):
                 draw_all_structures(smiles_list, out_dir = folder_path, mols_per_image = mols_per_image, molsPerRow = molsPerRow, name_tag = '', file_prefix=str(alpha) + '_Pareto_Frontier_')
         return top_k_1
     
-    def _calculate_memory_l2(self,df):
-        df['Memory'] = df['SELFIES'].apply(lambda selfies: self.selfies_2_latent_space([selfies]))
-        # Assuming 'Memory' is a column of tensors, calculate distance from the first molecule
+    def _calculate_memory_l2(self, df):
+        # Convert each SELFIES in the dataframe to its latent space representation
+        df['Memory'] = df['SELFIES'].apply(lambda selfies: self.selfies_2_latent_space([selfies])[0])
+        # Get the memory of the first molecule in the dataframe
         first_memory = df.iloc[0]['Memory']
-        df['MemoryDistance'] = df['Memory'].apply(lambda mem: torch.norm(first_memory - mem).item())
+        # Calculate the L2 distance between the memory of each molecule and the first molecule
+        df['MemoryDistance'] = df['Memory'].apply(lambda mem: np.linalg.norm(first_memory - mem))
         return df
     
     def _smile_2_property_model_input(self, smile_list):

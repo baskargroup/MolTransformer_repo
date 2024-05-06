@@ -57,7 +57,7 @@ print('Edited SELFIES:', edit_results['SELFIES'][0])
 ```
 
 
-## BuildModel Configuration
+## BuildModel Configuratio
 ### Overview
 The BuildModel class simplifies the initialization and configuration of models tailored for different machine learning tasks in the MolTransformer project. It handles device setup, model initialization, and pre-loading of models with detailed customization options.
 
