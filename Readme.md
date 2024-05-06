@@ -55,9 +55,20 @@ edit_results = GM.latent_space_2_strings(ls)
 print('Edited SMILE:', edit_results['SMILES'][0])
 print('Edited SELFIES:', edit_results['SELFIES'][0])
 ```
+#### Example 5: Optimistic Property-Driven Molecule Generation
+This example showcases property-driven generation aimed at optimizing molecule properties through iterative exploration of the latent space. The k parameter selects the top k most similar neighboring molecules in each iteration, from which the molecule showing the most significant improvement in properties is chosen for the next cycle. This process necessitates defining the dataset, the number of latent space vectors to sample, and the k parameter that dictates the extent of the neighborhood search.
+```python
+GM = GenerateMethods(save=True)  # Enable saving of results and logs
+molecules_generation_record = GM.optimistic_property_driven_molecules_generation(dataset='qm9',k=30,num_vector=100)
+print('Generated SMILES:', molecules_generation_record['SMILES'])
+print('Properties:', molecules_generation_record['Property'])
+```
 
 
-## BuildModel Configuratio
+
+
+
+## BuildModel Configuratiom;
 ### Overview
 The BuildModel class simplifies the initialization and configuration of models tailored for different machine learning tasks in the MolTransformer project. It handles device setup, model initialization, and pre-loading of models with detailed customization options.
 
