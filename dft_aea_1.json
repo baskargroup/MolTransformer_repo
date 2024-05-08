@@ -1,0 +1,9 @@
+{
+    "ocelot_0_1_1": "c2ccc(c1ccccc1)cc2",
+    "ocelot_0_1_2": "[H]C1=C([H])C([H])=C(C2N([H])C([H])=C([H])C([H])=C2[H])C([H])=C1[H]",
+    "ocelot_0_1_3": "[H]C1=C([H])N([H])C1([H])C2=C([H])C([H])=C([H])C([H])=C2[H]",
+    "ocelot_0_1_4": "[H]C1=C([H])C([H])(C2=C([H])C([H])=C([H])C([H])=C2[H])B1[H]",
+    "ocelot_2_1_1": "c1ccc3c(c1)sc4c2ccccc2sc34",
+    "ocelot_2_1_2": "[H]C1=C([H])C([H])=C2C(=C1[H])SC=C2SC(C[H])C[H]",
+    "ocelot_2_1_3": "[H]C=C(SC([H])(C([H])([H])[H])C([H])([H])[H])C1=C([H])C([H])=C([H])C([H])=C1Cl"
+  }
