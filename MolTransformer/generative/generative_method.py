@@ -436,7 +436,11 @@ class GenerateMethods(IndexConvert):
         if self.save:
             optimistic_property_driven_molecules_generation_report_path = self.report_save_path + 'optimistic_property_driven_molecules_generation/'
             check_path(optimistic_property_driven_molecules_generation_report_path)
-            plot_molecules(initial_smile,path = optimistic_property_driven_molecules_generation_report_path + 'initial')
+            plot_molecules(initial_smile, path=optimistic_property_driven_molecules_generation_report_path + 'initial')
+            csv_file_path = optimistic_property_driven_molecules_generation_report_path + 'molecules_generation_record.csv'
+            df = pd.DataFrame(molecules_generation_record)
+            df.to_csv(csv_file_path, mode='w', header=True, index=False)  # Write initial record
+
         current_smile = initial_smile
         while improvement and step < max_step:
             print('step: ', str(step))
@@ -453,7 +457,10 @@ class GenerateMethods(IndexConvert):
                 current_property = max_neighbor_properties
                 current_smile = top_k_neighbors['SMILES'][index_max_neighbor_properties]
                 if self.save:
-                    plot_molecules(top_k_neighbors['SMILES'][index_max_neighbor_properties],path = optimistic_property_driven_molecules_generation_report_path + 'step_'+ str(step+1))
+                    plot_molecules(top_k_neighbors['SMILES'][index_max_neighbor_properties], path=optimistic_property_driven_molecules_generation_report_path + 'step_' + str(step + 1))
+                    df = pd.DataFrame({'SMILES': [current_smile], 'Property': [current_property], 'SELFIES': [top_k_neighbors['SELFIES'][index_max_neighbor_properties]]})
+                    df = validate_smiles_in_pubchem(df) 
+                    df.to_csv(csv_file_path, mode='a', header=False, index=False)  # Append new record
                 
             else:
                 improvement = False
@@ -462,11 +469,6 @@ class GenerateMethods(IndexConvert):
         #save revolution_record to csv file 
         if self.save:
             draw_all_structures(molecules_generation_record['SMILES'], out_dir = optimistic_property_driven_molecules_generation_report_path, mols_per_image = 10, molsPerRow = 5, name_tag = '', file_prefix= 'molecules_generation_',pop_first = False,molecule_prefix = 'step :  ')
-            csv_file_path = optimistic_property_driven_molecules_generation_report_path + 'molecules_generation_record' + '.csv'
-            df = pd.DataFrame(molecules_generation_record)
-            # check pubchem_api
-            df = validate_smiles_in_pubchem(df) 
-            df.to_csv(csv_file_path, index=True)
         return molecules_generation_record
 
     def neighboring_search(self, initial_smile, search_range=40, resolution=0.001, num_vector=100):
