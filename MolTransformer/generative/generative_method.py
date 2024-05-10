@@ -439,6 +439,7 @@ class GenerateMethods(IndexConvert):
             plot_molecules(initial_smile, path=optimistic_property_driven_molecules_generation_report_path + 'initial')
             csv_file_path = optimistic_property_driven_molecules_generation_report_path + 'molecules_generation_record.csv'
             df = pd.DataFrame(molecules_generation_record)
+            df = validate_smiles_in_pubchem(df) 
             df.to_csv(csv_file_path, mode='w', header=True, index=False)  # Write initial record
 
         current_smile = initial_smile
