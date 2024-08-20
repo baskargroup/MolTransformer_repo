@@ -1321,3 +1321,111 @@ r than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_
 2024-05-08 17:08:14,981 - INFO - Mean of r: 14.972707443237304
 2024-05-08 17:08:14,981 - INFO - Standard Deviation of r: 2.337070653885425
 2024-05-08 17:08:14,981 - INFO - Ratio of fail: 0.0
+2024-05-13 18:27:25,142 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-13 18:28:09,317 - INFO - iteration_num: 0
+2024-05-13 18:28:09,318 - INFO - uniqueness_ratio: 0.86
+2024-05-13 19:38:59,953 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-13 19:40:23,059 - INFO - iteration_num: 0
+2024-05-13 19:40:23,061 - INFO - uniqueness_ratio: 0.828
+2024-07-31 17:23:05,111 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-07-31 17:24:58,620 - INFO - iteration_num: 0
+2024-07-31 17:24:58,621 - INFO - uniqueness_ratio: 0.828
+2024-08-01 14:56:33,482 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:00:03,229 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:00:04,096 - INFO - SS
+2024-08-01 15:00:04,096 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-08-01 15:00:37,294 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:00:37,907 - INFO - SS
+2024-08-01 15:00:37,907 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-08-01 15:03:04,075 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:03:04,728 - INFO - SS
+2024-08-01 15:03:04,729 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-08-01 15:03:08,913 - INFO - ********train size :  126976 ***************
+2024-08-01 15:03:08,913 - INFO - ********test size :  31738 ***************
+2024-08-01 15:03:08,914 - INFO - ********train_teacher_forcing, with lr =  0.0001 , epochs = 1000
+2024-08-01 15:03:10,379 - INFO - #####################epoch: 0
+2024-08-01 15:03:10,379 - INFO - ----------- for data set folder list number:0
+2024-08-01 15:03:10,379 - INFO - ----------- for data set :0--- n_iter:  0
+2024-08-01 15:03:15,342 - INFO - epoch: 0
+2024-08-01 15:03:15,342 - INFO - -----------1
+2024-08-01 15:03:15,342 - INFO - loss:      2.8048756917087303e-07
+2024-08-01 15:03:15,343 - INFO - start testing
+2024-08-01 15:03:32,864 - INFO - test loss:      6.0969736160368854e-12
+2024-08-01 15:07:17,433 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:07:18,088 - INFO - SS
+2024-08-01 15:07:18,088 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-08-01 15:07:22,270 - INFO - ********train size :  126976 ***************
+2024-08-01 15:07:22,270 - INFO - ********test size :  31738 ***************
+2024-08-01 15:21:16,020 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:21:16,655 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:28:01,343 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:28:01,979 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:28:02,002 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:28:02,109 - INFO - SS
+2024-08-01 15:28:02,109 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified to 'SS', the model will load default pretrain 'SS' model.
+2024-08-01 15:28:06,310 - INFO - ********train size :  126976 ***************
+2024-08-01 15:28:06,310 - INFO - ********test size :  31738 ***************
+2024-08-01 15:29:54,215 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:29:54,848 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:29:54,874 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:29:54,978 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:29:55,054 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:29:55,057 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:31:19,688 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:31:20,274 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:31:20,299 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:31:20,410 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:31:20,488 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:31:20,491 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:31:42,646 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:31:43,227 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:31:43,253 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:32:12,731 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:32:13,331 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:32:13,445 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-08-01 15:32:13,450 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-01 15:35:59,915 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-01 15:36:00,575 - WARNING - Warning: The 'pretrain_model_file' is provided, but it will be ignored since 'dataset' is specified and not 'SS', the model configuration will load default 'multiF_HF' model.
+2024-08-01 15:36:00,602 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-08-08 12:28:59,031 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:29:28,453 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:30:35,935 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:33:37,866 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:35:37,679 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:36:04,199 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:36:42,765 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:37:19,585 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:38:48,118 - INFO - iteration_num: 0
+2024-08-08 12:38:48,119 - INFO - uniqueness_ratio: 0.828
+2024-08-08 12:43:50,333 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:46:14,304 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:50:17,463 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:51:29,403 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:53:00,283 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 12:54:47,264 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 13:08:31,551 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 13:11:34,729 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 13:13:00,950 - INFO - iteration_num: 0
+2024-08-08 13:13:00,952 - INFO - uniqueness_ratio: 0.828
+2024-08-08 13:16:08,084 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 13:17:35,696 - INFO - iteration_num: 0
+2024-08-08 13:17:35,697 - INFO - uniqueness_ratio: 0.828
+2024-08-08 13:41:56,710 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 13:43:34,162 - INFO - iteration_num: 0
+2024-08-08 13:43:34,163 - INFO - uniqueness_ratio: 0.828
+2024-08-08 13:47:16,926 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 13:48:39,312 - INFO - iteration_num: 0
+2024-08-08 13:48:39,313 - INFO - uniqueness_ratio: 0.828
+2024-08-08 13:52:13,144 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 14:04:34,928 - INFO - iteration_num: 0
+2024-08-08 14:04:34,933 - INFO - uniqueness_ratio: 0.828
+2024-08-08 14:19:57,754 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 14:22:08,403 - INFO - iteration_num: 0
+2024-08-08 14:22:08,404 - INFO - uniqueness_ratio: 0.828
+2024-08-08 14:29:36,192 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 14:29:56,566 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 14:31:23,994 - INFO - iteration_num: 0
+2024-08-08 14:31:23,995 - INFO - uniqueness_ratio: 0.828
+2024-08-08 14:32:34,808 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-08-08 14:34:28,413 - INFO - iteration_num: 0
+2024-08-08 14:34:28,415 - INFO - uniqueness_ratio: 0.828

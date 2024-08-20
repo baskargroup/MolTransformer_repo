@@ -190,12 +190,12 @@ class GenerateMethods(IndexConvert):
         sampled_vectors = np.zeros((n_samples, n_components))
 
         for i in range(n_components):
-            print('components: ',i)
-            print('std_dev_matrix', std_dev_matrix[i])
-            print('min: ', bounding_box[i, 1])
-            print('max: ',bounding_box[i, 0])
+            #print('components: ',i)
+            #print('std_dev_matrix', std_dev_matrix[i])
+            #print('min: ', bounding_box[i, 1])
+            #print('max: ',bounding_box[i, 0])
             if sample_type == 'normal':
-                print('mean_matrix', mean_matrix[i])
+                #print('mean_matrix', mean_matrix[i])
                 samples = np.random.normal(loc=mean_matrix[i], scale=np.abs(std_dev_matrix[i]), size=n_samples)
                 sampled_vectors[:, i] = samples
             elif sample_type == 'uniform':
