@@ -1,4 +1,0 @@
-  File "/work/mech-ai/bella/MolTransformer_repo/main.py", line 31
-    molecules_generation_record = GM.optimistic_property_driven_molecules_generation(initial_smile = interest_molecules[dataset][target_molecule],dataset = dataset,k = 100,num_vector = 10000, sa_threshold = 6,initial_smile = '',resolution = 0.0001,search_range = 60,max_step = 10,alpha = 0.5) # dataset can be your own csv file, make sure the files contains 'SELFIES' 
-                                                                                                                                                                                                                 ^
-SyntaxError: keyword argument repeated

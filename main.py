@@ -17,12 +17,12 @@ interest_molecules_step1 = {
 	'CC1CC2CC(C)[Si]12C#Cc8c4cc3ccccc3cc4c(C#C[Si]56C(C)CC5CC6C)c9cc7ccccc7cc89',
 	'[H]OC1=C([H])C([H])=C(C2=C([H])C(O[H])=C(O[H])C([H])=C2C3=C([H])C(ON)=C(O[H])C([H])=C3C4=C([H])C([H])=C(O[H])C(O[H])=C4[H])C([H])=C1O[H]']}
 dataset = 'ocelot'
-target_molecule = 4
-report_save_path_base = '/work/mech-ai/bella/ChemTransformer/report/GenerativeMethods/optimistic_property_driven_molecules_generation_continue_1500/'
+target_molecule = 1
+report_save_path_base = '/work/mech-ai/bella/ChemTransformer/report/GenerativeMethods/optimistic_property_driven_molecules_generation_continue_800/'
 report_save_path = report_save_path_base +'/'+dataset+'/'+str(target_molecule)+'/'
 GM = GenerateMethods(save = True,report_save_path = report_save_path)
 
-molecules_generation_record = GM.optimistic_property_driven_molecules_generation(initial_smile = interest_molecules_step1[dataset][target_molecule],dataset = dataset,k = 100,num_vector = 1500, sa_threshold = 6,resolution = 0.0001,search_range = 60,max_step = 10,alpha = 0.5) # dataset can be your own csv file, make sure the files contains 'SELFIES' 
+molecules_generation_record = GM.optimistic_property_driven_molecules_generation(initial_smile = interest_molecules_step1[dataset][target_molecule],dataset = dataset,k = 100,num_vector = 800, sa_threshold = 6,resolution = 0.0001,search_range = 60,max_step = 10,alpha = 0.5) # dataset can be your own csv file, make sure the files contains 'SELFIES' 
 print('smiles', molecules_generation_record['SMILES'])
 print('properties', molecules_generation_record['Property'])
 
