@@ -144,7 +144,7 @@ class ModelOperator():
         
         data_path = {'train':train_path,'test':test_path}
 
-        Data = DataProcess(model_mode = global_config['model_mode'] ,data_path = data_path,high_fidelity_label =label ,save_path = global_config['report_save_path'])
+        Data = DataProcess(model_mode = global_config['model_mode'] ,data_path = data_path,high_fidelity_label =label ,report_save_path = global_config['report_save_path'])
         logging.info("********train size :  " + str(len(Data.dataset_train)) + " ***************")
         logging.info("********test size :  " + str(len(Data.dataset_test)) + " ***************")
         if global_config["gpu_mode"]:
