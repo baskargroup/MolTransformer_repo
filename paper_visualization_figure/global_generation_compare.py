@@ -21,11 +21,17 @@ def selfies_2_smile(selfies_list):
     return smiles
 
 # Path to the CSV file
-csv_file_path = '/Users/tcpba/MolTransformer_repo/ss_test_data/SS_test_0.csv'
+# user setting:
+
+csv_file_path = '/Users/tcpba/2024Spring/ss_test_data/SS_test_1.csv'
+save_path = '/Users/tcpba/MolTransformer_repo/output/global_generated/SS_test_1/'
+print("save_path: " + save_path)
+num_of_mol_from_dataset = 500
+num_of_gen_mol = 500
 
 # Read the CSV file into a pandas DataFrame
 original_dataframe_ = pd.read_csv(csv_file_path)
-original_dataframe = original_dataframe_.sample(n=10000, random_state=42)
+original_dataframe = original_dataframe_.sample(n=num_of_mol_from_dataset, random_state=42)
 print("len of testing", len(original_dataframe))
 # Check if the CSV file contains the 'SELFIES' column
 if 'SELFIES' in original_dataframe.columns:
@@ -131,7 +137,7 @@ def compare_and_plot_distributions(original_distribution, generated_distribution
 
 # Run the function on the DataFrame
 GM = GenerateMethods(save=False)  # Set `save=True` to save results and logs
-smiles_list, selfies_list = GM.global_molecular_generation(n_samples=1000)
+smiles_list, selfies_list = GM.global_molecular_generation(n_samples=num_of_gen_mol)
 
 # Create a DataFrame from the lists
 data = {
@@ -140,12 +146,12 @@ data = {
 }
 generated_dataframe = pd.DataFrame(data)
 # Run analysis on the original and generated dataframes
-original_distributions = plot_generative_molecules_analysis(original_dataframe, save_file='/Users/tcpba/MolTransformer_repo/output/global_generated/SS_test_0/ss_testing_set_plot/original_')
-generated_distributions = plot_generative_molecules_analysis(generated_dataframe, save_file='/Users/tcpba/MolTransformer_repo/output/global_generated/SS_test_0/generated_plot/generated_')
+original_distributions = plot_generative_molecules_analysis(original_dataframe, save_file= save_path + 'ss_testing_set_plot/original_')
+generated_distributions = plot_generative_molecules_analysis(generated_dataframe, save_file=  save_path +  'generated_plot/generated_')
 
 # Compare and plot distributions
-kl_atom_count = compare_and_plot_distributions(original_distributions[0], generated_distributions[0], save_file='/Users/tcpba/MolTransformer_repo/output/global_generated/SS_test_0/comparison/comparison_num_atoms.png', plot_title='Atom Count Distribution')
-kl_ring_count = compare_and_plot_distributions(original_distributions[1], generated_distributions[1], save_file='/Users/tcpba/MolTransformer_repo/output/global_generated/SS_test_0/comparison/comparison_num_rings.png', plot_title='Ring Count Distribution')
-kl_atom_types = compare_and_plot_distributions(original_distributions[2], generated_distributions[2], save_file='/Users/tcpba/MolTransformer_repo/output/global_generated/SS_test_0/comparison/comparison_atom_types.png', plot_title='Atom Types Distribution')
+kl_atom_count = compare_and_plot_distributions(original_distributions[0], generated_distributions[0], save_file=  save_path + 'comparison/comparison_num_atoms.png', plot_title='Atom Count Distribution')
+kl_ring_count = compare_and_plot_distributions(original_distributions[1], generated_distributions[1], save_file=  save_path + 'comparison/comparison_num_rings.png', plot_title='Ring Count Distribution')
+kl_atom_types = compare_and_plot_distributions(original_distributions[2], generated_distributions[2], save_file=  save_path + 'comparison/comparison_atom_types.png', plot_title='Atom Types Distribution')
 
 
