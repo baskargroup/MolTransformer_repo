@@ -7,12 +7,12 @@ interest_molecules = {
 count = 0
 for i in range(5):
 	for j in range(5):
-		start_molecule =  interest_molecules['qm9'][i]
-		end_molecule =  interest_molecules['ocelot'][j]
-		report_save_path_base = '/work/mech-ai/bella/ChemTransformer/report/GenerativeMethods/molecular_evolution_histogram/'
+		end_molecule =  interest_molecules['qm9'][i]
+		start_molecule=  interest_molecules['ocelot'][j]
+		report_save_path_base = '/work/mech-ai/bella/ChemTransformer/report/GenerativeMethods/reverse_molecular_evolution_histogram_1k_2/'
 		report_save_path = report_save_path_base +'/'+str(count)+'/'
 		GM = GenerateMethods(report_save_path = report_save_path)
-		GM.molecular_evolution(start_molecule, end_molecule, number = 200)
+		GM.molecular_evolution(start_molecule, end_molecule, number = 1000)
 		count += 1
 		print('done 1 pair')
 

@@ -1321,3 +1321,228 @@ r than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_
 2024-05-08 17:08:14,981 - INFO - Mean of r: 14.972707443237304
 2024-05-08 17:08:14,981 - INFO - Standard Deviation of r: 2.337070653885425
 2024-05-08 17:08:14,981 - INFO - Ratio of fail: 0.0
+2024-05-08 18:00:45,088 - INFO - Min of r: 7.142772674560547
+2024-05-08 18:00:45,088 - INFO - Max of r: 22.785301208496094
+2024-05-08 18:00:45,089 - INFO - Mean of r: 15.106143522262574
+2024-05-08 18:00:45,089 - INFO - Standard Deviation of r: 2.3369286730098744
+2024-05-08 18:00:45,089 - INFO - Ratio of fail: 0.0
+2024-05-08 20:36:21,241 - INFO - Min of r: 7.3793792724609375
+2024-05-08 20:36:21,241 - INFO - Max of r: 21.263751983642578
+2024-05-08 20:36:21,242 - INFO - Mean of r: 14.118899173736573
+2024-05-08 20:36:21,242 - INFO - Standard Deviation of r: 2.1468563122414506
+2024-05-08 20:36:21,242 - INFO - Ratio of fail: 0.0
+2024-05-08 22:25:58,522 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-08 22:25:58,955 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-08 22:25:58,958 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-08 22:26:11,771 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-08 22:26:12,077 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-08 22:26:12,080 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-08 22:29:55,776 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-08 22:29:56,837 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-08 22:29:56,841 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-08 22:30:03,190 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-08 22:30:03,655 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-08 22:30:03,659 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-08 23:13:29,054 - INFO - Min of r: 7.381095886230469
+2024-05-08 23:13:29,054 - INFO - Max of r: 22.486839294433594
+2024-05-08 23:13:29,054 - INFO - Mean of r: 15.051107225418091
+2024-05-08 23:13:29,054 - INFO - Standard Deviation of r: 2.3642237243459774
+2024-05-08 23:13:29,054 - INFO - Ratio of fail: 0.0
+2024-05-09 00:08:24,729 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:08:25,219 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:08:25,224 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:09:18,435 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:09:19,244 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:09:19,249 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:13:17,133 - INFO - Min of r: 10.619144439697266
+2024-05-09 00:13:17,133 - INFO - Max of r: 20.07568359375
+2024-05-09 00:13:17,133 - INFO - Mean of r: 15.967140197753906
+2024-05-09 00:13:17,133 - INFO - Standard Deviation of r: 2.308855266082501
+2024-05-09 00:13:17,133 - INFO - Ratio of fail: 0.0
+2024-05-09 00:14:41,020 - INFO - Min of r: 14.337787628173828
+2024-05-09 00:14:41,021 - INFO - Max of r: 30.785579681396484
+2024-05-09 00:14:41,021 - INFO - Mean of r: 21.69568862915039
+2024-05-09 00:14:41,021 - INFO - Standard Deviation of r: 4.269132299313495
+2024-05-09 00:14:41,021 - INFO - Ratio of fail: 0.0
+2024-05-09 00:16:55,373 - INFO - Min of r: 12.317218780517578
+2024-05-09 00:16:55,373 - INFO - Max of r: 29.007625579833984
+2024-05-09 00:16:55,374 - INFO - Mean of r: 21.241794204711915
+2024-05-09 00:16:55,374 - INFO - Standard Deviation of r: 3.166952515449173
+2024-05-09 00:16:55,374 - INFO - Ratio of fail: 0.0
+2024-05-09 00:17:44,048 - INFO - Min of r: 13.68570327758789
+2024-05-09 00:17:44,048 - INFO - Max of r: 53.60584259033203
+2024-05-09 00:17:44,048 - INFO - Mean of r: 25.07233772277832
+2024-05-09 00:17:44,048 - INFO - Standard Deviation of r: 6.351423447003568
+2024-05-09 00:17:44,049 - INFO - Ratio of fail: 0.0
+2024-05-09 00:29:26,985 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:29:27,396 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:29:27,399 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:30:53,104 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:30:53,460 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:30:53,463 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                2024-05-09 00:32:12,080 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:32:12,389 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:32:12,392 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:32:26,799 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:32:27,351 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:32:27,356 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:32:55,847 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:32:56,244 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:32:56,249 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:37:28,336 - INFO - Min of r: 9.04043197631836
+2024-05-09 00:37:28,336 - INFO - Max of r: 19.07083511352539
+2024-05-09 00:37:28,336 - INFO - Mean of r: 14.292512512207031
+2024-05-09 00:37:28,336 - INFO - Standard Deviation of r: 2.4518562222191145
+2024-05-09 00:37:28,336 - INFO - Ratio of fail: 0.0
+verridden to 'multiF_HF'.
+2024-05-09 00:37:30,040 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 00:39:17,071 - INFO - Min of r: 11.826839447021484
+2024-05-09 00:39:17,071 - INFO - Max of r: 19.3267822265625
+2024-05-09 00:39:17,071 - INFO - Mean of r: 15.39507007598877
+2024-05-09 00:39:17,071 - INFO - Standard Deviation of r: 2.0274647427693595
+2024-05-09 00:39:17,071 - INFO - Ratio of fail: 0.0
+2024-05-09 00:39:50,076 - INFO - Min of r: 16.689376831054688
+2024-05-09 00:39:50,076 - INFO - Max of r: 35.667686462402344
+2024-05-09 00:39:50,076 - INFO - Mean of r: 22.68245029449463
+2024-05-09 00:39:50,076 - INFO - Standard Deviation of r: 4.664321787349096
+2024-05-09 00:39:50,076 - INFO - Ratio of fail: 0.0
+2024-05-09 00:40:30,970 - INFO - Min of r: 14.976768493652344
+2024-05-09 00:40:30,970 - INFO - Max of r: 27.30325698852539
+2024-05-09 00:40:30,970 - INFO - Mean of r: 20.22681713104248
+2024-05-09 00:40:30,970 - INFO - Standard Deviation of r: 3.1158654391770404
+2024-05-09 00:40:30,970 - INFO - Ratio of fail: 0.0
+2024-05-09 00:59:13,942 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 00:59:14,407 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 00:59:14,412 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 01:00:46,824 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 01:00:47,355 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 01:00:47,359 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 01:01:06,033 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-09 01:01:06,750 - WARNING - Warning: The 'model_mode' is set to a value other than 'multiF_HF'. However, since 'dataset' is specified and not 'SS' , 'model_mode' will be overridden to 'multiF_HF'.
+2024-05-09 01:01:06,754 - WARNING - Default configuration loaded: A MultiF_HF model trained on the QM9 dataset targeting the LUMO property. To use a model trained on the OCELOT dataset targeting the AEA property, specify `BuildModel(dataset='ocelot')` when initializing your model. If you wish to load the model in SS mode without specifying a dataset, please ensure that the 'dataset' parameter is not defined. To specify the preload model according to your needs, you can also initialize the model with `BuildModel(preload_model='your intended mode', pretrain_model_file='your_pretrained_model_path')`.
+2024-05-09 02:46:06,871 - INFO - Min of r: 7.6668548583984375
+2024-05-09 02:46:06,871 - INFO - Max of r: 24.562110900878906
+2024-05-09 02:46:06,872 - INFO - Mean of r: 15.699675071239472
+2024-05-09 02:46:06,872 - INFO - Standard Deviation of r: 2.524308392664243
+2024-05-09 02:46:06,872 - INFO - Ratio of fail: 0.0
+                                                                                                                                                                                                                                                                                                                          2024-05-09 03:51:06,171 - INFO - Error for SMILES '[H]C=CN[I-1]([H])(C([H])([H])C)=C=CC=NC=C(C([H])CI)C=CC=CC(N)([H])C([H])C([H])=C(C([H])=C[C@@]1[H])[C+1]1' at radius 30.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 2024-05-09 04:42:57,839 - INFO - Min of r: 9.45505142211914
+2024-05-09 04:42:57,840 - INFO - Max of r: 22.86334991455078
+2024-05-09 04:42:57,840 - INFO - Mean of r: 15.801948308944702
+2024-05-09 04:42:57,840 - INFO - Standard Deviation of r: 2.294904346711403
+2024-05-09 04:42:57,840 - INFO - Ratio of fail: 0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          2024-05-09 06:38:37,738 - INFO - Min of r: 8.243522644042969
+2024-05-09 06:38:37,738 - INFO - Max of r: 22.832393646240234
+2024-05-09 06:38:37,738 - INFO - Mean of r: 15.672800552845
+2024-05-09 06:38:37,738 - INFO - Standard Deviation of r: 2.348771147534314
+2024-05-09 06:38:37,738 - INFO - Ratio of fail: 0.0
+2024-05-09 07:02:13,472 - INFO - Min of r: 7.511386871337891
+2024-05-09 07:02:13,472 - INFO - Max of r: 22.406558990478516
+2024-05-09 07:02:13,472 - INFO - Mean of r: 14.348662376403809
+2024-05-09 07:02:13,473 - INFO - Standard Deviation of r: 2.1684061060788675
+2024-05-09 07:02:13,473 - INFO - Ratio of fail: 0.0
+2024-05-09 07:30:16,630 - INFO - Min of r: 7.1312713623046875
+2024-05-09 07:30:16,631 - INFO - Max of r: 20.87442398071289
+2024-05-09 07:30:16,631 - INFO - Mean of r: 14.432807550430297
+2024-05-09 07:30:16,632 - INFO - Standard Deviation of r: 2.2403859108842967
+2024-05-09 07:30:16,632 - INFO - Ratio of fail: 0.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                2024-05-09 10:21:32,260 - INFO - Min of r: 7.132244110107422
+2024-05-09 10:21:32,260 - INFO - Max of r: 20.767879486083984
+2024-05-09 10:21:32,260 - INFO - Mean of r: 14.128020000457763
+2024-05-09 10:21:32,261 - INFO - Standard Deviation of r: 2.165798163357753
+2024-05-09 10:21:32,261 - INFO - Ratio of fail: 0.0
+2024-05-09 10:49:51,522 - INFO - Min of r: 6.310672760009766
+2024-05-09 10:49:51,523 - INFO - Max of r: 23.445796966552734
+2024-05-09 10:49:51,523 - INFO - Mean of r: 15.477616355895996
+2024-05-09 10:49:51,523 - INFO - Standard Deviation of r: 2.4936532891362826
+2024-05-09 10:49:51,523 - INFO - Ratio of fail: 0.0
+2024-05-09 10:53:09,011 - INFO - Min of r: 8.344230651855469
+2024-05-09 10:53:09,011 - INFO - Max of r: 23.01401138305664
+2024-05-09 10:53:09,012 - INFO - Mean of r: 15.54082251548767
+2024-05-09 10:53:09,012 - INFO - Standard Deviation of r: 2.274646901327545
+2024-05-09 10:53:09,012 - INFO - Ratio of fail: 0.0
+2024-05-09 10:58:24,955 - INFO - Min of r: 7.964344024658203
+2024-05-09 10:58:24,955 - INFO - Max of r: 22.539825439453125
+2024-05-09 10:58:24,956 - INFO - Mean of r: 14.827396845817566
+2024-05-09 10:58:24,956 - INFO - Standard Deviation of r: 2.448877475561369
+2024-05-09 10:58:24,956 - INFO - Ratio of fail: 0.0
+2024-05-09 11:15:54,359 - INFO - Error for SMILES '[H]C[I-1](C[H])(C[H])=C([H])C=C([H])C=C([H])C=C([H])C([H])(CC[H])C([H])=CS([H])=CC=O' at radius 22.5
+2024-05-09 11:24:40,323 - INFO - Min of r: 7.165260314941406
+2024-05-09 11:24:40,324 - INFO - Max of r: 22.071075439453125
+2024-05-09 11:24:40,324 - INFO - Mean of r: 15.032750558853149
+2024-05-09 11:24:40,325 - INFO - Standard Deviation of r: 2.275839127884469
+2024-05-09 11:24:40,325 - INFO - Ratio of fail: 0.0
+2024-05-09 12:52:39,358 - INFO - Min of r: 7.962226867675781
+2024-05-09 12:52:39,359 - INFO - Max of r: 24.117393493652344
+2024-05-09 12:52:39,359 - INFO - Mean of r: 15.790641872406006
+2024-05-09 12:52:39,359 - INFO - Standard Deviation of r: 2.3492086128307585
+2024-05-09 12:52:39,359 - INFO - Ratio of fail: 0.0
+2024-05-09 13:01:38,984 - INFO - Error for SMILES '[H]C=NN=[I-1]([H])(C[H])SC#CC=CCl' at radius 30.0
+2024-05-09 13:14:05,487 - INFO - Min of r: 7.556648254394531
+2024-05-09 13:14:05,488 - INFO - Max of r: 22.264366149902344
+2024-05-09 13:14:05,488 - INFO - Mean of r: 14.828363263607026
+2024-05-09 13:14:05,489 - INFO - Standard Deviation of r: 2.3801983465020236
+2024-05-09 13:14:05,489 - INFO - Ratio of fail: 0.0
+2024-05-09 13:52:05,160 - INFO - Min of r: 7.616901397705078
+2024-05-09 13:52:05,161 - INFO - Max of r: 21.604671478271484
+2024-05-09 13:52:05,161 - INFO - Mean of r: 14.317186760902405
+2024-05-09 13:52:05,161 - INFO - Standard Deviation of r: 2.0896153185238004
+2024-05-09 13:52:05,161 - INFO - Ratio of fail: 0.0
+2024-05-09 14:13:50,467 - INFO - Error for SMILES '[H]C=CCC[I-1](PC[H])([H])=C([H])[H]' at radius 30.0
+2024-05-09 15:04:17,485 - INFO - Error for SMILES '[H]C=C([N+1])[I-1]([H])([2H])=S/CC[H]' at radius 30.0
+2024-05-09 15:13:25,930 - INFO - Error for SMILES '[H]C(C)[I-1](=C[H])=C(C#PN([H])[C@@]C[H])[H]' at radius 30.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  2024-05-09 16:03:16,240 - INFO - Min of r: 6.393642425537109
+2024-05-09 16:03:16,240 - INFO - Max of r: 23.18836212158203
+2024-05-09 16:03:16,241 - INFO - Mean of r: 14.93795565032959
+2024-05-09 16:03:16,241 - INFO - Standard Deviation of r: 2.483360129960029
+2024-05-09 16:03:16,241 - INFO - Ratio of fail: 0.0
+                                                                                                                                                                                                                                                                                                                          2024-05-09 16:31:44,458 - INFO - Error for SMILES '[H]C=C([I-1])[I-1]([H])([H])([H])=C(F)C([H])I' at radius 30.0
+2024-05-09 16:35:32,982 - INFO - Error for SMILES '[H]OC\CC[I-1](C)([H])([H])[C@@]=C([H])[H]' at radius 30.0
+2024-05-09 17:11:06,214 - INFO - Error for SMILES '[H]C=C([I-1])[I-1](C)(/Cl)(C)[H]' at radius 30.0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              2024-05-09 17:34:21,681 - INFO - Error for SMILES '[H]C=C(F)[I-1]([H])([H])(C[O-1])Cl' at radius 30.0
+2024-05-09 17:51:15,782 - INFO - Error for SMILES '[H]C1=C([I-1]2#P=O)[CH0](C([H])C=C([H])C3[H])CC=C([H])C4=C([H])C([H])=C([H])C([H])=C4C=C=C2C([H])=C3C([H])=C1' at radius 22.5
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            2024-05-09 19:38:17,162 - INFO - Error for SMILES '[H]C=C(\[H])[I-1]([C@](CF)=C)([H])=C(C=NCC)[H]' at radius 30.0
+2024-05-09 20:25:11,329 - INFO - Error for SMILES '[H]C1=CC=S[I-1]1([H])([H])[H]' at radius 18.75
+2024-05-09 20:44:06,966 - INFO - Error for SMILES '[H]C#C[I-1]([H])(/O)=C([H])C(C[H])([I-1])C=C([H])OC[H]' at radius 30.0
+                                                                                                                                                                                                                                                                                                                        2024-05-09 21:15:07,276 - INFO - Min of r: 6.154003143310547
+2024-05-09 21:15:07,276 - INFO - Max of r: 23.52579116821289
+2024-05-09 21:15:07,277 - INFO - Mean of r: 14.35883985900879
+2024-05-09 21:15:07,277 - INFO - Standard Deviation of r: 2.6011188725719507
+2024-05-09 21:15:07,277 - INFO - Ratio of fail: 0.0
+                                                                                                                                                                                                                                                                                                                                         2024-05-09 21:57:00,098 - INFO - Error for SMILES '[H]C=N[I-1]([H])(C[H])=C([H])C=CC[O-1]' at radius 30.0
+                                                                                                                                                                                                                                                                                                                           2024-05-09 22:25:18,714 - INFO - Error for SMILES '[H]C=C([I-1])[I-1](CC)(C[H])([H])C=C([H])CS(C)CC=CSCC([H])=C(N([H])C)C[H]' at radius 30.0
+2024-05-09 22:25:19,104 - INFO - Error for SMILES '[H]C=C([I-1])[I-1](CC)(C[H])([H])C=C([H])C=C(C)CCI' at radius 22.5
+2024-05-09 22:39:15,077 - INFO - Error for SMILES '[H]C=C(Cl)[I-1](C)([H])([H])(CBr)C[C@@]' at radius 30.0
+2024-05-09 22:51:49,348 - INFO - Error for SMILES '[H]CC([I-1](C)#[N+1]C[H])CC[H]' at radius 30.0
+                                                                                                 2024-05-09 22:59:38,231 - INFO - Error for SMILES '[H]C(F)[I-1][I-1](CC=NC)([H])([H])=N/CC=C' at radius 30.0
+2024-05-09 23:12:33,206 - INFO - Error for SMILES '[H]C=C([S-1]1)[I-1]1([H])([H])C([H])[H]' at radius 30.0
+2024-05-09 23:12:33,562 - INFO - Error for SMILES '[H]C=C([S-1]1)[I-1]1([H])([H])C([H])=C' at radius 22.5
+2024-05-09 23:17:00,040 - INFO - Error for SMILES '[H]C[I-1](C[H])(N)=[S@@]=C([H])C=C([H])Br' at radius 30.0
+2024-05-09 23:24:38,628 - INFO - Error for SMILES '[H]C(C)[I-1]([H])(C[H])([H])[H]' at radius 30.0
+2024-05-09 23:43:02,267 - INFO - Error for SMILES '[H]C=C(F)[I-1]([H])([H])(/N)C(C[H])=C(O)C(C=C/[O-1])C([H])=C(C[H])C1CCCC1(C)[P+1]C' at radius 30.0
+                                                                                                  2024-05-09 23:55:24,659 - INFO - Error for SMILES '[H]C=[N+1]([I-1])[I-1]([H])(C([H])C)([H])C=C([H])N([H])CCl' at radius 30.0
+2024-05-09 23:59:54,885 - INFO - Error for SMILES '[H]OC#[I-1]([H])[H]' at radius 30.0
+2024-05-10 01:05:24,323 - INFO - Min of r: 7.064723968505859
+2024-05-10 01:05:24,324 - INFO - Max of r: 20.164947509765625
+2024-05-10 01:05:24,324 - INFO - Mean of r: 13.823401279449463
+2024-05-10 01:05:24,325 - INFO - Standard Deviation of r: 2.151239645299182
+2024-05-10 01:05:24,325 - INFO - Ratio of fail: 0.0
+2024-05-10 03:37:17,153 - INFO - Min of r: 6.150627136230469
+2024-05-10 03:37:17,154 - INFO - Max of r: 22.34476089477539
+2024-05-10 03:37:17,154 - INFO - Mean of r: 14.683128061294555
+2024-05-10 03:37:17,154 - INFO - Standard Deviation of r: 2.3713715878112143
+2024-05-10 03:37:17,154 - INFO - Ratio of fail: 0.0
+2024-05-10 10:32:59,295 - INFO - Min of r: 5.680389404296875
+2024-05-10 10:32:59,296 - INFO - Max of r: 20.80272674560547
+2024-05-10 10:32:59,296 - INFO - Mean of r: 14.481916723251343
+2024-05-10 10:32:59,296 - INFO - Standard Deviation of r: 2.384863504514592
+2024-05-10 10:32:59,296 - INFO - Ratio of fail: 0.0
+2024-05-10 18:16:05,131 - INFO - Min of r: 6.692619323730469
+2024-05-10 18:16:05,131 - INFO - Max of r: 22.693462371826172
+2024-05-10 18:16:05,132 - INFO - Mean of r: 14.370666790008546
+2024-05-10 18:16:05,132 - INFO - Standard Deviation of r: 2.2748772883845856
+2024-05-10 18:16:05,132 - INFO - Ratio of fail: 0.0
+2024-05-15 13:40:31,192 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-19 20:13:29,651 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-19 20:14:59,352 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2024-05-19 22:46:56,475 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
