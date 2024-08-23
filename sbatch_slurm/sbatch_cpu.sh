@@ -17,4 +17,4 @@
 
 module load miniconda3
 source activate /work/mech-ai/bella/selfies_envs
-python3 /work/mech-ai/bella/MolTransformer_repo/main_molecular_evolution.py  
+python3 /work/mech-ai/bella/MolTransformer_repo/paper_visualization_figure/min_num_atom.py  

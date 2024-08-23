@@ -1,0 +1,36 @@
+[14:57:03] Conflicting single bond directions around double bond at index 21.
+[14:57:03]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[14:57:47] Conflicting single bond directions around double bond at index 10.
+[14:57:47]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[14:58:18] Conflicting single bond directions around double bond at index 37.
+[14:58:18]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[14:58:32] Conflicting single bond directions around double bond at index 26.
+[14:58:32]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[14:58:43] Conflicting single bond directions around double bond at index 12.
+[14:58:43]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[14:58:48] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[14:59:00] Conflicting single bond directions around double bond at index 8.
+[14:59:00]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[14:59:44] Conflicting single bond directions around double bond at index 51.
+[14:59:44]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[15:01:00] Conflicting single bond directions around double bond at index 26.
+[15:01:00]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[15:01:04] Conflicting single bond directions around double bond at index 27.
+[15:01:04]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[15:01:28] Conflicting single bond directions around double bond at index 34.
+[15:01:28]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[15:02:11] Conflicting single bond directions around double bond at index 13.
+[15:02:11]   BondStereo set to STEREONONE and single bond directions set to NONE.
+[15:02:12] Conflicting single bond directions around double bond at index 17.
+[15:02:12]   BondStereo set to STEREONONE and single bond directions set to NONE.
+<frozen importlib._bootstrap>:219: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+finish reading
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/train_config.json
+Log file will be located at:  /work/mech-ai/bella/MolTransformer_repo/MolTransformer/log_file.log
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/train_config.json
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/train_config.json
+expect a configuration file at : /work/mech-ai/bella/MolTransformer_repo/MolTransformer/config.json
+Ratio of SELFIES length > 400: 0.0044465
+Minimum number of atoms for SELFIES length > 400: 166
+Molecules with SELFIES length > 400: 8893
+Total molecules: 2000000

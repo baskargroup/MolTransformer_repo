@@ -8,14 +8,14 @@ import selfies as sf # type: ignore
 import numpy as np
 
 # Add the path to the MolTransformer directory to sys.path
-moltransformer_path = os.path.abspath('/Users/tcpba/MolTransformer_repo/')
+moltransformer_path = os.path.abspath('/work/mech-ai/bella/MolTransformer_repo/')
 sys.path.append(moltransformer_path)
 
 
 # Example usage:
 # Assume you've already loaded and processed your CSV files into a DataFrame
-csv_file_path = '/Users/tcpba/2024Spring/ss_test_data/SS_test_0.csv'
-save_path = '/Users/tcpba/MolTransformer_repo/output/ss_test_analysis/test_0/'
+csv_file_path = '/work/mech-ai/bella/ChemTransformer/data/SS/test/SS_test_1.csv'
+save_path = '/work/mech-ai/bella/MolTransformer_repo/output/hpc/ss_test_analysis/test_1/'
 original_dataframe = pd.read_csv(csv_file_path)
 #original_dataframe = original_dataframe.sample(n=10000, random_state=42)
 print("finish reading")
@@ -120,7 +120,50 @@ def save_statistics_to_file(save_path, ratio_above_400, min_atoms, molecules_abo
         f.write(f"Molecules with SELFIES length > 400: {molecules_above_400}\n")
         f.write(f"Total molecules: {total_molecules}\n")
 
+def plot_generative_molecules_analysis(dataframe, save_file=''):
+    # Correcting the check for empty "rdk_mol" and generating RDKit molecule objects
+    if 'rdk_mol' not in dataframe.columns or dataframe['rdk_mol'].isnull().all():
+        dataframe['rdk_mol'] = dataframe['SMILES'].apply(MolFromSmiles)
+    
+    dataframe['num_rings'] = dataframe['rdk_mol'].apply(CalcNumRings)
+    dataframe['num_atoms'] = dataframe['rdk_mol'].apply(CalcNumAtoms)
+    dataframe['atom_types'] = dataframe['rdk_mol'].apply(lambda x: list(set([a.GetSymbol() for a in AddHs(x).GetAtoms()])))
 
+    # Plotting distributions and returning normalized distributions
+    num_atoms_distribution = dataframe['num_atoms'].value_counts(normalize=True).sort_index()
+    num_rings_distribution = dataframe['num_rings'].value_counts(normalize=True).sort_index()
+
+    ax = dataframe['num_atoms'].hist(bins=20)
+    ax.set_xlabel('Number of Atoms')
+    ax.set_ylabel('Frequency')
+    plt.title('Distribution of Atom Counts')
+    plt.savefig(save_file + 'num_atoms_distribution.png')  # Saving the plot
+    plt.close()
+
+    ax = dataframe['num_rings'].hist(bins=20)
+    ax.set_xlabel('Number of Rings')
+    ax.set_ylabel('Frequency')
+    plt.title('Distribution of Ring Counts')
+    plt.savefig(save_file + 'num_rings_distribution.png')  # Saving the plot
+    plt.close()
+
+    # Handling atom types
+    atoms = list(set([a for ats in dataframe['atom_types'] for a in ats]))
+    for a in atoms:
+        dataframe[a] = dataframe['atom_types'].apply(lambda x: a in x)
+    
+    atom_types_df = dataframe[atoms].sum()
+    atom_types_df.sort_values(ascending=False, inplace=True)
+    atom_types_distribution = atom_types_df / atom_types_df.sum()  # Normalize the atom type counts
+    ax = atom_types_df.plot.bar()
+    ax.set_xlabel('Atom Type')
+    ax.set_ylabel('Count')
+    plt.title('Distribution of Atom Types')
+    plt.savefig(save_file + 'atom_types_distribution.png')  # Saving the plot
+    plt.close()
+
+    # Return the normalized distributions
+    return num_atoms_distribution, num_rings_distribution, atom_types_distribution
 
 # Convert SELFIES to SMILES
 if 'SELFIES' in original_dataframe.columns:
@@ -155,3 +198,7 @@ print("Ratio of SELFIES length > 400:", ratio_above_400)
 print("Minimum number of atoms for SELFIES length > 400:", min_atoms)
 print("Molecules with SELFIES length > 400:", molecules_above_400)
 print("Total molecules:", total_molecules)
+
+
+original_distributions = plot_generative_molecules_analysis(original_dataframe, save_file= save_path )
+
