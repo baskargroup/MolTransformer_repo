@@ -1,3 +1,6 @@
 2024-08-22 14:44:24,716 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
 2024-08-22 15:29:14,398 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
 2024-08-22 15:39:48,247 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2025-02-03 13:27:26,568 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2025-02-03 13:36:01,192 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.
+2025-02-03 13:37:16,195 - ERROR - No token file found. Also make sure that a [prod] section with a 'token = value' assignment exists.

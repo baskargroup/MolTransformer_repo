@@ -1,0 +1,4 @@
+Ratio of SELFIES length > 400: 0.01
+Minimum number of atoms for SELFIES length > 400: 198
+Molecules with SELFIES length > 400: 5
+Total molecules: 500

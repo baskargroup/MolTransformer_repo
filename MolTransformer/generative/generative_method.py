@@ -255,7 +255,7 @@ class GenerateMethods(IndexConvert):
         
         # Convert numpy array to a torch tensor and move it to the device
         if isinstance(ls, np.ndarray):
-            torch_tensor = torch.from_numpy(ls).to(self.device)
+            torch_tensor = torch.as_tensor(ls).to(self.device)
         else:
             torch_tensor = ls.to(self.device)
         
