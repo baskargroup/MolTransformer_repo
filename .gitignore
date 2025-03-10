@@ -1,0 +1,5 @@
+# Ignore SLURM output files
+sbatch_slurm/
+sbatch_slurm/
+output/
+MolTransformer/log_file.log

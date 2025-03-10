@@ -56,6 +56,7 @@ class GenerateMethods(IndexConvert):
         if self.save:
             self.report_save_path = report_save_path
             check_path(self.report_save_path)
+            print('Resault will be save to the following path: ', report_save_path)
 
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode)
         self.model = build_model_instance.model
@@ -332,7 +333,7 @@ class GenerateMethods(IndexConvert):
             if not initial_smile:
                 initial_smile = self.random_smile(dataset)
             else:
-                raise ValueError("please not define initial_smile or set random to False")
+                raise ValueError("please not define initial_smile or set random_initial_smile to False")
         else:
             if not initial_smile:
                 raise ValueError("please define initial_smile or set random to True")
@@ -353,7 +354,7 @@ class GenerateMethods(IndexConvert):
             
             if top_k_closest:
                 for alpha in alpha_list: 
-                    self.sort_pareto_frontier(generated_results = df,alpha = alpha, k = k, save = True, prefix = '',folder_path = local_molecular_generation_report_save_path,sa_threshold=sa_threshold)
+                    self.sort_pareto_frontier(generated_results = df,alpha = alpha, k = k, save = True,folder_path = local_molecular_generation_report_save_path,sa_threshold=sa_threshold)
             
             csv_file_path = local_molecular_generation_report_save_path + 'fail_case_check' + '.csv'
             df = pd.DataFrame(fail_case_check)
