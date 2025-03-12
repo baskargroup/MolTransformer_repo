@@ -18,15 +18,42 @@ The `GenerateMethods` class in the MolTransformer project facilitates the genera
 - **Report Save Path**: Specifies the directory for saving outputs and logs.
 
 
+
+## Installation
+
+### 1. Create and activate a virtual environment (optional but recommended)
+```bash
+python -m venv env
+source env/bin/activate
+```
+
+(or use conda create -n myenv python=3.8, etc.)
+
+
+### 2. Install requirements
+```bash
+pip install -r requirements.txt
+```
+
+
+
+### 3. Install MolTransformer as a package
+```bash
+pip install -e .
+```
+## Quick Start
+
 #### Example 1: Global Molecular Generation
 This example demonstrates how to generate a set number of molecular structures randomly across the latent space. Note that the number of unique molecules may be less than requested due to potential duplicates.
 ```python
+import MolTransformer
 GM = GenerateMethods(save=True)  # Set `save=True` to save results and logs
 smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
 ```
 ####  Example 2: Local Molecular Generation
 Generate molecular structures locally around a randomly selected molecule from a specified dataset. Results are automatically saved to the specified path.
 ```python
+import MolTransformer
 GM = GenerateMethods(save=True)
 generated_results = GM.local_molecular_generation(dataset='qm9', num_vector=30)
 print(generated_results['SMILES'])
@@ -35,6 +62,7 @@ print(generated_results['SELFIES'])
 #### Example 3: Neighboring Search
 This example starts with a random SMILE from a dataset and explores its molecular neighborhood. It's particularly useful for iterative exploration and optimization of molecular structures.
 ```python
+import MolTransformer
 GM = GenerateMethods(report_save_path='your_custom_path')
 initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
@@ -45,6 +73,7 @@ print('Generated SELFIES:', generated_results['SELFIES'])
 #### Example 4: Custom Latent Space Manipulation
 After generating a latent space from a SMILE, you can manually perturb it to explore slight variations and their properties.
 ```python
+import MolTransformer
 GM = GenerateMethods()
 initial_smile = GM.random_smile(dataset='qm9')
 print('Initial SMILE:', initial_smile)
@@ -61,6 +90,7 @@ print('properties_2: shape', properties.shape)
 #### Example 5: Optimistic Property-Driven Molecule Generation
 This example showcases property-driven generation aimed at optimizing molecule properties through iterative exploration of the latent space. The k parameter selects the top k most similar neighboring molecules in each iteration, from which the molecule showing the most significant improvement in properties is chosen for the next cycle. This process necessitates defining the dataset, the number of latent space vectors to sample, and the k parameter that dictates the extent of the neighborhood search.
 ```python
+import MolTransformer
 GM = GenerateMethods(save=True)  # Enable saving of results and logs
 molecules_generation_record = GM.optimistic_property_driven_molecules_generation(dataset='qm9',k=30,num_vector=100) # you can also specify your initail_smile = 'your interested molecule'
 print('Generated SMILES:', molecules_generation_record['SMILES'])
