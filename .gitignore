@@ -2,3 +2,4 @@ sbatch_slurm/
 output/
 MolTransformer/log_file.log
 .DS_Store
+MolTransformer/__pycache__/
