@@ -3,3 +3,4 @@ sbatch_slurm/
 sbatch_slurm/
 output/
 MolTransformer/log_file.log
+.DS_Store
