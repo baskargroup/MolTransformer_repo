@@ -325,19 +325,19 @@ Some HPC systems remove or disable conda, but provide micromamba as a lightweigh
 
 - Load micromamba:
 
-'''bash
+```bash
 module purge
 module load micromamba
 eval "$(micromamba shell hook --shell=bash)"
-'''
+```
        
 
 - Create and activate a new environment:
 
-'''bash
+```bash
 micromamba create -p /path/to/my_moltransformer_env python=3.9 -c conda-forge
 micromamba activate /path/to/my_moltransformer_env
-'''
+```
 
 If your cluster only offers Python 3.13, you may see a warning about the removed imp module. We’ve patched hostlist in our code to avoid this issue, but be aware that older versions of hostlist or ansiblecmdb might still reference imp.
 
@@ -345,31 +345,28 @@ If your cluster only offers Python 3.13, you may see a warning about the removed
 
 - Install GPU PyTorch:
 
-'''bash
+```bash
 micromamba install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-
-'''
+```
 
 - Install RDKit (if needed):
 
-'''bash
+```bash
 micromamba install -c conda-forge rdkit
-
-'''
+```
 
 #### Install dependencies and MolTransformer:
 
-'''bash
+```bash
 pip install -r requirements.txt
 pip install -e .
-
-'''
+```
 
 #### Test:
 
-'''bash
+```bash
 python -c "import MolTransformer; print(MolTransformer.__file__)"
-'''
+```
 
 ### Notes on Python 3.13 and the imp Module
 Python 3.13 fully removes the old imp module. If you see a ModuleNotFoundError: No module named 'imp', it usually means a library (e.g., ansiblecmdb, hostlist) hasn’t updated to importlib.
@@ -379,9 +376,9 @@ If your cluster forcibly uses Python 3.13, you might need to manually patch or r
 #### ModuleNotFoundError: No module named 'imp'
 If the error occur to your systm, please do the following step:
 - Open it in a text editor:
-'''bash
+```bash
 nano /work/mech-ai/bella/my_moltransformer_env_py312/lib/python3.13/site-packages/ansiblecmdb/render.py
-'''
+```
 - Remove or replace the line:
 
 ```python
