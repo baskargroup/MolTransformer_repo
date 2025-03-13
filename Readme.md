@@ -22,7 +22,7 @@ The `GenerateMethods` class in the MolTransformer project facilitates the genera
 
 ### 1. Create a Conda Environment (Recommended)
 
-- 1. If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda.
+- 1. If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda. If your system does not support conda but micromamba and if you have error message while testing MolTransformer, please take a look at the section: Addition Information and Notes for Installation
 
 
 - 2. **Create and activate a new conda environment**  
