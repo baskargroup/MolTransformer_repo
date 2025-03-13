@@ -18,29 +18,59 @@ The `GenerateMethods` class in the MolTransformer project facilitates the genera
 - **Report Save Path**: Specifies the directory for saving outputs and logs.
 
 
-
 ## Installation
 
-### 1. Create and activate a virtual environment (optional but recommended)
+### 1. Create a Conda Environment (Recommended)
+
+- 1. If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda.
+
+
+- 2. **Create and activate a new conda environment**  
+  ```bash
+  conda create -n moltransformer python=3.9
+  conda activate moltransformer
+  ```
+
+- 3. **(Optional) Install GPU-Enabled PyTorch**
+If you have a suitable NVIDIA GPU and drivers:
+  ```bash
+  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+  ```
+(Adjust the cudatoolkit version & channel according to your hardware and preferences.)
+
+Skip this step if you don’t have a GPU or want CPU-only PyTorch.
+In that case, you can install PyTorch via pip install torch or conda install pytorch -c pytorch (CPU version).
+
+
+### 2. Install RDKit from conda-forge
+
+  ```bash
+  conda install -c conda-forge rdkit
+  ```
+
+### 3. Install the remaining dependencies via pip
+
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+### 4. Install MolTransformer as a package
+
+  ```bash
+  pip install -e .
+  ```
+
+### 5. Test Your Installation
+
+After installation, open a Python shell:
 ```bash
-python -m venv env
-source env/bin/activate
+import MolTransformer
+print(MolTransformer.__file__)
 ```
 
-(or use conda create -n myenv python=3.8, etc.)
+If you see no import errors, you’re good to go!
 
 
-### 2. Install requirements
-```bash
-pip install -r requirements.txt
-```
-
-
-
-### 3. Install MolTransformer as a package
-```bash
-pip install -e .
-```
 ## Quick Start
 
 #### Example 1: Global Molecular Generation

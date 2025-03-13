@@ -9,5 +9,5 @@ selfies>=2.0
 certifi>=2021.5.30
 pubchempy>=1.0
 hostlist
-# If you want to try installing RDKit from PyPI:
+# If you want to try installing RDKit from PyPI (unofficial):
 # rdkit-pypi>=2022.9.5
