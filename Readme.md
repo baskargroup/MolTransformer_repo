@@ -63,7 +63,7 @@ In that case, you can install PyTorch via pip install torch or conda install pyt
 ### 5. Test Your Installation
 
 After installation, open a Python shell:
-```bash
+```python
 import MolTransformer
 print(MolTransformer.__file__)
 ```
