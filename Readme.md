@@ -317,25 +317,6 @@ This guide provides detailed instructions on how to configure the `train_config.
 }
 ```
 
-## Setting Up Env_MolTransformer
-This following section of README file will guide users through the process of setting up a Conda environment named "Env_MolTransformer" specific to your library's requirements.
-
-### Step 1: Install Conda
-If you haven't already installed Conda, download and install it from the [official Conda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/).
-
-### Step 2: Download Environment File
-Ensure you have the `environment.yml` file from the MolTransformer library.
-
-### Step 3: Create the Conda Environment
-Open your terminal or command prompt and navigate to the directory containing the `environment.yml` file. Run the following command:
-
-'''bash
-conda env create -f environment.yml -n Env_MolTransformer
-
-conda activate Env_MolTransformer
-conda list
-'''
-
 
 ## Addition Information and Notes for Installation
 
