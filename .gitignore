@@ -3,3 +3,5 @@ output/
 MolTransformer/log_file.log
 .DS_Store
 MolTransformer/__pycache__/
+/MolTransformer/generative/__pycache__/
+/MolTransformer/model/__pycache__/
