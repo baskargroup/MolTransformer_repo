@@ -1,26 +1,5 @@
 # MolTransformer
 
-## Table of Contents
-- [GenerateMethods Usage Guide](#generatemethods-usage-guide)
-- [Installation](#installation)
-  - [1. Create a Conda Environment (Recommended)](#1-create-a-conda-environment-recommended)
-  - [2. Install RDKit from conda-forge](#2-install-rdkit-from-conda-forge)
-  - [3. Install the remaining dependencies via pip](#3-install-the-remaining-dependencies-via-pip)
-  - [4. Install MolTransformer as a package](#4-install-moltransformer-as-a-package)
-  - [5. Test Your Installation](#5-test-your-installation)
-- [Quick Start](#quick-start)
-  - [Example 1: Global Molecular Generation](#example-1-global-molecular-generation)
-  - [Example 2: Local Molecular Generation](#example-2-local-molecular-generation)
-  - [Example 3: Neighboring Search](#example-3-neighboring-search)
-  - [Example 4: Custom Latent Space Manipulation](#example-4-custom-latent-space-manipulation)
-  - [Example 5: Optimistic Property-Driven Molecule Generation](#example-5-optimistic-property-driven-molecule-generation)
-  - [Example 6: Simplified Molecular Evolution Between Two Molecules](#example-6-simplified-molecular-evolution-between-two-molecules)
-- [BuildModel Configuratiom](#buildmodel-configuratiom)
-- [DataLoader Configuration](#dataloader-configuration)
-- [ModelOperator Configuration](#modeloperator-configuration)
-  - [Configuration Guide for train_config.json](#configuration-guide-for-train_configjson)
-- [Addition Information and Notes for Installation](#addition-information-and-notes-for-installation)
-
 
 
 ## GenerateMethods Usage Guide
@@ -55,6 +34,31 @@ MolGen-Transformer addresses major challenges in generative molecular AI, includ
 - **Output Storage**: Customizable **report save path** for logs and results
 - **GPU Mode**: Enables computations on a GPU to speed up processing.
 - **Report Save Path**: Specifies the directory for saving outputs and logs.
+
+
+
+## Table of Contents
+- [GenerateMethods Usage Guide](#generatemethods-usage-guide)
+- [Installation](#installation)
+  - [1. Create a Conda Environment (Recommended)](#1-create-a-conda-environment-recommended)
+  - [2. Install RDKit from conda-forge](#2-install-rdkit-from-conda-forge)
+  - [3. Install the remaining dependencies via pip](#3-install-the-remaining-dependencies-via-pip)
+  - [4. Install MolTransformer as a package](#4-install-moltransformer-as-a-package)
+  - [5. Test Your Installation](#5-test-your-installation)
+- [Quick Start](#quick-start)
+  - [Example 1: Global Molecular Generation](#example-1-global-molecular-generation)
+  - [Example 2: Local Molecular Generation](#example-2-local-molecular-generation)
+  - [Example 3: Neighboring Search](#example-3-neighboring-search)
+  - [Example 4: Custom Latent Space Manipulation](#example-4-custom-latent-space-manipulation)
+  - [Example 5: Optimistic Property-Driven Molecule Generation](#example-5-optimistic-property-driven-molecule-generation)
+  - [Example 6: Simplified Molecular Evolution Between Two Molecules](#example-6-simplified-molecular-evolution-between-two-molecules)
+- [BuildModel Configuratiom](#buildmodel-configuratiom)
+- [DataLoader Configuration](#dataloader-configuration)
+- [ModelOperator Configuration](#modeloperator-configuration)
+  - [Configuration Guide for train_config.json](#configuration-guide-for-train_configjson)
+- [Addition Information and Notes for Installation](#addition-information-and-notes-for-installation)
+
+
 
 ## **Installation**
 Clone the repository to start using MolGen-Transformer for molecular generation and analysis:
