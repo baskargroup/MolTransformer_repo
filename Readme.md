@@ -1,3 +1,26 @@
+# MolTransformer
+
+## Table of Contents
+- [GenerateMethods Usage Guide](#generatemethods-usage-guide)
+- [Installation](#installation)
+  - [1. Create a Conda Environment (Recommended)](#1-create-a-conda-environment-recommended)
+  - [2. Install RDKit from conda-forge](#2-install-rdkit-from-conda-forge)
+  - [3. Install the remaining dependencies via pip](#3-install-the-remaining-dependencies-via-pip)
+  - [4. Install MolTransformer as a package](#4-install-moltransformer-as-a-package)
+  - [5. Test Your Installation](#5-test-your-installation)
+- [Quick Start](#quick-start)
+  - [Example 1: Global Molecular Generation](#example-1-global-molecular-generation)
+  - [Example 2: Local Molecular Generation](#example-2-local-molecular-generation)
+  - [Example 3: Neighboring Search](#example-3-neighboring-search)
+  - [Example 4: Custom Latent Space Manipulation](#example-4-custom-latent-space-manipulation)
+  - [Example 5: Optimistic Property-Driven Molecule Generation](#example-5-optimistic-property-driven-molecule-generation)
+  - [Example 6: Simplified Molecular Evolution Between Two Molecules](#example-6-simplified-molecular-evolution-between-two-molecules)
+- [BuildModel Configuratiom](#buildmodel-configuratiom)
+- [DataLoader Configuration](#dataloader-configuration)
+- [ModelOperator Configuration](#modeloperator-configuration)
+  - [Configuration Guide for train_config.json](#configuration-guide-for-train_configjson)
+- [Setting Up Env_MolTransformer](#setting-up-env_moltransformer)
+- [Addition Information and Notes for Installation](#addition-information-and-notes-for-installation)
 
 
 # Quick Start of Running the code.
@@ -22,8 +45,8 @@ The `GenerateMethods` class in the MolTransformer project facilitates the genera
 
 ### 1. Create a Conda Environment (Recommended)
 
-- 1. If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda. If your system does not support conda but micromamba and if you have error message while testing MolTransformer, please take a look at the section: Addition Information and Notes for Installation
-
+1. If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda.  
+**If your system does not support conda but has micromamba, and if you encounter error messages while testing MolTransformer, please see the [Addition Information and Notes for Installation](#addition-information-and-notes-for-installation).**
 
 - 2. **Create and activate a new conda environment**  
   ```bash
