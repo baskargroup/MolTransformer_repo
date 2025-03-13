@@ -65,6 +65,7 @@ In that case, you can install PyTorch via pip install torch or conda install pyt
 After installation, open a Python shell:
 ```python
 import MolTransformer
+
 print(MolTransformer.__file__)
 ```
 
@@ -334,3 +335,79 @@ conda env create -f environment.yml -n Env_MolTransformer
 conda activate Env_MolTransformer
 conda list
 '''
+
+
+## Addition Information and Notes for Installation
+
+### Installation on Clusters Without Conda (Using micromamba)
+Some HPC systems remove or disable conda, but provide micromamba as a lightweight conda-like tool. To install MolTransformer under micromamba, do:
+
+- Load micromamba:
+
+'''bash
+module purge
+module load micromamba
+eval "$(micromamba shell hook --shell=bash)"
+'''
+       
+
+- Create and activate a new environment:
+
+'''bash
+micromamba create -p /path/to/my_moltransformer_env python=3.9 -c conda-forge
+micromamba activate /path/to/my_moltransformer_env
+'''
+
+If your cluster only offers Python 3.13, you may see a warning about the removed imp module. We’ve patched hostlist in our code to avoid this issue, but be aware that older versions of hostlist or ansiblecmdb might still reference imp.
+
+#### Optional 
+
+- Install GPU PyTorch:
+
+'''bash
+micromamba install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+
+'''
+
+- Install RDKit (if needed):
+
+'''bash
+micromamba install -c conda-forge rdkit
+
+'''
+
+#### Install dependencies and MolTransformer:
+
+'''bash
+pip install -r requirements.txt
+pip install -e .
+
+'''
+
+#### Test:
+
+'''bash
+python -c "import MolTransformer; print(MolTransformer.__file__)"
+'''
+
+### Notes on Python 3.13 and the imp Module
+Python 3.13 fully removes the old imp module. If you see a ModuleNotFoundError: No module named 'imp', it usually means a library (e.g., ansiblecmdb, hostlist) hasn’t updated to importlib.
+We’ve patched our references to hostlist so it no longer imports imp. If you still encounter problems, make sure you’re on our latest codebase.
+If your cluster forcibly uses Python 3.13, you might need to manually patch or remove libraries that still depend on imp. Alternatively, if your HPC environment allows it, use Python 3.12 or earlier to avoid this issue entirely.
+
+#### ModuleNotFoundError: No module named 'imp'
+If the error occur to your systm, please do the following step:
+- Open it in a text editor:
+'''bash
+nano /work/mech-ai/bella/my_moltransformer_env_py312/lib/python3.13/site-packages/ansiblecmdb/render.py
+'''
+- Remove or replace the line:
+
+```python
+import imp
+```
+to: 
+
+```python
+import importlib
+```

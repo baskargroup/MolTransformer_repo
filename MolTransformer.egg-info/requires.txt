@@ -1,0 +1,11 @@
+torch>=1.10
+numpy>=1.19
+matplotlib>=3.0
+pillow>=9.0
+pandas>=1.0
+scikit-learn>=0.24
+scipy>=1.5
+selfies>=2.0
+certifi>=2021.5.30
+pubchempy>=1.0
+hostlist
