@@ -19,29 +19,50 @@
 - [DataLoader Configuration](#dataloader-configuration)
 - [ModelOperator Configuration](#modeloperator-configuration)
   - [Configuration Guide for train_config.json](#configuration-guide-for-train_configjson)
-- [Setting Up Env_MolTransformer](#setting-up-env_moltransformer)
 - [Addition Information and Notes for Installation](#addition-information-and-notes-for-installation)
 
 
-# Quick Start of Running the code.
+
 ## GenerateMethods Usage Guide
 
-### Overview
-The `GenerateMethods` class in the MolTransformer project facilitates the generation and analysis of molecular structures from latent space representations. This guide details how to utilize the class for various molecular generation tasks.
+# **MolGen-Transformer: A Molecular Language Model for Generation and Latent Space Exploration**
 
-### Features
-- **Local Molecular Generation**: Generates new molecular structures by manipulating latent space vectors locally.
-- **Global Molecular Generation**: Samples a number of latent space vectors randomly to generate molecular structures globally.
-- **Neighboring Search**: Iteratively searches neighboring molecules to optimize a given property using a multi-fidelity model.
-- **Molecular Evolution**: Evolves molecules along a path in latent space from a start to an end molecule.
-- **Smiles and Selfies Conversion**: Converts SMILES to latent space representations and vice versa.
 
-### Configuration Details
+## **Overview**
+MolGen-Transformer is a **transformer-based generative AI model** designed for **molecular generation and latent space exploration**, specifically targeting **π-conjugated molecules**. By leveraging a **latent-space-centered approach** and a **SELFIES-based molecular representation**, MolGen-Transformer ensures **100% molecular reconstruction accuracy**, enabling robust and reliable generation of chemically meaningful molecules.
+
+This repository provides the **MolGen-Transformer model, sampling methods, and analysis tools** for generative molecular design, facilitating AI-driven **chemical discovery, structure optimization, and property-based molecular exploration**.
+
+This work is described in detail in our paper:  
+[**MolGen-Transformer: A Molecule Language Model for the Generation and Latent Space Exploration of π-Conjugated Molecules**](https://chemrxiv.org/engage/chemrxiv/article-details/67bce95d81d2151a02e708ba) available on **ChemRxiv**.
+
+## **Key Features**
+MolGen-Transformer addresses major challenges in generative molecular AI, including **chemical space coverage, latent space interpretability, and generation reliability**, by implementing the following capabilities:
+
+- **Diverse Molecular Generation**: Randomly samples molecules from latent space to ensure diverse structural outputs.
+- **Controlled Molecular Generation**: Allows similarity-controlled generation for tuning molecular diversity and resemblance.
+- **Molecular Interpolation**: Identifies intermediate structures between two molecules, aiding in **reaction pathway discovery**.
+- **Local Molecular Generation**: Enables the **refinement and optimization** of molecules by manipulating latent space vectors locally.
+- **Neighboring Search**: Iteratively searches neighboring molecules to **optimize a given molecular property** using a multi-fidelity model.
+- **Molecular Evolution**: Evolves molecules along a path in latent space, allowing **progressive optimization from a starting molecule to a target structure**.
+- **SMILES & SELFIES Conversion**: Smiles and Selfies Conversion**: Converts SMILES to latent space representations and vice versa.
+
+
+## **Configuration Details**
+- **Trained on**: ~198 million organic molecules
+- **Latent Space Encoding**: SELFIES representation for guaranteed chemical validity
+- **Computation Mode**: GPU acceleration supported for efficient molecular generation
+- **Output Storage**: Customizable **report save path** for logs and results
 - **GPU Mode**: Enables computations on a GPU to speed up processing.
 - **Report Save Path**: Specifies the directory for saving outputs and logs.
 
+## **Installation**
+Clone the repository to start using MolGen-Transformer for molecular generation and analysis:
 
-## Installation
+```bash
+git clone https://github.com/baskargroup/MolTransformer_repo.git
+cd MolTransformer_repo
+```
 
 ### 1. Create a Conda Environment (Recommended)
 
