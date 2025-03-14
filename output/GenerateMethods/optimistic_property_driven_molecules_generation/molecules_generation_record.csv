@@ -1,3 +1,0 @@
-,SMILES,Property,SELFIES,pubchem
-0,[H]OC1(C([H])([H])[H])C([H])=C([H])C2([H])N([H])C21[H],0.03844389319419861,[H][O][C][Branch1][=Branch2][C][Branch1][C][H][Branch1][C][H][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][N][Branch1][C][H][C][Ring1][Branch1][Ring1][=C][H],True
-1,[H]OC(C([H])[H])[H],2.443767786026001,[H][O][C][Branch1][#Branch1][C][Branch1][C][H][Branch1][C][H][H][C][Branch1][C][H][=C][Branch1][C][H][C][Branch1][C][H][N][Branch1][C][H][C][Ring1][Branch1][Ring1][=C][H],True

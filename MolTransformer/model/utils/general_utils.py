@@ -11,35 +11,52 @@ import json
 import logging
 
 
+
 class Config:
     """
-    Configuration class that loads global settings from a JSON file.
-    Assumes the config.json is located three levels above the script's directory.
+    Configuration loader for JSON files in the project's config directory.
 
-    Usage:
-    global_config = Config()
-    some_setting = global_config['some_key']  # Returns None if 'some_key' does not exist
+    By default, loads 'global_config.json'. Provide a different filename to load a specific configuration.
+
+    Example usage:
+        global_config = Config()
+        setting_value = global_config['some_key']  # Returns None if 'some_key' doesn't exist
     """
-    def __init__(self,config_name = ''):
-        if not config_name:
-            config_name = 'train_config.json'
+
+    def __init__(self, config_name=''):
+        # Default config file name
+        config_name = config_name if config_name else 'global_config.json'
+
+        # Dynamically identify repo root (assuming this file is nested two levels deep, adjust accordingly)
+        repo_root = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), '../../../')
+        )
+
+        # recommended config folder at project root
+        config_folder = os.path.join(repo_root, 'config')
+
+        # construct full path to the config file
+        config_path = os.path.join(config_folder, config_name)
+
+        # Debug print statements (optional, can be removed after debugging)
+        print("Attempting to load configuration from:", config_folder)
+
         try:
-            # Calculate the path to the configuration file
-            base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-            config_path = os.path.join(base_dir, config_name)
-            print('expect a configuration file at :', config_path)
-
-            # Open and load the configuration file
-            with open(config_path, 'r') as config_file:
-                self.config = json.load(config_file)
+            with open(config_path := os.path.join(config_folder, config_name), 'r') as f:
+                self.config = json.load(f)
         except FileNotFoundError:
-            raise FileNotFoundError("Configuration file not found at the expected location.")
-        except json.JSONDecodeError:
-            raise Exception("Failed to decode the configuration file - please check its format.")
+            raise FileNotFoundError(
+                f"Configuration file '{config_name}' not found in '{config_folder}'."
+            )
+        except json.JSONDecodeError as e:
+            raise ValueError(
+                f"Invalid JSON in configuration file '{config_name}': {str(e)}"
+            )
 
-    def __getitem__(self, item):
-        # Returns the configuration item or None if it does not exist
-        return self.config.get(item, None)
+    def __getitem__(self, key):
+        # safe retrieval, returns None if key doesn't exist
+        return self.config.get(key, None)
+
 
 # Load global configuration from the JSON file
 
