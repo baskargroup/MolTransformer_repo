@@ -131,7 +131,16 @@ GM = GenerateMethods(save=True)  # Set `save=True` to save results and logs
 smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
 ```
 ####  Example 2: Local Molecular Generation
-Generate molecular structures locally around a randomly selected molecule from a specified dataset. Results are automatically saved to the specified path.
+This example demonstrates how to generate molecules locally around a specified molecule. 
+
+**Parameters:**
+
+- `initial_smile` *(str, optional)*:  
+  The SMILES string of the molecule around which new structures will be generated. If not provided, a random molecule from the dataset is selected.
+
+- `report_save_path` *(str, optional)*:  
+  The path to save the generated molecules and related reports. If not specified, results will be saved to a default location (`output/GenerateMethods/`).
+
 ```python
 from MolTransformer import GenerateMethods
 GM = GenerateMethods(save=True)

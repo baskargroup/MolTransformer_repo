@@ -63,21 +63,33 @@ class Config:
 global_config = Config()
 
 
-    
 def log_file():
-    # Get the directory of the current script
-    package_directory =  os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    # Define the path to the log file within the package directory
-    log_path = os.path.join(package_directory, "log_file.log")
-    # Ensure the directory exists
-    os.makedirs(os.path.dirname(log_path), exist_ok=True)
-    # Print the path to verify it
-    print('Log file will be located at: ', log_path)
-    # Setup logging
-    logging.basicConfig(filename=log_path, format='%(asctime)s - %(levelname)s - %(message)s', level=logging.INFO)
+    # Dynamically determine the repository root (assume current file is at MolTransformer/model/utils/)
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../'))
 
-# You can now call log_file() to initialize logging
+    # Define the path to the logs directory within the output folder at the repo root
+    log_dir = os.path.join(repo_root, 'output', 'logs')
+
+    # Ensure the log directory exists
+    os.makedirs(log_dir, exist_ok=True)
+
+    # Define the full path to the log file
+    log_path = os.path.join(log_dir, "log_file.log")
+
+    # Print the path clearly to verify it
+    print('Log file will be located at:', log_path)
+
+    # Configure Python logging to save logs to this file
+    logging.basicConfig(
+        filename=log_path,
+        filemode='a',  # Append logs to existing file
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        level=logging.INFO
+    )
+
+# Call log_file() once during initialization to start logging
 log_file()
+
 
 class LoadIndex:
     """

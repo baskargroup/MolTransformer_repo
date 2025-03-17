@@ -48,7 +48,7 @@ class GenerateMethods(IndexConvert):
 
         self.gpu_mode = gpu_mode
         self.save = save or bool(report_save_path)
-        self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        self.base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
         
         if self.save  and not report_save_path:
             report_save_path = os.path.join(self.base_dir, 'output','GenerateMethods/')
