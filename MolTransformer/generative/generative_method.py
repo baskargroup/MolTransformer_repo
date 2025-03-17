@@ -321,7 +321,7 @@ class GenerateMethods(IndexConvert):
         else:
             return uniqueness_ratio
     
-    def local_molecular_generation(self,top_k_closest = True, k = 30,alpha_list = [0,0.5,1], random_initial_smile = True,initial_smile = '',dataset = 'ocelot',search_range = 40, resolution = 0.001,num_vector = 150,sa_threshold=6):
+    def local_molecular_generation(self,top_k_closest = True, k = 30,alpha_list = [0,0.5,1], random_initial_smile = False,initial_smile = '',dataset = 'ocelot',search_range = 40, resolution = 0.001,num_vector = 150,sa_threshold=6):
         if self.save:
             local_molecular_generation_report_save_path = self.report_save_path + 'local_molecular_generation/'
             check_path(local_molecular_generation_report_save_path)
