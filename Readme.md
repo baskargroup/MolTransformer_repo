@@ -130,35 +130,51 @@ from MolTransformer import GenerateMethods
 GM = GenerateMethods(save=True)  # Set `save=True` to save results and logs
 smiles_list, selfies_list = GM.global_molecular_generation(n_samples=100)
 ```
-####  Example 2: Local Molecular Generation
-This example demonstrates how to generate molecules locally around a specified molecule. 
+
+#### Example 2: Local Molecular Generation
+
+Generates new molecules around an initial molecule by exploring its local latent space neighborhood. By default, it saves generated results and provides an option to select top-k closest molecules.
 
 **Parameters:**
 
-- `initial_smile` *(str, optional)*:  
-  The SMILES string of the molecule around which new structures will be generated. If not provided, a random molecule from the dataset is selected.
-
-- `report_save_path` *(str, optional)*:  
-  The path to save the generated molecules and related reports. If not specified, results will be saved to a default location (`output/GenerateMethods/`).
+- `initial_smile` *(str, optional)*: The SMILES string of your reference molecule. If omitted, a random molecule is selected from the dataset.
+- `report_save_path` *(str, optional)*: Path to save generated results. Default path: `output/GenerateMethods/`.
 
 ```python
 from MolTransformer import GenerateMethods
+
 GM = GenerateMethods(save=True)
-generated_results = GM.local_molecular_generation(dataset='qm9', num_vector=30)
-print(generated_results['SMILES'])
-print(generated_results['SELFIES'])
+generated_results = GM.local_molecular_generation(dataset='qm9', initial_smile='C1=CC=CC=C1', num_vector=30)
+
+print("Generated SMILES:", generated_results['SMILES'])
+print("Generated SELFIES:", generated_results['SELFIES'])
 ```
+
+---
+
 #### Example 3: Neighboring Search
-This example starts with a random SMILE from a dataset and explores its molecular neighborhood. It's particularly useful for iterative exploration and optimization of molecular structures.
+
+Performs minimal perturbations using a binary search in the latent space around a provided molecule, generating closely related molecular variants. Ideal for iterative exploration and optimization of molecular structures. The perturbation magnitude can be controlled with parameters.
+
+**Parameters:**
+
+- `initial_smile` *(str)*: SMILES string of the reference molecule (required).
+- `search_range` *(float, optional)*: Maximum perturbation range (default: `10.0`).
+- `resolution` *(float, optional)*: Perturbation resolution (default: `0.1`).
+- `report_save_path` *(str, optional)*: Path to save generated results.
+
 ```python
 from MolTransformer import GenerateMethods
-GM = GenerateMethods(report_save_path='your_custom_path')
-initial_smile = GM.random_smile(dataset='qm9')
-print('Initial SMILE:', initial_smile)
-generated_results, _ = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
+
+GM = GenerateMethods(save=True, report_save_path='./output/NeighborSearch/')
+initial_smile = 'C1=CC=CC=C1'  # Benzene example
+generated_results, fail_cases = GM.neighboring_search(initial_smile=initial_smile, num_vector=20)
+
 print('Generated SMILES:', generated_results['SMILES'])
 print('Generated SELFIES:', generated_results['SELFIES'])
 ```
+
+
 #### Example 4: Custom Latent Space Manipulation
 After generating a latent space from a SMILE, you can manually perturb it to explore slight variations and their properties.
 ```python
