@@ -174,26 +174,6 @@ print('Generated SMILES:', generated_results['SMILES'])
 print('Generated SELFIES:', generated_results['SELFIES'])
 ```
 
-
-#### Example 4: Custom Latent Space Manipulation
-After generating a latent space from a SMILE, you can manually perturb it to explore slight variations and their properties.
-```python
-from MolTransformer import GenerateMethods
-GM = GenerateMethods()
-initial_smile = GM.random_smile(dataset='qm9')
-print('Initial SMILE:', initial_smile)
-ls = GM.smiles_2_latent_space([initial_smile])
-print('Latent Space Shape:', ls.shape)
-# Perform custom modifications to ls as needed
-edit_results = GM.latent_space_2_strings(ls)
-print('Edited SMILE:', edit_results['SMILES'][0])
-print('Edited SELFIES:', edit_results['SELFIES'][0])
-properties = GM.smiles_2_properties(edit_results['SMILES'])
-print('properties_2: ', float(properties[0][0]))
-print('properties_2: shape', properties.shape)
-```
-
-
 #### Example 4: Custom Latent Space Manipulation
 
 This example shows how to manually manipulate the latent space representation of a molecule to explore structural variations. 
@@ -249,22 +229,39 @@ print('Generated SMILES:', molecules_generation_record['SMILES'])
 print('Properties:', molecules_generation_record['Property'])
 ```
 
-#### Example 6: Simplified Molecular Evolution Between Two Molecules
-The `molecular_evolution` function conducts a series of operations to transition from the structure of `start_molecule` to `end_molecule`. It explores the latent space to propose potential intermediates and applies property optimization techniques to refine the transformation pathway. This process helps in understanding how one molecular configuration can be converted into another, potentially uncovering viable synthetic routes or novel molecular structures.
+
+
+#### Example 6: Molecular Evolution Between Two Molecules
+
+The `molecular_evolution` function generates intermediate molecules along the latent space pathway connecting two specified molecules.
+
+**Parameters:**
+
+- `start_molecule` *(str)*: SMILES string of the initial molecule.
+- `end_molecule` *(str)*: SMILES string of the target molecule.
+- `number` *(int)*: Number of intermediate molecules generated.
+
+The function saves results automatically if `save=True`, including generated molecules, similarity scores, and visualizations.
+
+**Example Usage:**
 
 ```python
-# Import the GenerateMethods class
 from MolTransformer import GenerateMethods
-# Initialize the GenerateMethods with an output path
-GM = GenerateMethods(report_save_path='/path/to/save/reports/')
-# Randomly pick one molecule from each dataset
-start_molecule = 'c1ccccc1'  # Example SMILE from 'qm9'
-end_molecule = 'c2ccc(c1ccccc1)cc2'  # Example SMILE from 'ocelot'
 
-# Perform molecular evolution and observe the transformation
-GM.molecular_evolution(start_molecule, end_molecule, number=100)
-print('Molecular evolution completed from qm9 to ocelot molecule.')
+# Initialize with output saving enabled
+GM = GenerateMethods(report_save_path='/path/to/save/reports/', save=True)
+
+# Define starting and target molecules (SMILES)
+start_molecule = 'c1ccccc1'   # Benzene (example)
+end_molecule = 'C1CCCCC1'     # Cyclohexane example
+
+# Generate intermediate molecules
+results_df = GM.molecular_evolution(start_molecule, end_molecule, number=100)
+
+# Display generated molecules and similarities
+print(results_df[['SMILES', 'distance_ratio', 'similarity_start', 'similarity_end']])
 ```
+
 
 ## BuildModel Configuratiom;
 ### Overview
