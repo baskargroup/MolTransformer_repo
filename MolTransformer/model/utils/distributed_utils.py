@@ -72,39 +72,50 @@ def save_on_master(*args, **kwargs):
 
 def init_distributed_mode():
     if "RANK" in os.environ and "WORLD_SIZE" in os.environ:
-        print('in init_distributed_mode if "RANK" in os.environ and "WORLD_SIZE" in os.environ')
+        print('Distributed mode: environment variables RANK and WORLD_SIZE detected.')
         rank = int(os.environ["RANK"])
-        world_size  = int(os.environ["WORLD_SIZE"])
+        world_size = int(os.environ["WORLD_SIZE"])
         gpu = int(os.environ["LOCAL_RANK"])
-        print('Rank:'+str(rank))
-        print('World Size:'+str(world_size))
-        print('GPU:'+str(gpu))
-        world_size_ =  world_size
-    elif "SLURM_PROCID" in os.environ:
-        print('in init_distributed_mode elif "SLURM_PROCID" in os.environ')
+        print(f'Rank: {rank}, World Size: {world_size}, GPU: {gpu}')
+        world_size_ = world_size
+
+    elif all(var in os.environ for var in ["SLURM_PROCID", "SLURM_NTASKS", "SLURM_LOCALID", "SLURM_CPUS_PER_TASK", "SLURM_JOB_NODELIST"]):
+        print('Distributed mode: all SLURM environment variables detected.')
         rank = int(os.environ["SLURM_PROCID"])
-        print('Rank:'+str(rank))
         gpu = rank % torch.cuda.device_count()
         os.environ['CUDA_VISIBLE_DEVICES'] = "0,1,2,3"
-        print('GPU:'+str(gpu))
+        
         local_rank = int(os.environ['SLURM_LOCALID'])
         size = int(os.environ['SLURM_NTASKS'])
         cpus_per_task = int(os.environ['SLURM_CPUS_PER_TASK'])
-        # get node list from slurm
         hostnames = hostlist.expand_hostlist(os.environ['SLURM_JOB_NODELIST'])
-        world_size_ =  1
-    elif hasattr(global_config, "rank"):
-        pass
-    else:
-        print("Not using distributed mode")
-        return
-    print('set distrubuted')
+        world_size_ = size
 
+        print(f'Rank: {rank}, GPU: {gpu}, World Size: {world_size_}, CPUs per Task: {cpus_per_task}, Hosts: {hostnames}')
+
+    elif hasattr(global_config, "rank"):
+        # Add clear logging or handling if necessary
+        print('Distributed mode: using global_config.rank')
+        return
+
+    else:
+        print("Not running in distributed mode (defaulting to single GPU/CPU).")
+        world_size_ = 1
+        rank = 0
+        gpu = 0
+
+    # Set distributed mode clearly and robustly:
     torch.cuda.set_device(gpu)
-    torch.distributed.init_process_group(backend="nccl" , world_size=world_size_, rank=rank)
+    torch.distributed.init_process_group(
+        backend="nccl",
+        world_size=world_size_,
+        rank=rank
+    )
     torch.distributed.barrier()
-    setup_for_distributed(global_config['rank'] == 0)
+    setup_for_distributed(rank == 0)
+    
     return world_size_
+
 
 def reduce_across_processes(val):
     """

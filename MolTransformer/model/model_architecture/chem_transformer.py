@@ -92,6 +92,7 @@ class ChemTransformer(nn.Module):
         Returns:
             torch.Tensor: The memory output from the transformer encoder.
         """
+        input_idx = input_idx.to(self.device)
         padding_mask = self.create_pad_mask(input_idx)
         naive_embedding = self.embedding(input_idx).permute(1, 0, 2)
         input_embedding = self.position_encoding(naive_embedding)
@@ -112,6 +113,7 @@ class ChemTransformer(nn.Module):
         Returns:
             torch.Tensor: The output from the transformer decoder.
         """
+        input_idx = input_idx.to(self.device)  # explicitly move to GPU
         naive_embedding = self.embedding(input_idx).permute(1, 0, 2)
         input_embedding = self.position_encoding(naive_embedding)       
         ipt_mask = self.get_tgt_mask(self.max_sequence_length)
@@ -206,7 +208,8 @@ class ChemTransformer(nn.Module):
         Returns:
             The output of the ChemTransformer which varies based on the mode.
         """
-        input_idx = args[0].clone().detach().requires_grad_(False).to(torch.int)
+        input_idx = args[0].clone().detach().requires_grad_(False).to(torch.int).to(self.device)
+    
         memory = self.encoder(input_idx)
         memory_ = memory.permute(1, 0, 2)
         

@@ -46,7 +46,12 @@ class GenerateMethods(IndexConvert):
         super().__init__()  # Initialize the base IndexConvert class
         self.device = device
 
+        
+
         self.gpu_mode = gpu_mode
+        # the gpu mode here means parallel compute or not
+
+        
         self.save = save or bool(report_save_path)
         self.base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
         
@@ -59,7 +64,7 @@ class GenerateMethods(IndexConvert):
             print('Resault will be save to the following path: ', report_save_path)
 
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode)
-        self.model = build_model_instance.model
+        self.model = build_model_instance.model.to(self.device)
 
         self.iteration_num = 0
 
@@ -325,7 +330,7 @@ class GenerateMethods(IndexConvert):
         else:
             return uniqueness_ratio
     
-    def local_molecular_generation(self,top_k_closest = True, k = 30,alpha_list = [0,0.5,1], random_initial_smile = False,initial_smile = '',dataset = 'ocelot',search_range = 40, resolution = 0.001,num_vector = 150,sa_threshold=6):
+    def local_molecular_generation(self,top_k_closest = True, k = 30,alpha_list = [0,0.5,1], random_initial_smile = True,initial_smile = '',dataset = 'ocelot',search_range = 40, resolution = 0.001,num_vector = 150,sa_threshold=6):
         if self.save:
             local_molecular_generation_report_save_path = self.report_save_path + 'local_molecular_generation/'
             check_path(local_molecular_generation_report_save_path)
@@ -371,7 +376,7 @@ class GenerateMethods(IndexConvert):
             print(error_message)
             raise ValueError(error_message)
         build_model_instance = BuildModel(device=device,gpu_mode = self.gpu_mode,dataset = dataset)
-        self.property_model = build_model_instance.model
+        self.property_model = build_model_instance.model.to(self.device)
         self.std_parameter =  defaultdict(float)
         model_folder = 'ocelot_aea' if dataset == 'ocelot' else 'qm9_lumo'
         model_path = os.path.join(self.base_dir,'MolTransformer','model','models','best_models','MultiF_HF',model_folder)
@@ -388,12 +393,16 @@ class GenerateMethods(IndexConvert):
         
         # Prepare model input from smiles
         model_input = self._smile_2_property_model_input(smiles)
+
+        # Explicitly send tensors to GPU
+        input_tensor = model_input['input'].to(self.device)
+        descriptors_tensor = model_input['descriptors'].to(self.device)
         
         # Predict properties using the initialized model
         
-        predicted_property= self.property_model(model_input['input'],model_input['descriptors'])  # need convert to numpy array
+        predicted_property= self.property_model(input_tensor,descriptors_tensor)  # need convert to numpy array
         # Detach and convert tensor to numpy for further processing
-        predicted_property_np = predicted_property.detach().numpy()
+        predicted_property_np = predicted_property.detach().cpu().numpy()
         # Convert standardized prediction outputs to actual property values
         properties = self._recover_standardized_data(predicted_property_np)
         return properties
