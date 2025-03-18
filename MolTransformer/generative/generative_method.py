@@ -265,9 +265,13 @@ class GenerateMethods(IndexConvert):
         return representation
     
     def _memory_2_representation(self,memory_torch):
+        # Move input tensor explicitly to the correct device
+        memory_torch = memory_torch.to(self.device)
+
+        # Ensure the model itself is on the correct device
+        self.model.to(self.device)
 
         # if the shape of memory_torch is (1, 401, 30) 
-        # need to check whether pca version still work
         if memory_torch.shape[1] == 401:
             memory = memory_torch.permute(1, 0, 2)
         else:
@@ -663,9 +667,9 @@ class GenerateMethods(IndexConvert):
         # Convert SELFIES to latent space
         latent_spaces = self.selfies_2_latent_space(selfies_list)
         return latent_spaces
-    
+
     def selfies_2_latent_space(self, selfies):
-        print('selfies ',selfies)
+        print('selfies ', selfies)
         # If the input is a single SELFIES string, convert it to a list
         if isinstance(selfies, str):
             selfies = [selfies]
@@ -674,23 +678,27 @@ class GenerateMethods(IndexConvert):
         for selfies_str in selfies:
             inputs = [self.Index.char2ind.get(char, self.Index.char2ind['[nop]']) for char in sf.split_selfies(selfies_str)]
             seq_len = min(len(inputs), settings.max_sequence_length)
-            inputs_padd = torch.zeros((1, settings.max_sequence_length + 1), dtype=torch.long)
+
+            # Initialize tensor clearly on the correct device
+            inputs_padd = torch.zeros((1, settings.max_sequence_length + 1), dtype=torch.long, device=self.device)
             inputs_padd[0, 0] = self.Index.char2ind['G']
-            inputs_padd[0, 1:seq_len + 1] = torch.LongTensor(inputs[:seq_len])
+            inputs_padd[0, 1:seq_len + 1] = torch.tensor(inputs[:seq_len], device=self.device)
 
             with torch.no_grad():
-                input_idx = inputs_padd.to(self.device)
+                # Ensure model is also explicitly on the correct device
+                self.model.to(self.device)
+
                 if self.gpu_mode:
-                    memory = self.model.module.encoder(input_idx)
+                    memory = self.model.module.encoder(inputs_padd)
                 else:
-                    memory = self.model.encoder(input_idx)
-                memory_ = memory.permute(1, 0, 2).cpu()
-                latent_spaces.append(memory_.numpy())
+                    memory = self.model.encoder(inputs_padd)
+
+                memory_ = memory.permute(1, 0, 2).cpu().numpy()
+                latent_spaces.append(memory_)
 
         # Concatenate all the latent space representations into a single numpy array
         return np.concatenate(latent_spaces, axis=0)
 
-    
     def _generate_normalized_vectors(self,dimensions, num_vectors):
         # Generate random vectors with values in the range [-1, 1]
         random_vectors = np.random.uniform(low=-1, high=1, size=(num_vectors, dimensions))

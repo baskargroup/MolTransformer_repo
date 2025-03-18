@@ -1,5 +1,5 @@
 {
-    "gpu_mode": false,
+    "gpu_mode": true,
     "output_folder_name": "test_gm"
     
 

@@ -8,7 +8,7 @@ if os.path.isfile("README.md"):
 
 setup(
     name="MolTransformer",
-    version="0.1.0",
+    version="0.1.1",
     author="Chih-Hsuan Yang",
     author_email="chyang@iastate.edu",
     description="A python package for the paper: MolGen-Transformer: A molecule language model for the generation and latent space exploration of pi-conjugated molecules",

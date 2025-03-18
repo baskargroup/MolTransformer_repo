@@ -143,8 +143,8 @@ Generates new molecules around an initial molecule by exploring its local latent
 from MolTransformer import GenerateMethods
 
 GM = GenerateMethods(save=True)
-generated_results = GM.local_molecular_generation(dataset='qm9', initial_smile='C1=CC=CC=C1', num_vector=30)
-
+generated_results = GM.local_molecular_generation(
+    dataset='qm9', random_initial_smile=False, initial_smile='C1=CC=CC=C1', num_vector=30)
 print("Generated SMILES:", generated_results['SMILES'])
 print("Generated SELFIES:", generated_results['SELFIES'])
 ```
