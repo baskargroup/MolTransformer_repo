@@ -1,9 +1,3 @@
-# MolTransformer
-
-
-
-## GenerateMethods Usage Guide
-
 # **MolGen-Transformer: A Molecular Language Model for Generation and Latent Space Exploration**
 
 
