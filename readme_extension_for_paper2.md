@@ -1,3 +1,14 @@
+API:
+pypi-AgENdGVzdC5weXBpLm9yZwIkYWIwYzVhM2QtOTMyMy00MDYxLTljNTAtZDlmYjZhZDNkMTliAAIqWzMsImUyZDQ1MGYzLTc4YTctNDAwNC04NzU4LTQ2YTdkNzljMGQ3OCJdAAAGICjlUyzwqxuEK63d-oOlioKgoAhj6fOCTwVjslsHGEOY
+
+
+
+[testpypi]
+  username = __token__
+  password = pypi-AgENdGVzdC5weXBpLm9yZwIkYWIwYzVhM2QtOTMyMy00MDYxLTljNTAtZDlmYjZhZDNkMTliAAIqWzMsImUyZDQ1MGYzLTc4YTctNDAwNC04NzU4LTQ2YTdkNzljMGQ3OCJdAAAGICjlUyzwqxuEK63d-oOlioKgoAhj6fOCTwVjslsHGEOY
+
+
+
 #### Example 4: Custom Latent Space Manipulation
 
 This example shows how to manually manipulate the latent space representation of a molecule to explore structural variations. 

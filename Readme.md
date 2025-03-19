@@ -59,65 +59,80 @@ MolGen-Transformer addresses major challenges in generative molecular AI, includ
 
 
 ## **Installation**
-Clone the repository to start using MolGen-Transformer for molecular generation and analysis:
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/baskargroup/MolTransformer_repo.git
 cd MolTransformer_repo
 ```
 
-### 1. Create a Conda Environment (Recommended)
+### 2. Set Up Conda Environment
 
-1. If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda.  
-**If your system does not support conda but has micromamba, and if you encounter error messages while testing MolTransformer, please see the [Addition Information and Notes for Installation](#addition-information-and-notes-for-installation).**
+If you don’t already have conda, [install Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda.  
+*Note: For systems without conda (e.g., using micromamba), see the [Additional Information and Notes](#addition-information-and-notes-for-installation).*  
 
-- 2. **Create and activate a new conda environment**  
-  ```bash
-  conda create -n moltransformer python=3.9
-  conda activate moltransformer
-  ```
+Create and activate a new environment:
 
-- 3. **(Optional) Install GPU-Enabled PyTorch**
-If you have a suitable NVIDIA GPU and drivers:
-  ```bash
-  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-  ```
-(Adjust the cudatoolkit version & channel according to your hardware and preferences.)
+```bash
+conda create -n moltransformer python=3.9
+conda activate moltransformer
+```
 
-Skip this step if you don’t have a GPU or want CPU-only PyTorch.
-In that case, you can install PyTorch via pip install torch or conda install pytorch -c pytorch (CPU version).
+### 3. Install Dependencies
 
-
-### 2. Install RDKit from conda-forge
+- **Install RDKit:**
 
   ```bash
   conda install -c conda-forge rdkit
   ```
 
-### 3. Install the remaining dependencies via pip
+- **Install PyTorch:**
+
+  If you have an NVIDIA GPU:
+
+  ```bash
+  conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+  ```
+
+  *(Adjust the cudatoolkit version based on your hardware.)*
+
+  For CPU-only PyTorch:
+
+  ```bash
+  conda install pytorch torchvision torchaudio cpuonly -c pytorch
+  ```
+
+- **Install Remaining Dependencies:**
 
   ```bash
   pip install -r requirements.txt
   ```
 
-### 4. Install MolTransformer as a package
+### 4. Install MolTransformer (Pip Installable)
 
-  ```bash
-  pip install -e .
-  ```
+Install MolTransformer as an editable package (for development and latest updates):
 
-### 5. Test Your Installation
+```bash
+pip install -e .
+```
 
-After installation, open a Python shell:
+Or directly via pip (stable release):
+
+```bash
+pip install moltransformer
+```
+
+### 5. Test Installation
+
+Verify your installation by running:
+
 ```python
 import MolTransformer
-
 print(MolTransformer.__file__)
 ```
 
-If you see no import errors, you’re good to go!
-
-
+If there are no errors, your setup is complete!
 ## Quick Start
 
 
@@ -337,9 +352,16 @@ micromamba install -c conda-forge rdkit
 
 #### Install dependencies and MolTransformer:
 
+- Option 1: Install from the repository:
+
 ```bash
 pip install -r requirements.txt
 pip install -e .
+```
+
+- Option 2: Install via PyPI 
+```bash
+pip install moltransformer
 ```
 
 #### Test:
