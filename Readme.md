@@ -1,14 +1,18 @@
 # **MolGen-Transformer: A Molecular Language Model for Generation and Latent Space Exploration**
 
 
+
 ## **Overview**
 MolGen-Transformer is a **transformer-based generative AI model** designed for **molecular generation and latent space exploration**, specifically targeting **π-conjugated molecules**. By leveraging a **latent-space-centered approach** and a **SELFIES-based molecular representation**, MolGen-Transformer ensures **100% molecular reconstruction accuracy**, enabling robust and reliable generation of chemically meaningful molecules.
+
+> **New!** MolGen-Transformer is trained with the **[OCELOT Plus dataset](https://huggingface.co/datasets/D3TaLES/OCELOT_Plus)**, providing an expanded dataset for more comprehensive coverage of π-conjugated molecules.
 
 This repository provides the **MolGen-Transformer model, sampling methods, and analysis tools** for generative molecular design, facilitating AI-driven **chemical discovery, structure optimization, and property-based molecular exploration**.
 
 This work is described in detail in our paper:  
 [**MolGen-Transformer: A Molecule Language Model for the Generation and Latent Space Exploration of π-Conjugated Molecules**](https://chemrxiv.org/engage/chemrxiv/article-details/67bce95d81d2151a02e708ba) available on **ChemRxiv**.
 
+---
 ## **Key Features**
 MolGen-Transformer addresses major challenges in generative molecular AI, including **chemical space coverage, latent space interpretability, and generation reliability**, by implementing the following capabilities:
 
